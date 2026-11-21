@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>한입 스탯 · 정시한입 · 수시한입 통합 대시보드</title>
+<meta name="description" content="정시한입·수시한입의 웹사이트 방문자·페이지뷰·인기 대학 클릭과 유튜브 조회수·구독자를 한 화면에서 비교하는 통계 대시보드." />
+<meta name="theme-color" content="#0B1521" />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230B1521'/%3E%3Crect x='20' y='54' width='14' height='26' rx='4' fill='%2338BDF8'/%3E%3Crect x='43' y='40' width='14' height='40' rx='4' fill='%23E9C46A'/%3E%3Crect x='66' y='26' width='14' height='54' rx='4' fill='%23FACC15'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="13" width="4" height="8" rx="1.4" fill="#38BDF8"/><rect x="10" y="9" width="4" height="12" rx="1.4" fill="#E9C46A"/><rect x="17" y="4" width="4" height="17" rx="1.4" fill="#FACC15"/></svg>
+      </span>
+      <span class="brand-txt">
+        <b>한입 스탯</b>
+        <span>정시한입 · 수시한입 통합 대시보드</span>
+      </span>
+    </div>
+    <div class="top-meta">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span id="updatedAt">집계 시각 불러오는 중</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-head">
+        <p class="eyebrow">STATS HUB</p>
+        <h1>두 채널, <em>한 화면</em>에서.</h1>
+        <p class="lede">정시한입과 수시한입의 웹사이트 방문자·인기 대학 클릭과 유튜브 조회수·구독자를 나란히 모았습니다. 유튜브 수치는 실측, 웹사이트 수치는 GA4 연동 후 자동으로 채워집니다.</p>
+      </div>
+      <nav class="quick" aria-label="빠른 링크">
+        <a class="quick-link q-jeong" href="https://jeongsihanip.github.io/" target="_blank" rel="noopener">
+          <span class="qi" aria-hidden="true">🌐</span>
+          <span><b>정시한입 사이트</b><small>2027 정시모집요강 모음</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="quick-link q-jeong" href="https://www.youtube.com/@jeongsihanip" target="_blank" rel="noopener">
+          <span class="qi" aria-hidden="true">▶</span>
+          <span><b>정시한입 유튜브</b><small>@jeongsihanip</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="quick-link q-susi" href="https://susihanip.github.io/" target="_blank" rel="noopener">
+          <span class="qi" aria-hidden="true">🌐</span>
+          <span><b>수시한입 사이트</b><small>2027 수시모집요강 모음</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="quick-link q-susi" href="https://www.youtube.com/@susihanip" target="_blank" rel="noopener">
+          <span class="qi" aria-hidden="true">▶</span>
+          <span><b>수시한입 유튜브</b><small>@susihanip</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </section>
+
+    <!-- KPI -->
+    <section class="kpis" aria-label="전체 요약">
+      <article class="kpi" data-status="pending">
+        <div class="kpi-top"><span class="kpi-label">총 웹사이트 방문자</span><span class="badge badge-pending">집계 대기</span></div>
+        <div class="kpi-value" id="kpi-visitors">—</div>
+        <div class="kpi-sub" id="kpi-visitors-sub">GA4 연동 전 · 측정 시작 전</div>
+      </article>
+      <article class="kpi" data-status="pending">
+        <div class="kpi-top"><span class="kpi-label">총 페이지뷰</span><span class="badge badge-pending">집계 대기</span></div>
+        <div class="kpi-value" id="kpi-pageviews">—</div>
+        <div class="kpi-sub" id="kpi-pageviews-sub">GA4 연동 전 · 측정 시작 전</div>
+      </article>
+      <article class="kpi kpi-live" data-status="live">
+        <div class="kpi-top"><span class="kpi-label">총 유튜브 조회수</span><span class="badge badge-live">실측</span></div>
+        <div class="kpi-value" id="kpi-ytviews">—</div>
+        <div class="kpi-sub" id="kpi-ytviews-sub">공개 영상 2편 조회수 합</div>
+      </article>
+      <article class="kpi kpi-live" data-status="live">
+        <div class="kpi-top"><span class="kpi-label">총 구독자 수</span><span class="badge badge-live">실측</span></div>
+        <div class="kpi-value" id="kpi-subs">—</div>
+        <div class="kpi-sub" id="kpi-subs-sub">공개 표시 없음 · 0으로 집계</div>
+      </article>
+    </section>
+
+    <p class="status-note" id="statusNote">데이터를 불러오는 중입니다.</p>
+
+    <!-- YOUTUBE -->
+    <section class="section" aria-labelledby="yt-title">
+      <div class="section-head">
+        <h2 id="yt-title">유튜브 성과</h2>
+        <span class="section-tag tag-live">YouTube 공개 데이터 · 실측</span>
+      </div>
+      <div class="yt-grid" id="ytGrid"></div>
+    </section>
+
+    <!-- WEBSITE -->
+    <section class="section" aria-labelledby="web-title">
+      <div class="section-head">
+        <h2 id="web-title">웹사이트 방문 분석</h2>
+        <span class="section-tag tag-pending">GA4 연동 대기</span>
+      </div>
+      <div class="pending-banner">
+        <span class="pb-icon" aria-hidden="true">◔</span>
+        <p><b>아직 집계 전입니다.</b> 두 사이트에 Google Analytics 4가 연결되면 일별 방문자·페이지뷰, 유입 경로, 인기 대학 클릭 TOP 5가 이 자리에 실제 수치로 채워집니다. 지금 보이는 차트는 <b>레이아웃 확인용 샘플</b>이며 실제 방문 기록이 아닙니다.</p>
+      </div>
+      <div class="web-grid" id="webGrid"></div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="section" aria-labelledby="next-title">
+      <div class="section-head">
+        <h2 id="next-title">업로드 일정</h2>
+        <span class="section-tag tag-plan">계획</span>
+      </div>
+      <div class="schedule-grid" id="scheduleGrid"></div>
+    </section>
+
+    <footer class="foot">
+      <div class="foot-left">
+        <p><b>한입 스탯</b> · 정시한입 &amp; 수시한입 통합 통계</p>
+        <p id="footSource">유튜브 수치는 공개 채널 페이지 실측, 웹사이트 수치는 GA4 연동 후 자동 집계됩니다.</p>
+      </div>
+      <div class="foot-right">
+        <a href="https://jeongsihanip.github.io/" target="_blank" rel="noopener">정시한입 사이트</a>
+        <a href="https://www.youtube.com/@jeongsihanip" target="_blank" rel="noopener">정시한입 유튜브</a>
+        <a href="https://susihanip.github.io/" target="_blank" rel="noopener">수시한입 사이트</a>
+        <a href="https://www.youtube.com/@susihanip" target="_blank" rel="noopener">수시한입 유튜브</a>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
