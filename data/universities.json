@@ -1,0 +1,34 @@
+{
+  "updated": "2026-11-21",
+  "channel": {
+    "name": "정시한입",
+    "handle": "@jeongsihanip",
+    "url": "https://www.youtube.com/@jeongsihanip"
+  },
+  "universities": [
+    {
+      "id": "konkuk",
+      "name": "건국대학교",
+      "campus": "서울캠퍼스",
+      "group": ["가군", "나군", "다군"],
+      "quota": "정원 내 1,330명 (총 1,472명 · 수시 이월 전)",
+      "schedule": "2027. 1. 5.(화) ~ 1. 7.(목) 17:00",
+      "summary": "인문·자연·자유전공 수능 100% | A/B형 반영 | 2027 군 이동",
+      "noticeUrl": "https://admission.konkuk.ac.kr/bbs/admission/6282/1204956/artclView.do",
+      "pdfUrl": "https://admission.konkuk.ac.kr/bbs/admission/6282/1224860/download.do",
+      "shortsUrl": "https://youtube.com/shorts/OEZeBpUk8yc"
+    },
+    {
+      "id": "snu",
+      "name": "서울대학교",
+      "campus": "관악캠퍼스",
+      "group": ["나군"],
+      "quota": "정원 내 1,374명 (지균 153 · 일반 1,221 · 수시 이월 전)",
+      "schedule": "2027. 1. 4.(월) 10:00 ~ 1. 6.(수) 18:00",
+      "summary": "지균 수능60+교과40 | 일반 수능100%→80+20 | 국100·수120·탐80",
+      "noticeUrl": "https://admission.snu.ac.kr/undergraduate/regular/guide",
+      "pdfUrl": "https://admission.snu.ac.kr/webdata/admission/files/2027jungsi.pdf",
+      "shortsUrl": "https://youtube.com/shorts/p5DjyAgTPG0"
+    }
+  ]
+}
