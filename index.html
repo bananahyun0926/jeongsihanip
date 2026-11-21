@@ -303,11 +303,20 @@
 
   function filtered() {
     var q = state.q.trim().toLowerCase();
-    return state.items.filter(function (u) {
+    var rows = state.items.filter(function (u) {
       var okGroup = state.group === "전체" || (u.group || []).indexOf(state.group) !== -1;
       var okQuery = !q || haystack(u).indexOf(q) !== -1;
       return okGroup && okQuery;
     });
+    if (q) {
+      // 대학명이 검색어와 맞는 항목을 먼저 보여줌 (예: '서울' → 서울대학교가 건국대 서울캠퍼스보다 위)
+      rows.sort(function (a, b) {
+        var an = String(a.name || "").toLowerCase().indexOf(q) !== -1 ? 0 : 1;
+        var bn = String(b.name || "").toLowerCase().indexOf(q) !== -1 ? 0 : 1;
+        return an - bn;
+      });
+    }
+    return rows;
   }
 
   function extIcon() {
