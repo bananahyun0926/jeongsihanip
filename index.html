@@ -165,6 +165,8 @@
   .btn svg{width:13px;height:13px;opacity:.9}
   .btn.pdf{background:rgba(233,196,106,.14);border-color:rgba(233,196,106,.42);color:#ffe9bb}
   .btn.shorts{grid-column:1/-1;background:rgba(56,189,248,.13);border-color:rgba(56,189,248,.40);color:#d3f0ff}
+  .btn.pending{grid-column:1/-1;background:rgba(255,255,255,.035);border-color:var(--line);color:#8fa3b8;font-weight:600;cursor:default}
+  .btn.pending svg{opacity:.6}
 
   .empty{
     text-align:center;color:var(--muted);font-size:13.5px;
@@ -332,6 +334,7 @@
     if (u.noticeUrl) links.push('<a class="btn" href="' + esc(u.noticeUrl) + '" target="_blank" rel="noopener">입학처 공지' + extIcon() + "</a>");
     if (u.pdfUrl) links.push('<a class="btn pdf" href="' + esc(u.pdfUrl) + '" target="_blank" rel="noopener">요강 PDF' + extIcon() + "</a>");
     if (u.shortsUrl) links.push('<a class="btn shorts" href="' + esc(u.shortsUrl) + '" target="_blank" rel="noopener">1분 요약 쇼츠 보기' + extIcon() + "</a>");
+    else links.push('<span class="btn pending" aria-disabled="true">1분 요약 쇼츠 준비 중</span>');
 
     return '' +
       '<article class="card">' +
