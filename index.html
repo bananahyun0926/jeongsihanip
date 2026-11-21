@@ -9,6 +9,7 @@
 <meta property="og:title" content="2027 정시모집요강 모음 | 정시한입" />
 <meta property="og:description" content="대학별 2027 정시모집요강 · 모집인원 · 원서접수 일정 · 입학처 공지 · PDF · 1분 요약 쇼츠" />
 <meta property="og:type" content="website" />
+<meta name="naver-site-verification" content="21a3e7762f813665430a8b1bf3f3ec1b18eecda1" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ5B4J0HXY"></script>
 <script>
@@ -118,6 +119,10 @@
   .chip:active{transform:scale(.97)}
   .chip[aria-pressed="true"]{color:#0D1B2A;background:var(--sky);border-color:transparent;box-shadow:0 4px 14px rgba(56,189,248,.28)}
   .count{margin:2px 2px 12px;font-size:12px;color:#8295aa}
+  .count-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 2px 12px}
+  .count-row .count{margin:0}
+  .sort{display:flex;gap:5px;flex:0 0 auto}
+  .sort .chip{font-size:12px;padding:6px 11px;font-weight:600}
   .count b{color:var(--text)}
 
   /* ── cards ── */
@@ -259,11 +264,24 @@
     <button class="chip" type="button" data-group="가군" aria-pressed="false">가군</button>
     <button class="chip" type="button" data-group="나군" aria-pressed="false">나군</button>
     <button class="chip" type="button" data-group="다군" aria-pressed="false">다군</button>
+    <button class="chip" type="button" data-group="군외" aria-pressed="false">군외</button>
+  </div>
+  <div class="filters" role="group" aria-label="지역 필터">
+    <button class="chip" type="button" data-region="전체" aria-pressed="true">전체</button>
+    <button class="chip" type="button" data-region="서울" aria-pressed="false">서울</button>
+    <button class="chip" type="button" data-region="수도권" aria-pressed="false">수도권</button>
+    <button class="chip" type="button" data-region="지방" aria-pressed="false">지방</button>
   </div>
 </div>
 
 <main class="wrap">
-  <div class="count" id="count" hidden></div>
+  <div class="count-row">
+    <div class="count" id="count" hidden></div>
+    <div class="sort" role="group" aria-label="정렬">
+      <button class="chip" type="button" data-sort="추천순" aria-pressed="true">추천순</button>
+      <button class="chip" type="button" data-sort="가나다순" aria-pressed="false">가나다순</button>
+    </div>
+  </div>
   <div id="list">
     <div class="loading"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>요강 목록 불러오는 중…</span></div>
   </div>
@@ -292,7 +310,7 @@
 
 <script>
 (function () {
-  var state = { items: [], q: "", group: "전체", ready: false };
+  var state = { items: [], q: "", group: "전체", region: "전체", sort: "추천순", ready: false };
   var listEl = document.getElementById("list");
   var countEl = document.getElementById("count");
   var qEl = document.getElementById("q");
@@ -315,10 +333,15 @@
     var q = state.q.trim().toLowerCase();
     var rows = state.items.filter(function (u) {
       var okGroup = state.group === "전체" || (u.group || []).indexOf(state.group) !== -1;
+      var okRegion = state.region === "전체" || u.region === state.region;
       var okQuery = !q || haystack(u).indexOf(q) !== -1;
-      return okGroup && okQuery;
+      return okGroup && okRegion && okQuery;
     });
-    if (q) {
+    if (state.sort === "가나다순") {
+      rows.sort(function (a, b) {
+        return String(a.name || "").localeCompare(String(b.name || ""), "ko");
+      });
+    } else if (q) {
       // 대학명이 검색어와 맞는 항목을 먼저 보여줌 (예: '서울' → 서울대학교가 건국대 서울캠퍼스보다 위)
       rows.sort(function (a, b) {
         var an = String(a.name || "").toLowerCase().indexOf(q) !== -1 ? 0 : 1;
@@ -370,6 +393,7 @@
     countEl.hidden = false;
     countEl.innerHTML = "총 <b>" + rows.length + "</b>곳" +
       (state.group === "전체" ? "" : " · " + esc(state.group)) +
+      (state.region === "전체" ? "" : " · " + esc(state.region)) +
       (state.q.trim() ? " · ‘" + esc(state.q.trim()) + "’ 검색" : "");
 
     if (!rows.length) {
@@ -382,15 +406,22 @@
     listEl.innerHTML = rows.map(card).join("");
   }
 
-  document.querySelectorAll(".chip").forEach(function (chip) {
-    chip.addEventListener("click", function () {
-      state.group = chip.dataset.group;
-      document.querySelectorAll(".chip").forEach(function (c) {
-        c.setAttribute("aria-pressed", String(c === chip));
+  function wireChips(attr, apply) {
+    var chips = document.querySelectorAll(".chip[data-" + attr + "]");
+    Array.prototype.forEach.call(chips, function (chip) {
+      chip.addEventListener("click", function () {
+        apply(chip.dataset[attr]);
+        Array.prototype.forEach.call(chips, function (c) {
+          c.setAttribute("aria-pressed", String(c === chip));
+        });
+        render();
       });
-      render();
     });
-  });
+  }
+
+  wireChips("group", function (v) { state.group = v; });
+  wireChips("region", function (v) { state.region = v; });
+  wireChips("sort", function (v) { state.sort = v; });
 
   var t = null;
   qEl.addEventListener("input", function () {
