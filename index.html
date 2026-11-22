@@ -767,10 +767,11 @@
       } else {
         scoreEl.max = "9"; scoreEl.min = "1"; scoreEl.placeholder = "예: 2.5"; scoreUnit.textContent = "등급";
       }
-      var v = parseFloat(scoreEl.value);
-      state.score = isFinite(v) && v > 0 ? v : null;
-      if (state.mode === "grade" && state.score != null && state.score > 9) { state.score = null; scoreEl.value = ""; }
-      if (state.mode === "pct" && state.score != null && state.score > 100) { state.score = null; scoreEl.value = ""; }
+      // 입력 방식이 바뀌면 단위가 달라지므로 입력값을 비운다
+      scoreEl.value = ""; state.score = null; state.band = "전체";
+      Array.prototype.forEach.call(bandWrap.querySelectorAll(".chip"), function (c) {
+        c.setAttribute("aria-pressed", String(c.dataset.band === "전체"));
+      });
       updateScoreUI(); render();
     });
   });
