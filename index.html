@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>2027 정시모집요강 모음 | 정시한입</title>
-<meta name="description" content="2027학년도 대학별 정시모집요강을 한 곳에서 — 모집군·모집인원·원서접수 일정과 입학처 공지, 요강 PDF, 1분 요약 쇼츠 링크를 모았습니다. 내 수능 백분위·등급으로 지원 가능 대학을 참고용으로 추려보세요. (정시한입)" />
+<meta name="description" content="2027학년도 대학별 정시모집요강을 한 곳에서 — 모집군·모집인원·원서접수 일정과 입학처 공지, 요강 PDF, 1분 요약 쇼츠 링크를 모았습니다. 국어·수학·탐구 원점수나 백분위를 넣으면 2027 수능 예상 등급컷으로 환산해 지원 가능 대학을 참고용으로 추려보세요. (정시한입)" />
 <meta name="theme-color" content="#0D1B2A" id="meta-theme" />
 <meta property="og:title" content="2027 정시모집요강 모음 | 정시한입" />
 <meta property="og:description" content="대학별 2027 정시모집요강 · 모집인원 · 원서접수 일정 · 입학처 공지 · PDF · 1분 요약 쇼츠" />
@@ -211,6 +211,69 @@
   }
   .score-note b{color:var(--text-body)}
 
+  /* ── 성적 입력: 과목별(원점수·백분위) ── */
+  .mode-row{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:11px}
+  .mode-row .score-clear{margin-left:auto}
+  .seg-unit button{font-size:11.5px;padding:6px 9px}
+  .subj-form{display:grid;gap:7px}
+  .subj-row{
+    display:grid;gap:7px 8px;align-items:center;
+    grid-template-columns:50px minmax(0,1fr) minmax(0,1fr);
+    grid-template-areas:"name sel sel" "name inp out";
+    padding:8px 9px;border:1px solid var(--line);border-radius:12px;background:var(--surface-soft);
+  }
+  .subj-row.eng{grid-template-columns:50px minmax(0,1fr) minmax(0,1fr);grid-template-areas:"name sel out"}
+  .subj-name{grid-area:name;font-size:12px;font-weight:800;color:var(--text-body);letter-spacing:-.2px;line-height:1.2}
+  .subj-name small{display:block;font-size:9.5px;font-weight:600;color:var(--dim);margin-top:2px;letter-spacing:0}
+  .subj-select{grid-area:sel;position:relative;min-width:0}
+  .subj-select select{
+    width:100%;font-family:inherit;font-size:12.5px;font-weight:600;color:var(--text);
+    background:var(--surface);border:1px solid var(--line);border-radius:9px;
+    padding:8px 24px 8px 9px;outline:none;cursor:pointer;
+    -webkit-appearance:none;appearance:none;
+  }
+  .subj-select select:focus{border-color:var(--accent-line);background:var(--surface-strong)}
+  .subj-select::after{
+    content:"";position:absolute;right:10px;top:calc(50% - 1px);width:5px;height:5px;
+    border-right:1.8px solid var(--muted);border-bottom:1.8px solid var(--muted);
+    transform:translateY(-50%) rotate(45deg);pointer-events:none;
+  }
+  .subj-row .score-input{grid-area:inp}
+  .subj-row .score-input input{padding:9px 40px 9px 10px;font-size:14px;border-radius:9px}
+  .subj-row .score-unit{font-size:10.5px;right:9px}
+  .subj-out{
+    grid-area:out;display:flex;align-items:center;justify-content:center;gap:3px;
+    min-height:38px;padding:4px 7px;border-radius:9px;
+    font-size:11px;font-weight:700;line-height:1.25;color:var(--muted);text-align:center;
+    background:var(--surface);border:1px dashed var(--line-soft);
+  }
+  .subj-out b{font-weight:800;color:var(--text-body)}
+  .subj-out .o-val{white-space:nowrap;display:inline-block}
+  .subj-out.has{color:var(--accent-ink);background:var(--accent-soft);border:1px solid var(--accent-line)}
+  .subj-out.has b{color:var(--accent-ink)}
+  html[data-theme="light"] .subj-out.has{background:rgba(2,132,199,.07)}
+  .score-hint{margin:9px 0 0;font-size:11px;line-height:1.6;color:var(--muted)}
+  .score-hint b{color:var(--text-body)}
+  .score-warn{
+    margin:8px 0 0;font-size:11px;line-height:1.6;color:#fde68a;
+    background:rgba(233,196,106,.10);border:1px solid rgba(233,196,106,.30);
+    border-radius:9px;padding:7px 9px;
+  }
+  .score-warn b{color:var(--gold-ink)}
+  html[data-theme="light"] .score-warn{color:#8a5a00;background:rgba(180,83,9,.07);border-color:rgba(180,83,9,.24)}
+  .cut-table{margin-top:10px;border-top:1px dashed var(--line);padding-top:9px}
+  .cut-table summary{cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-body);list-style:none}
+  .cut-table summary::-webkit-details-marker{display:none}
+  .cut-table summary::before{content:"▸";color:var(--sky);margin-right:5px;font-size:10px}
+  .cut-table[open] summary::before{content:"▾"}
+  .cut-table .tbl-wrap{overflow-x:auto;margin-top:8px;-webkit-overflow-scrolling:touch}
+  .cut-table table{border-collapse:collapse;width:100%;min-width:340px;font-size:10.5px}
+  .cut-table th,.cut-table td{border:1px solid var(--line);padding:4px 5px;text-align:center;white-space:nowrap;color:var(--text-body)}
+  .cut-table th{background:var(--surface-strong);font-weight:700;color:var(--muted)}
+  .cut-table td.sub{text-align:left;font-weight:700;color:var(--text)}
+  .cut-table tr.anchor td{color:var(--dim);font-weight:600}
+  .cut-table .src{margin:7px 0 0;font-size:10.5px;line-height:1.6;color:var(--dim)}
+
   /* ── controls ── */
   .controls{position:sticky;top:53px;z-index:15;padding:10px 0 12px;background:var(--controls-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
   .search{position:relative}
@@ -303,6 +366,24 @@
   .cut-main b{color:var(--text);font-weight:800}
   .cut-sub{color:var(--muted);font-size:11px}
   .cut-empty{color:var(--muted)}
+  .cut-why{
+    flex:1 0 100%;margin:3px 0 0;font-size:11.5px;line-height:1.55;color:var(--text-body);
+    font-variant-numeric:tabular-nums;letter-spacing:-.1px;
+  }
+  .cut-why b{color:var(--text);font-weight:800}
+  .cut-why .neg{color:var(--b-hard-fg);font-weight:700}
+  .cut-why .pos{color:var(--b-stable-fg);font-weight:700}
+  html[data-theme="light"] .cut-why .neg{color:#991b1b}
+  html[data-theme="light"] .cut-why .pos{color:#166534}
+  .cut-advice{
+    flex:1 0 100%;margin:2px 0 0;font-size:11px;line-height:1.55;color:var(--dim);
+    font-variant-numeric:tabular-nums;
+  }
+  .cut-advice .tip{display:inline;color:var(--text-body)}
+  .cut-advice .tip-warn{display:inline;color:var(--b-bold-fg)}
+  .cut-advice .tip-bad{display:inline;color:var(--b-hard-fg)}
+  html[data-theme="light"] .cut-advice .tip-warn{color:#9a3412}
+  html[data-theme="light"] .cut-advice .tip-bad{color:#991b1b}
 
   .facts{display:grid;gap:7px;margin-bottom:12px}
   .fact{display:grid;grid-template-columns:58px 1fr;gap:8px;font-size:13px;line-height:1.5}
@@ -402,6 +483,8 @@
     .seg{grid-column:auto}
     .score-input{grid-column:auto}
     .score-clear{grid-column:auto}
+    .subj-row{grid-template-columns:58px 156px minmax(0,1fr) 118px;grid-template-areas:"name sel inp out"}
+    .subj-row.eng{grid-template-columns:58px 156px minmax(0,1fr) 118px;grid-template-areas:"name sel . out"}
     .hero h1{font-size:30px}
     .actions{grid-template-columns:auto auto 1fr}
     .btn.shorts{grid-column:auto}
@@ -456,19 +539,85 @@
 <section class="wrap score-card" aria-labelledby="score-title">
   <div class="score-head">
     <h2 id="score-title">내 수능 성적으로 대학 추리기</h2>
-    <span class="score-tag">2026학년도 70% 컷</span>
+    <span class="score-tag">2027 예상 등급컷 + 2026 70% 컷</span>
   </div>
-  <div class="score-row">
-    <div class="seg" role="group" aria-label="성적 입력 방식">
-      <button type="button" data-score-mode="pct" aria-pressed="true">평균 백분위</button>
-      <button type="button" data-score-mode="grade" aria-pressed="false">평균 등급</button>
+
+  <div class="mode-row">
+    <div class="seg" role="group" aria-label="입력 방식 선택">
+      <button type="button" data-input-mode="subject" aria-pressed="true">과목별 입력</button>
+      <button type="button" data-input-mode="simple" aria-pressed="false">간편 입력</button>
     </div>
-    <div class="score-input">
-      <input id="score" type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="예: 85" aria-label="내 수능 성적 입력" />
-      <span class="score-unit" id="score-unit">백분위</span>
+    <div class="seg seg-unit" id="unit-seg" role="group" aria-label="과목별 입력 단위">
+      <button type="button" data-unit="raw" aria-pressed="true">원점수</button>
+      <button type="button" data-unit="pct" aria-pressed="false">백분위</button>
     </div>
     <button type="button" class="score-clear" id="score-clear" hidden>초기화</button>
   </div>
+
+  <div class="subj-form" id="subject-form">
+    <div class="subj-row" data-subj="korean">
+      <span class="subj-name">국어<small>100점</small></span>
+      <div class="subj-select"><select id="korean-opt" aria-label="국어 선택과목"></select></div>
+      <div class="score-input">
+        <input id="korean-score" type="number" inputmode="decimal" step="0.1" placeholder="예: 88" aria-label="국어 원점수 또는 백분위" />
+        <span class="score-unit" data-unit-label>점</span>
+      </div>
+      <span class="subj-out" id="out-korean" data-out="korean">미입력</span>
+    </div>
+
+    <div class="subj-row" data-subj="math">
+      <span class="subj-name">수학<small>100점</small></span>
+      <div class="subj-select"><select id="math-opt" aria-label="수학 선택과목"></select></div>
+      <div class="score-input">
+        <input id="math-score" type="number" inputmode="decimal" step="0.1" placeholder="예: 84" aria-label="수학 원점수 또는 백분위" />
+        <span class="score-unit" data-unit-label>점</span>
+      </div>
+      <span class="subj-out" id="out-math" data-out="math">미입력</span>
+    </div>
+
+    <div class="subj-row eng" data-subj="english">
+      <span class="subj-name">영어<small>절대평가</small></span>
+      <div class="subj-select"><select id="english-grade" aria-label="영어 등급"></select></div>
+      <span class="subj-out" id="out-english" data-out="english">1~9등급</span>
+    </div>
+
+    <div class="subj-row" data-subj="inq1">
+      <span class="subj-name">탐구1<small>50점</small></span>
+      <div class="subj-select"><select id="inq1-opt" aria-label="탐구1 과목"></select></div>
+      <div class="score-input">
+        <input id="inq1-score" type="number" inputmode="decimal" step="0.1" placeholder="예: 45" aria-label="탐구1 원점수 또는 백분위" />
+        <span class="score-unit" data-unit-label>점</span>
+      </div>
+      <span class="subj-out" id="out-inq1" data-out="inq1">미입력</span>
+    </div>
+
+    <div class="subj-row" data-subj="inq2">
+      <span class="subj-name">탐구2<small>50점</small></span>
+      <div class="subj-select"><select id="inq2-opt" aria-label="탐구2 과목"></select></div>
+      <div class="score-input">
+        <input id="inq2-score" type="number" inputmode="decimal" step="0.1" placeholder="예: 44" aria-label="탐구2 원점수 또는 백분위" />
+        <span class="score-unit" data-unit-label>점</span>
+      </div>
+      <span class="subj-out" id="out-inq2" data-out="inq2">미입력</span>
+    </div>
+  </div>
+
+  <div id="simple-form" hidden>
+    <div class="score-row">
+      <div class="seg" role="group" aria-label="간편 입력 단위">
+        <button type="button" data-score-mode="pct" aria-pressed="true">평균 백분위</button>
+        <button type="button" data-score-mode="grade" aria-pressed="false">평균 등급</button>
+      </div>
+      <div class="score-input">
+        <input id="score" type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="예: 85" aria-label="내 수능 성적 입력" />
+        <span class="score-unit" id="score-unit">백분위</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="score-hint" id="score-hint">원점수를 넣으면 2027 수능 <b>예상 등급컷으로 예상 백분위·등급</b>을 계산해 종합 평균에 반영합니다. 비워둔 과목은 평균에서 제외됩니다.</p>
+  <p class="score-warn" id="eng-warn" hidden></p>
+
   <div class="filters band-filters" id="band-filters" role="group" aria-label="지원 가능성 필터" hidden>
     <button class="chip" type="button" data-band="전체" aria-pressed="true">전체</button>
     <button class="chip" type="button" data-band="안정" aria-pressed="false">안정</button>
@@ -477,7 +626,11 @@
     <button class="chip" type="button" data-band="어려움" aria-pressed="false">어려움</button>
   </div>
   <p class="score-sum" id="score-sum" hidden></p>
-  <p class="score-note">전년도 입결(대교협 ‘어디가’·대학 공개 70% 컷) 기준 <b>참고용 필터</b>입니다. 학과·반영비율·변환표준점수·수능최저에 따라 달라지므로, 정확한 지원 가능 여부는 반드시 각 대학 입학처 및 대입정보포털(어디가)에서 확인하세요.</p>
+  <p class="score-note">공개된 <b>2027 수능 예상 등급컷 기반 근사 환산</b> 및 <b>전년도 70% 컷 기준 참고용 결과</b>입니다. 대학별 반영비율·변환표준점수·영어 가감점에 따라 달라지므로 반드시 입학처·어디가에서 확인하세요.</p>
+  <details class="cut-table" id="cut-table">
+    <summary>적용한 2027 예상 등급컷 표 보기</summary>
+    <div class="tbl-wrap" id="cut-table-body"></div>
+  </details>
 </section>
 
 <div class="wrap controls">
@@ -510,7 +663,7 @@
       <button class="chip" type="button" data-sort="가나다순" aria-pressed="false">가나다순</button>
     </div>
   </div>
-  <p class="legend" id="legend" hidden><b>안정</b> = 대학 상위 20% 모집단위 컷 이상 · <b>적정</b> = 중위 컷 이상 · <b>소신</b> = 대학 최저 컷 이상 · <b>어려움</b> = 최저 컷보다 낮음</p>
+  <p class="legend" id="legend" hidden><b>안정</b> = 대학 상위 20% 모집단위 컷 이상 · <b>적정</b> = 중위 컷 이상 · <b>소신</b> = 대학 최저 컷 이상 · <b>어려움</b> = 최저 컷보다 낮음<br>카드의 판정 줄은 <b>내 예상 백분위와 그 대학 컷의 실제 점수 차이</b>를, 그 아래 줄은 <b>발목 과목·영어 등급·보완 조건</b>을 보여줍니다.</p>
   <div id="list">
     <div class="loading"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>요강 목록 불러오는 중…</span></div>
   </div>
@@ -526,6 +679,7 @@
       <li>표시된 모집인원은 <b>수시 이월 인원 반영 전</b> 값입니다(대교협 전형시행계획·각 대학 2027 정시요강 기준). 최종 모집인원은 원서접수 직전 입학처 공지에서 다시 확인하세요.</li>
       <li>일정·전형방법은 각 대학 입학처의 <b>최종 확정 요강</b>이 기준입니다. 이 페이지는 원문 링크를 모아둔 안내용입니다.</li>
       <li>입결 배지는 <b>2026학년도 최종등록자 70% 컷</b>을 대학 단위로 묶은 참고값입니다. 학과별·전형별 차이가 크고, 대학마다 반영비율이 달라 다른 대학과 직접 비교할 수 없습니다.</li>
+      <li><b>성적 입력기의 원점수→백분위 환산</b>은 EBSi가 공개한 <b>2027학년도 수능 예상 등급컷</b>(선택과목별 1~8등급, 2026-11-20 확인)과 등급 구분 백분위(96/89/77/60/40/23/11/4/0) 사이를 선형 보간한 <b>근사값</b>입니다. 12월 11일 성적 통지 후 평가원 확정 등급과 다를 수 있고, 영어는 절대평가라 평균에서 제외했습니다.</li>
       <li>모든 링크는 각 대학 입학처와 유튜브로 연결됩니다.</li>
     </ul>
   </div>
@@ -540,7 +694,18 @@
 
 <script>
 (function () {
-  var state = { items: [], cuts: {}, q: "", group: "전체", region: "전체", sort: "추천순", band: "전체", mode: "pct", score: null, ready: false };
+  var state = {
+    items: [], cuts: {}, q: "", group: "전체", region: "전체", sort: "추천순", band: "전체",
+    mode: "pct", score: null, ready: false,
+    inputMode: "subject", unit: "raw",
+    subj: {
+      korean: { opt: "언어와 매체", value: null },
+      math: { opt: "미적분", value: null },
+      english: { value: null },
+      inq1: { opt: "생활과 윤리", value: null },
+      inq2: { opt: "사회·문화", value: null }
+    }
+  };
   var listEl = document.getElementById("list");
   var countEl = document.getElementById("count");
   var qEl = document.getElementById("q");
@@ -551,6 +716,17 @@
   var bandWrap = document.getElementById("band-filters");
   var scoreSum = document.getElementById("score-sum");
   var legendEl = document.getElementById("legend");
+  var subjectForm = document.getElementById("subject-form");
+  var simpleForm = document.getElementById("simple-form");
+  var hintEl = document.getElementById("score-hint");
+  var engWarn = document.getElementById("eng-warn");
+  var unitSeg = document.getElementById("unit-seg");
+  var cutTableBody = document.getElementById("cut-table-body");
+  var SUBJ_KEYS = ["korean", "math", "inq1", "inq2", "english"];
+  var SUBJ_WEIGHT = { korean: 1, math: 1, inq1: 0.5, inq2: 0.5 };
+  var SUBJ_MAX = { korean: 100, math: 100, inq1: 50, inq2: 50 };
+  var DEFAULT_ANCHORS = [96, 89, 77, 60, 40, 23, 11, 4, 0];
+  var GRADE_CUTS = null;
 
   var GROUP_CLASS = { "가군": "ga", "나군": "na", "다군": "da" };
   // 수능 등급 → 평균 백분위 근사치 (등급 구분 백분위의 대표값)
@@ -575,7 +751,77 @@
     }
     return null;
   }
+  /* ── 2027 예상 등급컷 기반 원점수 → 백분위 근사 환산 ── */
+  function anchors() {
+    var a = GRADE_CUTS && GRADE_CUTS.meta && GRADE_CUTS.meta.percentile_anchors
+      && GRADE_CUTS.meta.percentile_anchors.grades_1_to_9;
+    return (a && a.length === 9) ? a : DEFAULT_ANCHORS;
+  }
+  function dataKey(key) { return (key === "inq1" || key === "inq2") ? "inquiry" : key; }
+  function subjDef(key) {
+    if (!GRADE_CUTS || !GRADE_CUTS.subjects) return null;
+    return GRADE_CUTS.subjects[dataKey(key)] || null;
+  }
+  function subjectOptions(key) {
+    var def = subjDef(key);
+    if (!def || !def.options) return [];
+    return Object.keys(def.options);
+  }
+  function cutsFor(key, opt) {
+    var def = subjDef(key);
+    if (!def || !def.options) return null;
+    var o = def.options[opt];
+    if (!o || !o.cuts || o.cuts.length !== 8) return null;
+    return { cuts: o.cuts, max: def.max };
+  }
+  // 원점수 → 예상 등급 + 백분위(등급컷 사이 선형 보간)
+  function rawToPct(cuts, max, s) {
+    var A = anchors(), g = 9, i, L, U, pL, pU;
+    for (i = 0; i < cuts.length; i++) { if (s >= cuts[i]) { g = i + 1; break; } }
+    if (g === 1) { L = cuts[0]; U = max; pL = A[0]; pU = 100; }
+    else if (g <= 8) { L = cuts[g - 1]; U = cuts[g - 2]; pL = A[g - 1]; pU = A[g - 2]; }
+    else { L = 0; U = cuts[7]; pL = 0; pU = A[7]; }
+    var pct = (U <= L) ? pL : pL + (s - L) / (U - L) * (pU - pL);
+    pct = Math.max(0, Math.min(100, Math.round(pct * 10) / 10));
+    return { grade: g, pct: pct };
+  }
+  function pctToGrade(p) {
+    var A = anchors(), i;
+    for (i = 0; i < 8; i++) { if (p >= A[i]) return i + 1; }
+    return 9;
+  }
+  function subjResult(key) {
+    var s = state.subj[key];
+    if (!s || s.value == null) return null;
+    if (key === "english") return { grade: s.value, pct: null };
+    if (state.unit === "pct") return { grade: pctToGrade(s.value), pct: s.value };
+    var c = cutsFor(key, s.opt);
+    if (!c) return null;
+    return rawToPct(c.cuts, c.max, s.value);
+  }
+  // 국어·수학 각 1, 탐구 각 0.5 가중 평균(일반적인 정시 수능 반영 구조)
+  function weightedPct() {
+    var sum = 0, w = 0, i, k, r, keys = ["korean", "math", "inq1", "inq2"];
+    for (i = 0; i < keys.length; i++) {
+      k = keys[i]; r = subjResult(k);
+      if (!r || r.pct == null) continue;
+      sum += r.pct * SUBJ_WEIGHT[k]; w += SUBJ_WEIGHT[k];
+    }
+    if (!w) return null;
+    return Math.round(sum / w * 10) / 10;
+  }
+  function hasAnyInput() {
+    if (state.inputMode === "subject") {
+      for (var i = 0; i < SUBJ_KEYS.length; i++) {
+        if (state.subj[SUBJ_KEYS[i]].value != null) return true;
+      }
+      return false;
+    }
+    return state.score != null;
+  }
+
   function effectivePct() {
+    if (state.inputMode === "subject") return weightedPct();
     if (state.score == null) return null;
     return state.mode === "pct" ? state.score : gradeToPct(state.score);
   }
@@ -638,18 +884,97 @@
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>';
   }
 
+  function pctStr(v) { return (Math.round(v * 10) / 10).toFixed(1); }
+  function diffSpan(v) {
+    var r = Math.round(v * 10) / 10;
+    return '<span class="' + (r < 0 ? "neg" : "pos") + '">' + (r >= 0 ? "+" : "-") + Math.abs(r).toFixed(1) + "</span>";
+  }
+  function subjectEntries() {
+    var list = [], map = [["korean", "국어"], ["math", "수학"], ["inq1", "탐구1"], ["inq2", "탐구2"]];
+    map.forEach(function (p) {
+      var r = subjResult(p[0]);
+      if (!r || r.pct == null) return;
+      list.push({ key: p[0], label: p[1], name: state.subj[p[0]].opt || p[1], pct: r.pct, grade: r.grade });
+    });
+    return list;
+  }
+
+  // 판정 이유: 내 예상 백분위와 대학 컷의 실제 점수 차이
+  function verdictWhy(b, c, p) {
+    var mine = "내 예상 평균 백분위 <b>" + pctStr(p) + "</b>";
+    if (b === "안정") {
+      return mine + " — 대학 상위 20% 컷(" + pctStr(c.p80) + ") 이상 (" + diffSpan(p - c.p80) + " 여유)";
+    }
+    if (b === "적정") {
+      return mine + " vs 중위 컷 " + pctStr(c.median) + " (" + diffSpan(p - c.median) + " 여유 · 상위 20% 컷 " + pctStr(c.p80) + " 대비 " + diffSpan(p - c.p80) + ")";
+    }
+    if (b === "소신") {
+      return mine + " vs 중위 컷 " + pctStr(c.median) + " (" + diffSpan(p - c.median) + " · 최저 컷 " + pctStr(c.min) + " 대비 " + diffSpan(p - c.min) + ")";
+    }
+    return mine + " vs 대학 최저 컷 <b>" + pctStr(c.min) + "</b> (" + pctStr(c.min - p) + "점 부족 · 중위 컷 " + pctStr(c.median) + " 대비 " + diffSpan(p - c.median) + ")";
+  }
+
+  // 어떤 조건이 바뀌면 가능해지는지 + 발목 과목 / 영어 주의
+  function verdictAdvice(b, c, p) {
+    var cond = [], extra = [], low = null, high = null;
+    var ents = state.inputMode === "subject" ? subjectEntries() : [];
+    if (ents.length >= 2) {
+      low = high = ents[0];
+      ents.forEach(function (e) {
+        if (e.pct < low.pct) low = e;
+        if (e.pct > high.pct) high = e;
+      });
+    }
+    var eng = subjResult("english");
+
+    if (b === "어려움") {
+      cond.push('<span class="tip-bad">최저 컷까지 백분위 +' + pctStr(c.min - p) + "점 필요</span>");
+      cond.push(c.min - p >= 10
+        ? "차이가 10점 이상이면 사실상 어려운 구간 — 하향 후보를 함께 보세요"
+        : "국·수·탐 반영비율이 유리한 모집단위면 결과가 갈릴 수 있음");
+    } else if (b === "소신") {
+      cond.push('<span class="tip">중위 컷까지 백분위 +' + pctStr(c.median - p) + "점</span> — 반영비율·영어 가감점에 따라 갈리는 구간");
+      if (high && high.pct - p >= 1) {
+        cond.push(esc(high.label) + " " + pctStr(high.pct) + " 강점 — 이 과목 비중이 큰 전형이면 보완 가능");
+      }
+    } else if (b === "안정") {
+      if (p - c.p80 < 1.5) cond.push("상위 20% 컷과 차이가 1.5점 이내 — 학과별 컷 편차를 확인하세요");
+    } else if (b === "적정") {
+      if (high && high.pct - p >= 2) cond.push(esc(high.label) + " " + pctStr(high.pct) + " 강점 — 이 과목 비중이 큰 전형이면 안정권");
+    }
+
+    if (low && p - low.pct > 0.5) {
+      extra.push('<span class="tip">발목: <b>' + esc(low.label) + " " + esc(low.name) + " " + pctStr(low.pct) + "</b> (평균 -" + pctStr(p - low.pct) + ")</span>");
+    }
+    if (eng && eng.grade >= 3) {
+      extra.push('<span class="tip-warn">영어 ' + eng.grade + "등급 — " +
+        (eng.grade >= 4 ? "주요 대학은 등급별 감점이 커 실질 환산점수가 낮아질 수 있음" : "상위권 대학 감점 폭이 클 수 있음") +
+        "</span>");
+    }
+
+    return cond.concat(extra).slice(0, 2).join(' <span style="color:var(--line-soft)">·</span> ');
+  }
+
   function cutBlock(u) {
     var b = bandOf(u);
     var c = cut(u);
+    var p = effectivePct();
     if (!c) {
       return '<div class="cut">' +
         (b ? '<span class="badge b-none">입결 데이터 미등록</span>' : '') +
-        '<span class="cut-empty">' + (b ? "직접 확인" : "2026학년도 정시 70% 컷 미공개") + "</span></div>";
+        '<span class="cut-empty">' + (b ? "직접 확인" : "2026학년도 정시 70% 컷 미공개") + "</span>" +
+        (b ? '<p class="cut-why">내 예상 평균 백분위 <b>' + pctStr(p) +
+          '</b> — 이 대학은 어디가·대학 공개 70% 컷 자료가 없어 자동 비교가 되지 않습니다. 입학처 입시결과를 직접 확인하세요.</p>' : "") +
+        "</div>";
     }
     var badge = b ? '<span class="badge ' + bandClass(b) + '">' + esc(b) + "</span>" : "";
+    var why = b ? '<p class="cut-why">' + verdictWhy(b, c, p) + "</p>" : "";
+    var advice = b ? verdictAdvice(b, c, p) : "";
     return '<div class="cut">' + badge +
       '<span class="cut-main">2026 정시 70% 컷 중위 <b>' + c.median + "</b> 백분위</span>" +
       '<span class="cut-sub">공개 모집단위 ' + c.min + "~" + c.max + " · " + c.n + "개</span>" +
+      why +
+      (advice ? '<p class="cut-advice">' + advice + "</p>" : "") +
       "</div>";
   }
 
@@ -693,27 +1018,79 @@
     return n;
   }
 
+  function renderOuts() {
+    SUBJ_KEYS.forEach(function (k) {
+      var el = document.getElementById("out-" + k);
+      if (!el) return;
+      var r = subjResult(k);
+      if (!r) {
+        el.className = "subj-out";
+        el.innerHTML = k === "english" ? "1~9등급" : "미입력";
+        return;
+      }
+      el.className = "subj-out has";
+      if (k === "english") {
+        el.innerHTML = '<span class="o-val">절대평가 <b>' + r.grade + "등급</b></span>";
+        return;
+      }
+      el.innerHTML = "<span class=\"o-val\"><b>" + r.grade + "등급</b> · " + pctStr(r.pct) + "</span>";
+    });
+    if (engWarn) {
+      var e = subjResult("english");
+      if (!e) { engWarn.hidden = true; }
+      else {
+        engWarn.hidden = false;
+        engWarn.innerHTML = e.grade <= 2
+          ? "영어 <b>" + e.grade + "등급</b> — 영어는 절대평가로 백분위가 없어 종합 평균(국·수·탐)에 넣지 않았습니다."
+          : "영어 <b>" + e.grade + "등급</b> — 절대평가라 평균 백분위에는 넣지 않았습니다. 영어 3등급 이하는 대학별 감점·가산이 커서 실제 환산점수가 크게 달라질 수 있으니, 지원할 대학의 영어 반영 방식을 꼭 확인하세요.";
+      }
+    }
+  }
+
+  function bandPills(n) {
+    return '<span class="pill" style="color:var(--b-stable-fg);border-color:var(--b-stable-bd);background:var(--b-stable-bg)">안정 ' + n["안정"] + "</span>" +
+      '<span class="pill" style="color:var(--b-fit-fg);border-color:var(--b-fit-bd);background:var(--b-fit-bg)">적정 ' + n["적정"] + "</span>" +
+      '<span class="pill" style="color:var(--b-bold-fg);border-color:var(--b-bold-bd);background:var(--b-bold-bg)">소신 ' + n["소신"] + "</span>" +
+      '<span class="pill" style="color:var(--b-hard-fg);border-color:var(--b-hard-bd);background:var(--b-hard-bg)">어려움 ' + n["어려움"] + "</span>" +
+      '<span class="pill">입결 미등록 ' + n["미등록"] + "</span>";
+  }
+
   function updateScoreUI() {
     var p = effectivePct();
-    if (state.score == null) {
-      bandWrap.hidden = true; scoreSum.hidden = true; legendEl.hidden = true; scoreClear.hidden = true;
+    scoreClear.hidden = !hasAnyInput();
+    if (p == null) {
+      bandWrap.hidden = true; legendEl.hidden = true;
+      scoreSum.hidden = !(state.inputMode === "subject" && hasAnyInput());
+      if (!scoreSum.hidden) scoreSum.innerHTML = "국어·수학·탐구 중 하나 이상의 점수를 넣으면 대학별 판정이 시작됩니다. 영어 등급은 참고 배지로만 반영됩니다.";
       state.band = "전체";
       Array.prototype.forEach.call(bandWrap.querySelectorAll(".chip"), function (c) {
         c.setAttribute("aria-pressed", String(c.dataset.band === "전체"));
       });
       return;
     }
-    bandWrap.hidden = false; scoreSum.hidden = false; legendEl.hidden = false; scoreClear.hidden = false;
+    bandWrap.hidden = false; scoreSum.hidden = false; legendEl.hidden = false;
     var n = bandCounts();
-    var label = state.mode === "pct"
-      ? "평균 백분위 <b>" + state.score + "</b>"
-      : "평균 <b>" + state.score + "등급</b> (백분위 약 " + p + ")";
-    scoreSum.innerHTML = label + " 기준 · " +
-      '<span class="pill" style="color:var(--b-stable-fg);border-color:var(--b-stable-bd);background:var(--b-stable-bg)">안정 ' + n["안정"] + "</span>" +
-      '<span class="pill" style="color:var(--b-fit-fg);border-color:var(--b-fit-bd);background:var(--b-fit-bg)">적정 ' + n["적정"] + "</span>" +
-      '<span class="pill" style="color:var(--b-bold-fg);border-color:var(--b-bold-bd);background:var(--b-bold-bg)">소신 ' + n["소신"] + "</span>" +
-      '<span class="pill" style="color:var(--b-hard-fg);border-color:var(--b-hard-bd);background:var(--b-hard-bg)">어려움 ' + n["어려움"] + "</span>" +
-      '<span class="pill">입결 미등록 ' + n["미등록"] + "</span>";
+    var parts = [];
+    if (state.inputMode === "subject") {
+      parts.push("종합 평균 백분위 <b>" + p + "</b>");
+      var k = subjResult("korean");
+      if (k) parts.push("국어 " + pctStr(k.pct));
+      var m = subjResult("math");
+      if (m) parts.push("수학 " + pctStr(m.pct));
+      var i1 = subjResult("inq1"), i2 = subjResult("inq2");
+      var iq = [];
+      if (i1 && i1.pct != null) iq.push(pctStr(i1.pct));
+      if (i2 && i2.pct != null) iq.push(pctStr(i2.pct));
+      if (iq.length) parts.push("탐구 " + iq.join("·"));
+      var e = subjResult("english");
+      if (e) parts.push("영어 " + e.grade + "등급");
+    } else {
+      parts.push(state.mode === "pct"
+        ? "평균 백분위 <b>" + state.score + "</b>"
+        : "평균 <b>" + state.score + "등급</b> (백분위 약 " + p + ")");
+    }
+    scoreSum.innerHTML = parts.join(" · ") + " 기준 · " + bandPills(n) +
+      (state.inputMode === "subject" ? ' <span style="color:var(--muted)">(국어·수학 각 1, 탐구 각 0.5 가중)</span>' : "");
   }
 
   function render() {
@@ -756,6 +1133,157 @@
   wireChips("sort", function (v) { state.sort = v; });
   wireChips("band", function (v) { state.band = v; });
 
+  function resetBand() {
+    state.band = "전체";
+    Array.prototype.forEach.call(bandWrap.querySelectorAll(".chip"), function (c) {
+      c.setAttribute("aria-pressed", String(c.dataset.band === "전체"));
+    });
+  }
+
+  function optionsHtml(names, current) {
+    return names.map(function (n) {
+      return '<option value="' + esc(n) + '"' + (n === current ? " selected" : "") + ">" + esc(n) + "</option>";
+    }).join("");
+  }
+
+  function fillSubjectOptions() {
+    var kOpt = document.getElementById("korean-opt");
+    var mOpt = document.getElementById("math-opt");
+    var i1Opt = document.getElementById("inq1-opt");
+    var i2Opt = document.getElementById("inq2-opt");
+    var eSel = document.getElementById("english-grade");
+    if (kOpt) kOpt.innerHTML = optionsHtml(subjectOptions("korean"), state.subj.korean.opt);
+    if (mOpt) mOpt.innerHTML = optionsHtml(subjectOptions("math"), state.subj.math.opt);
+    var qDef = subjDef("inquiry");
+    var groups = (qDef && qDef.groups) || null;
+    function inqHtml(current) {
+      if (!groups) return optionsHtml(subjectOptions("inquiry"), current);
+      return Object.keys(groups).map(function (g) {
+        return '<optgroup label="' + esc(g) + '">' + optionsHtml(groups[g], current) + "</optgroup>";
+      }).join("");
+    }
+    if (i1Opt) i1Opt.innerHTML = inqHtml(state.subj.inq1.opt);
+    if (i2Opt) i2Opt.innerHTML = inqHtml(state.subj.inq2.opt);
+    if (eSel) {
+      var g = ['<option value="">등급 선택</option>'], i;
+      for (i = 1; i <= 9; i++) g.push('<option value="' + i + '">' + i + "등급</option>");
+      eSel.innerHTML = g.join("");
+    }
+  }
+
+  function applyUnitUI() {
+    var pct = state.unit === "pct";
+    Array.prototype.forEach.call(document.querySelectorAll("[data-unit-label]"), function (el) {
+      el.textContent = pct ? "백분위" : "점";
+    });
+    ["korean", "math", "inq1", "inq2"].forEach(function (k) {
+      var el = document.getElementById(k + "-score");
+      if (!el) return;
+      el.max = pct ? "100" : String(SUBJ_MAX[k]);
+      el.placeholder = pct ? "예: 93" : (SUBJ_MAX[k] === 50 ? "예: 45" : "예: 88");
+    });
+    if (hintEl) {
+      hintEl.innerHTML = pct
+        ? "백분위를 넣으면 <b>예상 등급</b>을 함께 보여줍니다. 비워둔 과목은 평균에서 제외됩니다."
+        : "원점수를 넣으면 2027 수능 <b>예상 등급컷으로 예상 백분위·등급</b>을 계산해 종합 평균에 반영합니다. 비워둔 과목은 평균에서 제외됩니다.";
+    }
+  }
+
+  function syncModeUI() {
+    subjectForm.hidden = state.inputMode !== "subject";
+    simpleForm.hidden = state.inputMode !== "simple";
+    unitSeg.hidden = state.inputMode !== "subject";
+    Array.prototype.forEach.call(document.querySelectorAll("[data-input-mode]"), function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.inputMode === state.inputMode));
+    });
+  }
+
+  function renderCutTable() {
+    if (!cutTableBody || !GRADE_CUTS) return;
+    var A = anchors(), seen = {}, rows = [];
+    [["korean", state.subj.korean.opt], ["math", state.subj.math.opt],
+     ["inq1", state.subj.inq1.opt], ["inq2", state.subj.inq2.opt]].forEach(function (p) {
+      var c = cutsFor(p[0], p[1]);
+      if (!c || seen[p[1]]) return;
+      seen[p[1]] = true;
+      rows.push({ name: p[1], cuts: c.cuts });
+    });
+    var head = "<tr><th>과목</th>", g;
+    for (g = 1; g <= 8; g++) head += "<th>" + g + "급</th>";
+    head += "</tr>";
+    var body = rows.map(function (r) {
+      return '<tr><td class="sub">' + esc(r.name) + "</td>" +
+        r.cuts.map(function (c) { return "<td>" + c + "</td>"; }).join("") + "</tr>";
+    }).join("");
+    body += '<tr class="anchor"><td class="sub">백분위</td>' +
+      A.slice(0, 8).map(function (a) { return "<td>" + a + "</td>"; }).join("") + "</tr>";
+    var src = (GRADE_CUTS.meta && GRADE_CUTS.meta.source && GRADE_CUTS.meta.source.primary) || "EBSi 예상 등급컷";
+    var when = (GRADE_CUTS.meta && GRADE_CUTS.meta.checked_at) || "";
+    cutTableBody.innerHTML = "<table><thead>" + head + "</thead><tbody>" + body + "</tbody></table>" +
+      '<p class="src">각 등급의 원점수 컷은 ' + esc(src.replace(/\s*—.*$/, "")) + "(" + esc(when.slice(0, 10)) +
+      " 확인) 값이고, 등급 안쪽의 세부 백분위는 공개되지 않아 등급 구분 백분위(96/89/77/60/40/23/11/4) 사이를 선형 보간한 <b>근사값</b>입니다. 만점은 100, 0점은 0으로 둡니다. 확정 등급은 2026-12-11 성적 통지 후 평가원 발표를 확인하세요.</p>";
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-input-mode]"), function (btn) {
+    btn.addEventListener("click", function () {
+      if (state.inputMode === btn.dataset.inputMode) return;
+      state.inputMode = btn.dataset.inputMode;
+      resetBand(); syncModeUI(); updateScoreUI(); render();
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-unit]"), function (btn) {
+    btn.addEventListener("click", function () {
+      var u = btn.dataset.unit;
+      if (u === state.unit) return;
+      state.unit = u;
+      Array.prototype.forEach.call(document.querySelectorAll("[data-unit]"), function (b) {
+        b.setAttribute("aria-pressed", String(b.dataset.unit === u));
+      });
+      // 단위를 바꾸면 입력값은 비운다(원점수 ↔ 백분위는 1:1 대응이 아님)
+      ["korean", "math", "inq1", "inq2"].forEach(function (k) {
+        state.subj[k].value = null;
+        var el = document.getElementById(k + "-score");
+        if (el) el.value = "";
+      });
+      resetBand(); applyUnitUI(); renderOuts(); updateScoreUI(); render();
+    });
+  });
+
+  [["korean-opt", "korean"], ["math-opt", "math"], ["inq1-opt", "inq1"], ["inq2-opt", "inq2"]].forEach(function (pair) {
+    var el = document.getElementById(pair[0]);
+    if (!el) return;
+    el.addEventListener("change", function () {
+      state.subj[pair[1]].opt = el.value;
+      renderCutTable(); renderOuts(); updateScoreUI(); render();
+    });
+  });
+
+  ["korean", "math", "inq1", "inq2"].forEach(function (k) {
+    var el = document.getElementById(k + "-score");
+    if (!el) return;
+    var timer = null;
+    el.addEventListener("input", function () {
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        var raw = String(el.value).trim();
+        var v = parseFloat(raw);
+        var max = state.unit === "pct" ? 100 : SUBJ_MAX[k];
+        state.subj[k].value = (raw !== "" && isFinite(v)) ? Math.max(0, Math.min(v, max)) : null;
+        renderOuts(); updateScoreUI(); render();
+      }, 140);
+    });
+  });
+
+  var engSel = document.getElementById("english-grade");
+  if (engSel) {
+    engSel.addEventListener("change", function () {
+      var v = parseInt(engSel.value, 10);
+      state.subj.english.value = isFinite(v) ? v : null;
+      renderOuts(); updateScoreUI(); render();
+    });
+  }
+
   Array.prototype.forEach.call(document.querySelectorAll("[data-score-mode]"), function (btn) {
     btn.addEventListener("click", function () {
       state.mode = btn.dataset.scoreMode;
@@ -768,11 +1296,8 @@
         scoreEl.max = "9"; scoreEl.min = "1"; scoreEl.placeholder = "예: 2.5"; scoreUnit.textContent = "등급";
       }
       // 입력 방식이 바뀌면 단위가 달라지므로 입력값을 비운다
-      scoreEl.value = ""; state.score = null; state.band = "전체";
-      Array.prototype.forEach.call(bandWrap.querySelectorAll(".chip"), function (c) {
-        c.setAttribute("aria-pressed", String(c.dataset.band === "전체"));
-      });
-      updateScoreUI(); render();
+      scoreEl.value = ""; state.score = null;
+      resetBand(); updateScoreUI(); render();
     });
   });
 
@@ -787,11 +1312,16 @@
     }, 120);
   });
   scoreClear.addEventListener("click", function () {
-    scoreEl.value = ""; state.score = null; state.band = "전체";
-    Array.prototype.forEach.call(bandWrap.querySelectorAll(".chip"), function (c) {
-      c.setAttribute("aria-pressed", String(c.dataset.band === "전체"));
+    SUBJ_KEYS.forEach(function (k) { state.subj[k].value = null; });
+    ["korean", "math", "inq1", "inq2"].forEach(function (k) {
+      var el = document.getElementById(k + "-score");
+      if (el) el.value = "";
     });
-    updateScoreUI(); render(); scoreEl.focus();
+    if (engSel) engSel.value = "";
+    scoreEl.value = ""; state.score = null;
+    resetBand(); renderOuts(); updateScoreUI(); render();
+    var focusEl = state.inputMode === "subject" ? document.getElementById("korean-score") : scoreEl;
+    if (focusEl) focusEl.focus();
   });
 
   var t = null;
@@ -831,9 +1361,11 @@
 
   Promise.all([
     fetch("data/universities.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/cutoffs.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : { universities: {} }; }).catch(function () { return { universities: {} }; })
+    fetch("data/cutoffs.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : { universities: {} }; }).catch(function () { return { universities: {} }; }),
+    fetch("data/grade-cuts-2027.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
   ]).then(function (res) {
     var data = res[0], cuts = res[1];
+    GRADE_CUTS = res[2] || null;
     state.items = (data.universities || []).slice();
     state.cuts = (cuts && cuts.universities) || {};
     state.ready = true;
@@ -843,6 +1375,20 @@
       document.getElementById("stat-updated").textContent =
         d.length === 3 ? d[0] + "." + Number(d[1]) + "." + Number(d[2]) : data.updated;
     }
+    if (GRADE_CUTS) {
+      fillSubjectOptions();
+      applyUnitUI();
+      renderCutTable();
+    } else {
+      // 환산표를 못 불러오면 과목별 입력을 감추고 간편 입력으로 대체한다
+      state.inputMode = "simple";
+      Array.prototype.forEach.call(document.querySelectorAll("[data-input-mode='subject']"), function (b) {
+        b.hidden = true;
+      });
+    }
+    syncModeUI();
+    renderOuts();
+    updateScoreUI();
     render();
   }).catch(function () {
     listEl.innerHTML = '<div class="empty"><b>목록을 불러오지 못했어요</b>' +
