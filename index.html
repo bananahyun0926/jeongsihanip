@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>2027 정시모집요강 모음 | 정시한입</title>
-<meta name="description" content="2027학년도 대학별 정시모집요강을 한 곳에서 — 모집군·모집인원·원서접수 일정과 입학처 공지, 요강 PDF, 1분 요약 쇼츠 링크를 모았습니다. (정시한입)" />
-<meta name="theme-color" content="#0D1B2A" />
+<meta name="description" content="2027학년도 대학별 정시모집요강을 한 곳에서 — 모집군·모집인원·원서접수 일정과 입학처 공지, 요강 PDF, 1분 요약 쇼츠 링크를 모았습니다. 내 수능 백분위·등급으로 지원 가능 대학을 참고용으로 추려보세요. (정시한입)" />
+<meta name="theme-color" content="#0D1B2A" id="meta-theme" />
 <meta property="og:title" content="2027 정시모집요강 모음 | 정시한입" />
 <meta property="og:description" content="대학별 2027 정시모집요강 · 모집인원 · 원서접수 일정 · 입학처 공지 · PDF · 1분 요약 쇼츠" />
 <meta property="og:type" content="website" />
@@ -24,31 +24,98 @@
 <style>
   :root{
     --navy-900:#0D1B2A;
-    --navy-800:#111F31;
-    --navy-700:#1B263B;
-    --navy-600:#243B55;
-    --gold:#E9C46A;
-    --sky:#38BDF8;
+    --bg-color:#09090b;
+    --bg:
+      radial-gradient(900px 520px at 50% -180px, rgba(56,189,248,.16), transparent 70%),
+      radial-gradient(700px 460px at 100% 8%, rgba(233,196,106,.08), transparent 72%),
+      linear-gradient(180deg,#09090b 0%, #111113 48%, #0c0c0f 100%);
+    --header-bg:rgba(9,9,11,.86);
+    --controls-bg:linear-gradient(180deg,rgba(9,9,11,.95),rgba(9,9,11,.78) 70%,rgba(9,9,11,0));
+    --surface:rgba(255,255,255,.055);
+    --surface-soft:rgba(255,255,255,.035);
+    --surface-strong:rgba(255,255,255,.09);
+    --card-bg:#18181b;
+    --card-border:#27272a;
     --text:#EAF1F8;
+    --text-soft:#e6eef7;
+    --text-body:#cbdcec;
     --muted:#9FB0C3;
+    --dim:#8295aa;
     --line:rgba(255,255,255,.09);
-    --card:rgba(255,255,255,.035);
+    --line-soft:rgba(255,255,255,.14);
+    --gold:#E9C46A;
+    --gold-ink:#ffe9bb;
+    --sky:#38BDF8;
+    --accent:#38BDF8;
+    --accent-ink:#dcf1ff;
+    --accent-ink-2:#d3f0ff;
+    --on-accent:#0D1B2A;
+    --accent-soft:rgba(56,189,248,.10);
+    --accent-line:rgba(56,189,248,.30);
+    --shadow:0 10px 26px rgba(0,0,0,.45);
     --radius:18px;
+    --b-stable-bg:rgba(74,222,128,.14); --b-stable-bd:rgba(74,222,128,.45); --b-stable-fg:#bbf7d0;
+    --b-fit-bg:rgba(56,189,248,.14);    --b-fit-bd:rgba(56,189,248,.45);    --b-fit-fg:#bae6fd;
+    --b-bold-bg:rgba(233,196,106,.14);  --b-bold-bd:rgba(233,196,106,.45);  --b-bold-fg:#fde68a;
+    --b-hard-bg:rgba(248,113,113,.13);  --b-hard-bd:rgba(248,113,113,.38);  --b-hard-fg:#fecaca;
+    --b-none-bg:rgba(255,255,255,.05);  --b-none-bd:rgba(255,255,255,.18);  --b-none-fg:#9FB0C3;
+    --switch-bg:rgba(255,255,255,.07);
+    --switch-on:rgba(56,189,248,.22);
+    --switch-on-fg:#e8f7ff;
+  }
+  html[data-theme="light"]{
+    --bg-color:#f8fafc;
+    --bg:
+      radial-gradient(900px 520px at 50% -180px, rgba(56,189,248,.16), transparent 70%),
+      radial-gradient(700px 460px at 100% 8%, rgba(233,196,106,.14), transparent 72%),
+      linear-gradient(180deg,#ffffff 0%, #f8fafc 46%, #eef4fb 100%);
+    --header-bg:rgba(255,255,255,.88);
+    --controls-bg:linear-gradient(180deg,rgba(248,250,252,.97),rgba(248,250,252,.85) 70%,rgba(248,250,252,0));
+    --surface:rgba(15,23,42,.045);
+    --surface-soft:rgba(15,23,42,.03);
+    --surface-strong:rgba(15,23,42,.07);
+    --card-bg:#ffffff;
+    --card-border:rgba(15,23,42,.11);
+    --text:#0f172a;
+    --text-soft:#1e293b;
+    --text-body:#334155;
+    --muted:#64748b;
+    --dim:#64748b;
+    --line:rgba(15,23,42,.11);
+    --line-soft:rgba(15,23,42,.18);
+    --gold:#b45309;
+    --gold-ink:#8a5a00;
+    --sky:#0284c7;
+    --accent:#0284c7;
+    --accent-ink:#075985;
+    --accent-ink-2:#075985;
+    --on-accent:#ffffff;
+    --accent-soft:rgba(2,132,199,.08);
+    --accent-line:rgba(2,132,199,.28);
+    --shadow:0 6px 18px rgba(15,23,42,.07);
+    --b-stable-bg:rgba(22,163,74,.10); --b-stable-bd:rgba(22,163,74,.35); --b-stable-fg:#166534;
+    --b-fit-bg:rgba(2,132,199,.10);    --b-fit-bd:rgba(2,132,199,.32);    --b-fit-fg:#075985;
+    --b-bold-bg:rgba(180,83,9,.10);    --b-bold-bd:rgba(180,83,9,.32);    --b-bold-fg:#9a3412;
+    --b-hard-bg:rgba(220,38,38,.09);   --b-hard-bd:rgba(220,38,38,.28);   --b-hard-fg:#991b1b;
+    --b-none-bg:rgba(15,23,42,.04);    --b-none-bd:rgba(15,23,42,.16);    --b-none-fg:#64748b;
+    --switch-bg:rgba(15,23,42,.05);
+    --switch-on:#ffffff;
+    --switch-on-fg:#0f172a;
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  [hidden]{display:none !important}
   html,body{margin:0;padding:0}
   body{
     font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-    background:
-      radial-gradient(900px 520px at 50% -180px, rgba(56,189,248,.20), transparent 70%),
-      radial-gradient(700px 460px at 100% 8%, rgba(233,196,106,.10), transparent 72%),
-      linear-gradient(180deg,var(--navy-900) 0%, var(--navy-800) 46%, var(--navy-700) 100%);
+    background-color:var(--bg-color);
+    background-image:var(--bg);
     background-attachment:fixed;
     color:var(--text);
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
     word-break:keep-all;
     min-height:100vh;
+    transition:background-color .2s ease,color .2s ease;
   }
   a{color:inherit;text-decoration:none}
   .wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
@@ -57,82 +124,140 @@
   header.top{
     position:sticky;top:0;z-index:20;
     backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-    background:rgba(13,27,42,.82);
+    background:var(--header-bg);
     border-bottom:1px solid var(--line);
   }
-  .top-in{display:flex;align-items:center;gap:10px;padding:12px 0}
+  .top-in{display:flex;align-items:center;gap:8px;padding:10px 0}
   .brand{display:flex;align-items:center;gap:9px;min-width:0}
-  .brand .mark{width:32px;height:32px;flex:0 0 32px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(160deg,#16324a,#0f2234);border:1px solid rgba(56,189,248,.35)}
+  .brand .mark{width:32px;height:32px;flex:0 0 32px;border-radius:10px;display:grid;place-items:center;background:var(--surface);border:1px solid rgba(56,189,248,.35)}
   .brand .mark svg{width:19px;height:19px;display:block}
   .brand b{font-size:16px;letter-spacing:-.2px;display:block;line-height:1.15}
   .brand span{font-size:11px;color:var(--muted);display:block;line-height:1.2}
+  .theme-switch{
+    margin-left:auto;flex:0 0 auto;display:inline-flex;gap:2px;padding:3px;
+    background:var(--switch-bg);border:1px solid var(--line);border-radius:999px;
+  }
+  .theme-switch button{
+    display:inline-flex;align-items:center;gap:4px;
+    font-family:inherit;font-size:11.5px;font-weight:700;line-height:1;
+    color:var(--muted);background:transparent;border:0;border-radius:999px;
+    padding:7px 9px;cursor:pointer;transition:background .16s,color .16s;
+  }
+  .theme-switch button svg{width:13px;height:13px}
+  .theme-switch button[aria-pressed="true"]{background:var(--switch-on);color:var(--switch-on-fg);box-shadow:0 1px 4px rgba(0,0,0,.10)}
   .ch-link{
-    margin-left:auto;flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
-    font-size:12.5px;font-weight:600;color:#0D1B2A;
+    flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;
+    font-size:12px;font-weight:600;color:#0D1B2A;
     background:linear-gradient(135deg,var(--gold),#f3d98f);
-    padding:8px 12px;border-radius:999px;white-space:nowrap;
+    padding:8px 11px;border-radius:999px;white-space:nowrap;
     box-shadow:0 4px 14px rgba(233,196,106,.20);
   }
-  .ch-link svg{width:14px;height:14px}
+  .ch-link svg{width:13px;height:13px}
 
   /* ── hero ── */
-  .hero{padding:26px 0 6px}
-  .hero h1{margin:0 0 8px;font-size:26px;line-height:1.28;letter-spacing:-.7px;font-weight:800}
+  .hero{padding:24px 0 6px}
+  .hero h1{margin:0 0 8px;font-size:25px;line-height:1.28;letter-spacing:-.7px;font-weight:800}
   .hero h1 em{font-style:normal;color:var(--sky)}
   .hero p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.62}
   .stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
   .stat{
     display:inline-flex;align-items:baseline;gap:6px;
     font-size:12px;color:var(--muted);
-    border:1px solid var(--line);background:rgba(255,255,255,.03);
+    border:1px solid var(--line);background:var(--surface-soft);
     padding:6px 11px;border-radius:999px;
   }
   .stat b{color:var(--text);font-size:13px;font-weight:700}
 
+  /* ── 성적 입력 ── */
+  .score-card{
+    margin:16px auto 0;padding:14px 14px 13px;
+    background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;
+    box-shadow:var(--shadow);
+  }
+  .score-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .score-head h2{margin:0;font-size:15px;font-weight:800;letter-spacing:-.3px}
+  .score-tag{font-size:10.5px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);border:1px solid var(--accent-line);padding:3px 7px;border-radius:999px}
+  .score-row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
+  .seg{grid-column:1/-1;justify-self:start}
+  .score-input{grid-column:1}
+  .score-clear{grid-column:2}
+  .seg{display:inline-flex;padding:3px;background:var(--surface);border:1px solid var(--line);border-radius:11px}
+  .seg button{
+    font-family:inherit;font-size:12px;font-weight:700;color:var(--muted);
+    background:transparent;border:0;border-radius:8px;padding:7px 10px;cursor:pointer;white-space:nowrap;
+  }
+  .seg button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);box-shadow:0 2px 8px rgba(2,132,199,.25)}
+  .score-input{position:relative;display:flex;align-items:center;min-width:0}
+  .score-input input{
+    width:100%;font-family:inherit;font-size:15px;font-weight:700;color:var(--text);
+    background:var(--surface);border:1px solid var(--line);border-radius:11px;
+    padding:9px 58px 9px 11px;outline:none;-moz-appearance:textfield;appearance:textfield;
+  }
+  .score-input input::-webkit-outer-spin-button,.score-input input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .score-input input::placeholder{color:var(--dim);font-weight:500}
+  .score-input input:focus{border-color:var(--accent-line);background:var(--surface-strong)}
+  .score-unit{position:absolute;right:10px;font-size:11px;font-weight:700;color:var(--muted);pointer-events:none}
+  .score-clear{
+    flex:0 0 auto;font-family:inherit;font-size:11.5px;font-weight:700;color:var(--muted);
+    background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:7px 9px;cursor:pointer;
+  }
+  .band-filters{margin-top:10px}
+  .score-sum{margin:9px 0 0;font-size:12px;color:var(--text-body);line-height:1.6}
+  .score-sum b{color:var(--text)}
+  .score-sum .pill{display:inline-block;margin:2px 4px 0 0;padding:2px 7px;border-radius:999px;font-size:11px;font-weight:700;border:1px solid var(--line)}
+  .score-note{
+    margin:9px 0 0;font-size:11px;line-height:1.62;color:var(--muted);
+    border-top:1px dashed var(--line);padding-top:8px;
+  }
+  .score-note b{color:var(--text-body)}
+
   /* ── controls ── */
-  .controls{position:sticky;top:57px;z-index:15;padding:10px 0 12px;background:linear-gradient(180deg,rgba(13,27,42,.94),rgba(13,27,42,.72) 70%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .controls{position:sticky;top:53px;z-index:15;padding:10px 0 12px;background:var(--controls-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
   .search{position:relative}
-  .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#7d90a6;pointer-events:none}
+  .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--dim);pointer-events:none}
   .search input{
     width:100%;padding:13px 40px 13px 40px;
     font-size:15px;font-family:inherit;color:var(--text);
-    background:rgba(255,255,255,.055);
+    background:var(--surface);
     border:1px solid var(--line);border-radius:14px;outline:none;
     transition:border-color .18s,background .18s;
   }
-  .search input::placeholder{color:#8295aa}
-  .search input:focus{border-color:rgba(56,189,248,.65);background:rgba(255,255,255,.08)}
+  .search input::placeholder{color:var(--dim)}
+  .search input:focus{border-color:var(--accent-line);background:var(--surface-strong)}
   .search .clear{
     position:absolute;right:8px;top:50%;transform:translateY(-50%);
     width:26px;height:26px;border:0;border-radius:50%;display:none;place-items:center;
-    background:rgba(255,255,255,.12);color:#cfdcea;font-size:14px;cursor:pointer;
+    background:var(--surface-strong);color:var(--text-body);font-size:14px;cursor:pointer;
   }
   .search .clear.show{display:grid}
   .filters{display:flex;gap:7px;margin-top:9px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
   .filters::-webkit-scrollbar{display:none}
   .chip{
     flex:0 0 auto;font-family:inherit;font-size:13px;font-weight:600;
-    color:var(--muted);background:rgba(255,255,255,.045);
+    color:var(--muted);background:var(--surface);
     border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;
     transition:all .16s;
   }
   .chip:active{transform:scale(.97)}
-  .chip[aria-pressed="true"]{color:#0D1B2A;background:var(--sky);border-color:transparent;box-shadow:0 4px 14px rgba(56,189,248,.28)}
-  .count{margin:2px 2px 12px;font-size:12px;color:#8295aa}
-  .count-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 2px 12px}
+  .chip[aria-pressed="true"]{color:var(--on-accent);background:var(--sky);border-color:transparent;box-shadow:0 4px 14px rgba(56,189,248,.28)}
+  .count{margin:2px 2px 12px;font-size:12px;color:var(--dim)}
+  .count-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 2px 10px}
   .count-row .count{margin:0}
   .sort{display:flex;gap:5px;flex:0 0 auto}
   .sort .chip{font-size:12px;padding:6px 11px;font-weight:600}
   .count b{color:var(--text)}
+  .result-note{margin:0 2px 12px;font-size:11px;line-height:1.6;color:var(--muted)}
+  .legend{margin:0 2px 12px;font-size:11px;line-height:1.6;color:var(--muted)}
+  .legend b{color:var(--text-body)}
 
   /* ── cards ── */
   main{padding-bottom:8px}
   .card{
     position:relative;overflow:hidden;
-    background:linear-gradient(168deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
-    border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--card-bg);
+    border:1px solid var(--card-border);border-radius:var(--radius);
     padding:16px 15px 14px;margin-bottom:13px;
-    box-shadow:0 10px 26px rgba(0,0,0,.20);
+    box-shadow:var(--shadow);
     animation:rise .32s ease both;
   }
   @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -140,7 +265,7 @@
     content:"";position:absolute;inset:0 0 auto 0;height:2px;
     background:linear-gradient(90deg,var(--sky),rgba(56,189,248,0) 62%);
   }
-  .card-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:11px}
+  .card-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:9px}
   .card-title{min-width:0}
   .card-title h2{margin:0;font-size:18px;font-weight:800;letter-spacing:-.45px;line-height:1.3}
   .card-title .campus{font-size:12.5px;color:var(--muted);margin-top:2px;display:block}
@@ -148,21 +273,47 @@
   .g{
     font-size:11px;font-weight:700;letter-spacing:.1px;
     padding:4px 7px;border-radius:7px;line-height:1;
-    border:1px solid rgba(255,255,255,.16);color:#dce8f4;background:rgba(255,255,255,.06);
+    border:1px solid var(--line-soft);color:var(--text-body);background:var(--surface);
   }
   .g.ga{color:#ffd9a8;border-color:rgba(233,196,106,.55);background:rgba(233,196,106,.13)}
   .g.na{color:#bfe8ff;border-color:rgba(56,189,248,.55);background:rgba(56,189,248,.13)}
   .g.da{color:#c9f7d9;border-color:rgba(110,231,183,.5);background:rgba(110,231,183,.12)}
+  html[data-theme="light"] .g.ga{color:#8a5a00;border-color:rgba(180,83,9,.32);background:rgba(180,83,9,.09)}
+  html[data-theme="light"] .g.na{color:#075985;border-color:rgba(2,132,199,.30);background:rgba(2,132,199,.08)}
+  html[data-theme="light"] .g.da{color:#166534;border-color:rgba(22,163,74,.30);background:rgba(22,163,74,.08)}
+
+  /* 자격 배지 · 입결 컷 */
+  .cut{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    border:1px solid var(--line);background:var(--surface-soft);
+    border-radius:11px;padding:8px 10px;margin:0 0 11px;
+    font-size:11.5px;color:var(--muted);line-height:1.45;
+  }
+  .badge{
+    flex:0 0 auto;font-size:11px;font-weight:800;letter-spacing:-.1px;
+    padding:4px 8px;border-radius:7px;line-height:1;border:1px solid var(--b-none-bd);
+    background:var(--b-none-bg);color:var(--b-none-fg);
+  }
+  .badge.b-stable{background:var(--b-stable-bg);border-color:var(--b-stable-bd);color:var(--b-stable-fg)}
+  .badge.b-fit{background:var(--b-fit-bg);border-color:var(--b-fit-bd);color:var(--b-fit-fg)}
+  .badge.b-bold{background:var(--b-bold-bg);border-color:var(--b-bold-bd);color:var(--b-bold-fg)}
+  .badge.b-hard{background:var(--b-hard-bg);border-color:var(--b-hard-bd);color:var(--b-hard-fg)}
+  .badge.b-none{background:var(--b-none-bg);border-color:var(--b-none-bd);color:var(--b-none-fg)}
+  .cut-main{color:var(--text-body);font-weight:600}
+  .cut-main b{color:var(--text);font-weight:800}
+  .cut-sub{color:var(--muted);font-size:11px}
+  .cut-empty{color:var(--muted)}
+
   .facts{display:grid;gap:7px;margin-bottom:12px}
   .fact{display:grid;grid-template-columns:58px 1fr;gap:8px;font-size:13px;line-height:1.5}
-  .fact dt{color:#8295aa;font-size:12px;padding-top:1px}
-  .fact dd{margin:0;color:#e6eef7}
+  .fact dt{color:var(--dim);font-size:12px;padding-top:1px}
+  .fact dd{margin:0;color:var(--text-soft)}
   .fact dd.strong{font-weight:600}
   .fact dd small{display:block;color:var(--muted);font-size:11.5px;margin-top:1px}
   .summary{
     display:flex;gap:7px;align-items:flex-start;
-    font-size:12.5px;line-height:1.55;color:#cbdcec;
-    background:rgba(56,189,248,.075);border:1px solid rgba(56,189,248,.18);
+    font-size:12.5px;line-height:1.55;color:var(--text-body);
+    background:var(--accent-soft);border:1px solid var(--accent-line);
     border-radius:11px;padding:9px 10px;margin-bottom:12px;
   }
   .summary svg{width:14px;height:14px;flex:0 0 14px;margin-top:2px;color:var(--sky)}
@@ -171,26 +322,30 @@
     display:inline-flex;align-items:center;justify-content:center;gap:6px;
     font-size:12.5px;font-weight:700;letter-spacing:-.1px;
     padding:11px 8px;border-radius:11px;border:1px solid var(--line);
-    background:rgba(255,255,255,.06);color:#e6eef7;
+    background:var(--surface);color:var(--text-soft);
     transition:transform .12s,background .16s;
   }
   .btn:active{transform:scale(.975)}
   .btn svg{width:13px;height:13px;opacity:.9}
-  .btn.notice-link{background:rgba(56,189,248,.10);border-color:rgba(56,189,248,.30);color:#dcf1ff}
+  .btn.notice-link{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent-ink)}
   /* 요강 PDF가 없어 '입학처 공지' 단독인 카드: 카드 하단을 꽉 채우는 메인 버튼으로 */
   .actions.solo{grid-template-columns:1fr}
   .btn.notice-link.solo{
     grid-column:1/-1;min-height:48px;padding:14px 16px;gap:8px;
     font-size:13.5px;font-weight:800;
-    border-color:rgba(56,189,248,.48);
+    border-color:var(--accent-line);
     background:linear-gradient(135deg,rgba(56,189,248,.22),rgba(56,189,248,.07) 60%,rgba(233,196,106,.10));
-    color:#e6f7ff;
+    color:var(--accent-ink);
     box-shadow:0 6px 18px rgba(56,189,248,.13), inset 0 1px 0 rgba(255,255,255,.07);
     transition:transform .15s,background .18s,border-color .18s,box-shadow .18s;
   }
+  html[data-theme="light"] .btn.notice-link.solo{
+    background:linear-gradient(135deg,rgba(2,132,199,.12),rgba(2,132,199,.05) 60%,rgba(180,83,9,.07));
+    box-shadow:0 4px 12px rgba(2,132,199,.10), inset 0 1px 0 rgba(255,255,255,.6);
+  }
   .btn.notice-link.solo .ic{font-size:15px;line-height:1}
   .btn.notice-link.solo svg{width:15px;height:15px;opacity:1;color:var(--sky);margin-left:2px}
-  .btn.notice-link.solo:focus-visible{outline:2px solid rgba(56,189,248,.85);outline-offset:2px}
+  .btn.notice-link.solo:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   @media (hover:hover){
     .btn.notice-link.solo:hover{
       border-color:rgba(56,189,248,.78);transform:translateY(-1px);
@@ -198,14 +353,15 @@
       box-shadow:0 10px 24px rgba(56,189,248,.22), inset 0 1px 0 rgba(255,255,255,.10);
     }
   }
-  .btn.pdf{background:rgba(233,196,106,.14);border-color:rgba(233,196,106,.42);color:#ffe9bb}
-  .btn.shorts{grid-column:1/-1;background:rgba(56,189,248,.13);border-color:rgba(56,189,248,.40);color:#d3f0ff}
-  .btn.pending{grid-column:1/-1;background:rgba(255,255,255,.035);border-color:var(--line);color:#8fa3b8;font-weight:600;cursor:default}
+  .btn.pdf{background:rgba(233,196,106,.12);border-color:rgba(233,196,106,.38);color:var(--gold-ink)}
+  .btn.shorts{grid-column:1/-1;background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent-ink-2)}
+  .btn.pending{grid-column:1/-1;background:var(--surface-soft);border-color:var(--line);color:var(--muted);font-weight:600;cursor:default}
   .btn.pending svg{opacity:.6}
+  html[data-theme="light"] .btn.pdf{background:rgba(180,83,9,.07);border-color:rgba(180,83,9,.26);color:#8a5a00}
 
   .empty{
     text-align:center;color:var(--muted);font-size:13.5px;
-    border:1px dashed rgba(255,255,255,.16);border-radius:var(--radius);
+    border:1px dashed var(--line-soft);border-radius:var(--radius);
     padding:34px 18px;line-height:1.7;
   }
   .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:4px}
@@ -218,13 +374,13 @@
   }
   .notice h3{margin:0 0 7px;font-size:13px;font-weight:800;color:var(--gold);display:flex;align-items:center;gap:6px}
   .notice h3 svg{width:15px;height:15px}
-  .notice ul{margin:0;padding-left:16px;font-size:12.5px;line-height:1.72;color:#d8e2ee}
+  .notice ul{margin:0;padding-left:16px;font-size:12.5px;line-height:1.72;color:var(--text-body)}
   .notice li+li{margin-top:3px}
   .foot-links{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between}
-  .foot-links .copy{font-size:11.5px;color:#7d90a6;line-height:1.6}
+  .foot-links .copy{font-size:11.5px;color:var(--dim);line-height:1.6}
   .foot-ch{
     display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;
-    color:#d3f0ff;border:1px solid rgba(56,189,248,.32);background:rgba(56,189,248,.10);
+    color:var(--accent-ink-2);border:1px solid var(--accent-line);background:var(--accent-soft);
     padding:8px 12px;border-radius:999px;
   }
   .foot-ch svg{width:13px;height:13px}
@@ -235,11 +391,22 @@
   .dot:nth-child(3){animation-delay:.3s}
   @keyframes pulse{0%,100%{opacity:.25;transform:scale(.85)}50%{opacity:1;transform:scale(1)}}
 
+  @media (max-width:520px){
+    .ch-link span{display:none}
+    .ch-link{padding:8px}
+    .theme-switch button span{display:none}
+    .theme-switch button{padding:8px}
+  }
   @media (min-width:560px){
+    .score-row{grid-template-columns:auto 1fr auto}
+    .seg{grid-column:auto}
+    .score-input{grid-column:auto}
+    .score-clear{grid-column:auto}
     .hero h1{font-size:30px}
     .actions{grid-template-columns:auto auto 1fr}
     .btn.shorts{grid-column:auto}
     .btn{padding:11px 16px}
+    .theme-switch button span{display:inline}
   }
   @media (prefers-reduced-motion:reduce){
     .card{animation:none}
@@ -259,8 +426,19 @@
         <span>대학별 2027 정시모집요강</span>
       </span>
     </a>
-    <a class="ch-link" href="https://www.youtube.com/@jeongsihanip" target="_blank" rel="noopener">유튜브 채널
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+    <div class="theme-switch" role="group" aria-label="화면 테마 선택">
+      <button type="button" data-theme-set="light" aria-pressed="false" title="화이트 모드">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
+        <span>라이트</span>
+      </button>
+      <button type="button" data-theme-set="dark" aria-pressed="true" title="다크 모드">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.5 14.6A8.5 8.5 0 1 1 9.4 3.5a6.9 6.9 0 0 0 11.1 11.1Z"/></svg>
+        <span>다크</span>
+      </button>
+    </div>
+    <a class="ch-link" href="https://www.youtube.com/@jeongsihanip" target="_blank" rel="noopener" aria-label="정시한입 유튜브 채널">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.1 5 12 5 12 5s-6.1 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.9 2 12 2 12s0 3.1.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.9 19 12 19 12 19s6.1 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8C22 15.1 22 12 22 12s0-3.1-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg>
+      <span>유튜브</span>
     </a>
   </div>
 </header>
@@ -274,6 +452,33 @@
     <span class="stat">정시한입 <b>@jeongsihanip</b></span>
   </div>
 </div>
+
+<section class="wrap score-card" aria-labelledby="score-title">
+  <div class="score-head">
+    <h2 id="score-title">내 수능 성적으로 대학 추리기</h2>
+    <span class="score-tag">2026학년도 70% 컷</span>
+  </div>
+  <div class="score-row">
+    <div class="seg" role="group" aria-label="성적 입력 방식">
+      <button type="button" data-score-mode="pct" aria-pressed="true">평균 백분위</button>
+      <button type="button" data-score-mode="grade" aria-pressed="false">평균 등급</button>
+    </div>
+    <div class="score-input">
+      <input id="score" type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="예: 85" aria-label="내 수능 성적 입력" />
+      <span class="score-unit" id="score-unit">백분위</span>
+    </div>
+    <button type="button" class="score-clear" id="score-clear" hidden>초기화</button>
+  </div>
+  <div class="filters band-filters" id="band-filters" role="group" aria-label="지원 가능성 필터" hidden>
+    <button class="chip" type="button" data-band="전체" aria-pressed="true">전체</button>
+    <button class="chip" type="button" data-band="안정" aria-pressed="false">안정</button>
+    <button class="chip" type="button" data-band="적정" aria-pressed="false">적정</button>
+    <button class="chip" type="button" data-band="소신" aria-pressed="false">소신</button>
+    <button class="chip" type="button" data-band="어려움" aria-pressed="false">어려움</button>
+  </div>
+  <p class="score-sum" id="score-sum" hidden></p>
+  <p class="score-note">전년도 입결(대교협 ‘어디가’·대학 공개 70% 컷) 기준 <b>참고용 필터</b>입니다. 학과·반영비율·변환표준점수·수능최저에 따라 달라지므로, 정확한 지원 가능 여부는 반드시 각 대학 입학처 및 대입정보포털(어디가)에서 확인하세요.</p>
+</section>
 
 <div class="wrap controls">
   <div class="search">
@@ -297,6 +502,7 @@
 </div>
 
 <main class="wrap">
+  <p class="result-note" id="result-note">전년도 입결(대교협 ‘어디가’·대학 공개 70% 컷) 기준 참고용이며, 학과·반영비율·변환표준점수·수능최저에 따라 달라집니다. 정확한 지원 가능 여부는 각 대학 입학처 및 대입정보포털(어디가)에서 확인하세요.</p>
   <div class="count-row">
     <div class="count" id="count" hidden></div>
     <div class="sort" role="group" aria-label="정렬">
@@ -304,6 +510,7 @@
       <button class="chip" type="button" data-sort="가나다순" aria-pressed="false">가나다순</button>
     </div>
   </div>
+  <p class="legend" id="legend" hidden><b>안정</b> = 대학 상위 20% 모집단위 컷 이상 · <b>적정</b> = 중위 컷 이상 · <b>소신</b> = 대학 최저 컷 이상 · <b>어려움</b> = 최저 컷보다 낮음</p>
   <div id="list">
     <div class="loading"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>요강 목록 불러오는 중…</span></div>
   </div>
@@ -318,6 +525,7 @@
     <ul>
       <li>표시된 모집인원은 <b>수시 이월 인원 반영 전</b> 값입니다(대교협 전형시행계획·각 대학 2027 정시요강 기준). 최종 모집인원은 원서접수 직전 입학처 공지에서 다시 확인하세요.</li>
       <li>일정·전형방법은 각 대학 입학처의 <b>최종 확정 요강</b>이 기준입니다. 이 페이지는 원문 링크를 모아둔 안내용입니다.</li>
+      <li>입결 배지는 <b>2026학년도 최종등록자 70% 컷</b>을 대학 단위로 묶은 참고값입니다. 학과별·전형별 차이가 크고, 대학마다 반영비율이 달라 다른 대학과 직접 비교할 수 없습니다.</li>
       <li>모든 링크는 각 대학 입학처와 유튜브로 연결됩니다.</li>
     </ul>
   </div>
@@ -332,18 +540,62 @@
 
 <script>
 (function () {
-  var state = { items: [], q: "", group: "전체", region: "전체", sort: "추천순", ready: false };
+  var state = { items: [], cuts: {}, q: "", group: "전체", region: "전체", sort: "추천순", band: "전체", mode: "pct", score: null, ready: false };
   var listEl = document.getElementById("list");
   var countEl = document.getElementById("count");
   var qEl = document.getElementById("q");
   var clearEl = document.getElementById("clear");
+  var scoreEl = document.getElementById("score");
+  var scoreUnit = document.getElementById("score-unit");
+  var scoreClear = document.getElementById("score-clear");
+  var bandWrap = document.getElementById("band-filters");
+  var scoreSum = document.getElementById("score-sum");
+  var legendEl = document.getElementById("legend");
 
   var GROUP_CLASS = { "가군": "ga", "나군": "na", "다군": "da" };
+  // 수능 등급 → 평균 백분위 근사치 (등급 구분 백분위의 대표값)
+  var GRADE_PCT = [[1,96],[2,89],[3,77],[4,60],[5,40],[6,23],[7,11],[8,4],[9,0]];
+  var BAND_RANK = { "안정": 0, "적정": 1, "소신": 2, "어려움": 3, "미등록": 4 };
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
+  }
+  function gradeToPct(g) {
+    if (!isFinite(g)) return null;
+    if (g <= 1) return 100;
+    if (g >= 9) return 0;
+    for (var i = 0; i < GRADE_PCT.length - 1; i++) {
+      var a = GRADE_PCT[i], b = GRADE_PCT[i + 1];
+      if (g >= a[0] && g <= b[0]) {
+        var t = (g - a[0]) / (b[0] - a[0]);
+        return Math.round((a[1] + (b[1] - a[1]) * t) * 10) / 10;
+      }
+    }
+    return null;
+  }
+  function effectivePct() {
+    if (state.score == null) return null;
+    return state.mode === "pct" ? state.score : gradeToPct(state.score);
+  }
+  function cut(u) {
+    var c = state.cuts[u.id];
+    if (!c) return null;
+    return c.pct70 || (c.jungsi && c.jungsi.pct70) || null;
+  }
+  function bandOf(u) {
+    var p = effectivePct();
+    if (p == null) return null;
+    var c = cut(u);
+    if (!c) return "미등록";
+    if (p >= c.p80) return "안정";
+    if (p >= c.median) return "적정";
+    if (p >= c.min) return "소신";
+    return "어려움";
+  }
+  function bandClass(b) {
+    return b === "안정" ? "b-stable" : b === "적정" ? "b-fit" : b === "소신" ? "b-bold" : b === "어려움" ? "b-hard" : "b-none";
   }
 
   function haystack(u) {
@@ -357,14 +609,22 @@
       var okGroup = state.group === "전체" || (u.group || []).indexOf(state.group) !== -1;
       var okRegion = state.region === "전체" || u.region === state.region;
       var okQuery = !q || haystack(u).indexOf(q) !== -1;
-      return okGroup && okRegion && okQuery;
+      var b = bandOf(u);
+      var okBand = state.band === "전체" || b === state.band || (b === "미등록" && state.score != null && state.band !== "전체");
+      return okGroup && okRegion && okQuery && okBand;
     });
+    var p = effectivePct();
     if (state.sort === "가나다순") {
+      rows.sort(function (a, b) { return String(a.name || "").localeCompare(String(b.name || ""), "ko"); });
+    } else if (p != null) {
       rows.sort(function (a, b) {
-        return String(a.name || "").localeCompare(String(b.name || ""), "ko");
+        var ra = BAND_RANK[bandOf(a)] || 0, rb = BAND_RANK[bandOf(b)] || 0;
+        if (ra !== rb) return ra - rb;
+        var ca = cut(a), cb = cut(b);
+        var da = ca ? Math.abs(ca.median - p) : 999, db = cb ? Math.abs(cb.median - p) : 999;
+        return da - db;
       });
     } else if (q) {
-      // 대학명이 검색어와 맞는 항목을 먼저 보여줌 (예: '서울' → 서울대학교가 건국대 서울캠퍼스보다 위)
       rows.sort(function (a, b) {
         var an = String(a.name || "").toLowerCase().indexOf(q) !== -1 ? 0 : 1;
         var bn = String(b.name || "").toLowerCase().indexOf(q) !== -1 ? 0 : 1;
@@ -376,6 +636,21 @@
 
   function extIcon() {
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>';
+  }
+
+  function cutBlock(u) {
+    var b = bandOf(u);
+    var c = cut(u);
+    if (!c) {
+      return '<div class="cut">' +
+        (b ? '<span class="badge b-none">입결 데이터 미등록</span>' : '') +
+        '<span class="cut-empty">' + (b ? "직접 확인" : "2026학년도 정시 70% 컷 미공개") + "</span></div>";
+    }
+    var badge = b ? '<span class="badge ' + bandClass(b) + '">' + esc(b) + "</span>" : "";
+    return '<div class="cut">' + badge +
+      '<span class="cut-main">2026 정시 70% 컷 중위 <b>' + c.median + "</b> 백분위</span>" +
+      '<span class="cut-sub">공개 모집단위 ' + c.min + "~" + c.max + " · " + c.n + "개</span>" +
+      "</div>";
   }
 
   function card(u) {
@@ -400,6 +675,7 @@
           "</div>" +
           '<div class="groups">' + groups + "</div>" +
         "</div>" +
+        cutBlock(u) +
         '<dl class="facts">' +
           (u.quota ? '<div class="fact"><dt>모집인원</dt><dd>' + esc(u.quota) + "</dd></div>" : "") +
           (u.schedule ? '<div class="fact"><dt>원서접수</dt><dd class="strong">' + esc(u.schedule) + "</dd></div>" : "") +
@@ -411,20 +687,52 @@
       "</article>";
   }
 
+  function bandCounts() {
+    var n = { "안정": 0, "적정": 0, "소신": 0, "어려움": 0, "미등록": 0 };
+    state.items.forEach(function (u) { var b = bandOf(u); if (b) n[b]++; });
+    return n;
+  }
+
+  function updateScoreUI() {
+    var p = effectivePct();
+    if (state.score == null) {
+      bandWrap.hidden = true; scoreSum.hidden = true; legendEl.hidden = true; scoreClear.hidden = true;
+      state.band = "전체";
+      Array.prototype.forEach.call(bandWrap.querySelectorAll(".chip"), function (c) {
+        c.setAttribute("aria-pressed", String(c.dataset.band === "전체"));
+      });
+      return;
+    }
+    bandWrap.hidden = false; scoreSum.hidden = false; legendEl.hidden = false; scoreClear.hidden = false;
+    var n = bandCounts();
+    var label = state.mode === "pct"
+      ? "평균 백분위 <b>" + state.score + "</b>"
+      : "평균 <b>" + state.score + "등급</b> (백분위 약 " + p + ")";
+    scoreSum.innerHTML = label + " 기준 · " +
+      '<span class="pill" style="color:var(--b-stable-fg);border-color:var(--b-stable-bd);background:var(--b-stable-bg)">안정 ' + n["안정"] + "</span>" +
+      '<span class="pill" style="color:var(--b-fit-fg);border-color:var(--b-fit-bd);background:var(--b-fit-bg)">적정 ' + n["적정"] + "</span>" +
+      '<span class="pill" style="color:var(--b-bold-fg);border-color:var(--b-bold-bd);background:var(--b-bold-bg)">소신 ' + n["소신"] + "</span>" +
+      '<span class="pill" style="color:var(--b-hard-fg);border-color:var(--b-hard-bd);background:var(--b-hard-bg)">어려움 ' + n["어려움"] + "</span>" +
+      '<span class="pill">입결 미등록 ' + n["미등록"] + "</span>";
+  }
+
   function render() {
     if (!state.ready) return;
     var rows = filtered();
+    var p = effectivePct();
     countEl.hidden = false;
     countEl.innerHTML = "총 <b>" + rows.length + "</b>곳" +
       (state.group === "전체" ? "" : " · " + esc(state.group)) +
       (state.region === "전체" ? "" : " · " + esc(state.region)) +
-      (state.q.trim() ? " · ‘" + esc(state.q.trim()) + "’ 검색" : "");
+      (state.band === "전체" ? "" : " · " + esc(state.band)) +
+      (state.q.trim() ? " · ‘" + esc(state.q.trim()) + "’ 검색" : "") +
+      (p != null && state.band !== "전체" ? ' <span style="color:var(--muted)">(입결 미등록 대학은 하단에 별도 표시)</span>' : "");
 
     if (!rows.length) {
       listEl.innerHTML = '<div class="empty"><b>해당하는 대학이 없어요</b>' +
         (state.q.trim()
           ? "다른 대학명이나 키워드로 검색해 보세요.<br>새 대학은 쇼츠가 올라오면 계속 추가됩니다."
-          : "이 모집군으로 등록된 대학이 아직 없습니다.") + "</div>";
+          : (p != null ? "성적을 조금 낮추거나 다른 구간을 선택해 보세요.<br>입결이 공개되지 않은 대학은 ‘입결 데이터 미등록’으로 표시됩니다." : "이 모집군으로 등록된 대학이 아직 없습니다.")) + "</div>";
       return;
     }
     listEl.innerHTML = rows.map(card).join("");
@@ -446,6 +754,44 @@
   wireChips("group", function (v) { state.group = v; });
   wireChips("region", function (v) { state.region = v; });
   wireChips("sort", function (v) { state.sort = v; });
+  wireChips("band", function (v) { state.band = v; });
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-score-mode]"), function (btn) {
+    btn.addEventListener("click", function () {
+      state.mode = btn.dataset.scoreMode;
+      Array.prototype.forEach.call(document.querySelectorAll("[data-score-mode]"), function (b) {
+        b.setAttribute("aria-pressed", String(b === btn));
+      });
+      if (state.mode === "pct") {
+        scoreEl.max = "100"; scoreEl.min = "0"; scoreEl.placeholder = "예: 85"; scoreUnit.textContent = "백분위";
+      } else {
+        scoreEl.max = "9"; scoreEl.min = "1"; scoreEl.placeholder = "예: 2.5"; scoreUnit.textContent = "등급";
+      }
+      var v = parseFloat(scoreEl.value);
+      state.score = isFinite(v) && v > 0 ? v : null;
+      if (state.mode === "grade" && state.score != null && state.score > 9) { state.score = null; scoreEl.value = ""; }
+      if (state.mode === "pct" && state.score != null && state.score > 100) { state.score = null; scoreEl.value = ""; }
+      updateScoreUI(); render();
+    });
+  });
+
+  var st = null;
+  scoreEl.addEventListener("input", function () {
+    clearTimeout(st);
+    st = setTimeout(function () {
+      var v = parseFloat(scoreEl.value);
+      if (!isFinite(v) || v <= 0) state.score = null;
+      else state.score = state.mode === "pct" ? Math.min(v, 100) : Math.min(v, 9);
+      updateScoreUI(); render();
+    }, 120);
+  });
+  scoreClear.addEventListener("click", function () {
+    scoreEl.value = ""; state.score = null; state.band = "전체";
+    Array.prototype.forEach.call(bandWrap.querySelectorAll(".chip"), function (c) {
+      c.setAttribute("aria-pressed", String(c.dataset.band === "전체"));
+    });
+    updateScoreUI(); render(); scoreEl.focus();
+  });
 
   var t = null;
   qEl.addEventListener("input", function () {
@@ -461,23 +807,46 @@
     if (e.key === "Escape") { qEl.value = ""; state.q = ""; clearEl.classList.remove("show"); render(); }
   });
 
-  fetch("data/universities.json", { cache: "no-cache" })
-    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-    .then(function (data) {
-      state.items = (data.universities || []).slice();
-      state.ready = true;
-      document.getElementById("stat-count").textContent = state.items.length;
-      if (data.updated) {
-        var d = String(data.updated).split("-");
-        document.getElementById("stat-updated").textContent =
-          d.length === 3 ? d[0] + "." + Number(d[1]) + "." + Number(d[2]) : data.updated;
-      }
-      render();
-    })
-    .catch(function () {
-      listEl.innerHTML = '<div class="empty"><b>목록을 불러오지 못했어요</b>' +
-        "잠시 후 새로고침해 주세요. 계속 안 되면 정시한입 채널에 알려 주세요.</div>";
+  // ── 테마 ──
+  var THEME_KEY = "jeongsihanip-theme";
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    Array.prototype.forEach.call(document.querySelectorAll("[data-theme-set]"), function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.themeSet === theme));
     });
+    var m = document.getElementById("meta-theme");
+    if (m) m.setAttribute("content", theme === "light" ? "#f8fafc" : "#0D1B2A");
+  }
+  var savedTheme = null;
+  try { savedTheme = localStorage.getItem(THEME_KEY); } catch (e) {}
+  applyTheme(savedTheme === "light" ? "light" : "dark");
+  Array.prototype.forEach.call(document.querySelectorAll("[data-theme-set]"), function (b) {
+    b.addEventListener("click", function () {
+      var theme = b.dataset.themeSet;
+      applyTheme(theme);
+      try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
+    });
+  });
+
+  Promise.all([
+    fetch("data/universities.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+    fetch("data/cutoffs.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : { universities: {} }; }).catch(function () { return { universities: {} }; })
+  ]).then(function (res) {
+    var data = res[0], cuts = res[1];
+    state.items = (data.universities || []).slice();
+    state.cuts = (cuts && cuts.universities) || {};
+    state.ready = true;
+    document.getElementById("stat-count").textContent = state.items.length;
+    if (data.updated) {
+      var d = String(data.updated).split("-");
+      document.getElementById("stat-updated").textContent =
+        d.length === 3 ? d[0] + "." + Number(d[1]) + "." + Number(d[2]) : data.updated;
+    }
+    render();
+  }).catch(function () {
+    listEl.innerHTML = '<div class="empty"><b>목록을 불러오지 못했어요</b>' +
+      "잠시 후 새로고침해 주세요. 계속 안 되면 정시한입 채널에 알려 주세요.</div>";
+  });
 })();
 </script>
 </body>
