@@ -147,8 +147,23 @@
   .brand{display:flex;align-items:center;gap:10px;min-width:0}
   .brand .mark{width:32px;height:32px;flex:0 0 32px;border-radius:10px;display:grid;place-items:center;background:var(--surface);border:1px solid rgba(56,189,248,.35)}
   .brand .mark svg{width:19px;height:19px;display:block}
-  .brand b{font-size:16px;letter-spacing:-.2px;display:block;line-height:1.15}
-  .brand span{font-size:11px;color:var(--muted);display:block;line-height:1.2}
+  .brand b{font-size:16px;letter-spacing:-.2px;display:block;line-height:1.15;white-space:nowrap}
+  .brand span{font-size:11px;color:var(--muted);display:block;line-height:1.2;white-space:nowrap}
+  /* 정시 | 수시 전환 탭 */
+  .site-switch{
+    flex:0 0 auto;display:inline-flex;align-items:center;gap:1px;padding:3px;
+    background:transparent;border:1px solid var(--line);border-radius:999px;
+  }
+  .site-switch .ss-item{
+    display:inline-flex;align-items:center;justify-content:center;
+    font-size:11.5px;font-weight:800;line-height:1;letter-spacing:-.1px;
+    padding:8px 9px;border-radius:999px;color:var(--muted);
+    transition:background .16s,color .16s;
+  }
+  .site-switch a.ss-item:hover{color:var(--text);background:rgba(148,163,184,.16)}
+  html[data-theme="light"] .site-switch a.ss-item:hover{background:rgba(15,23,42,.07);color:var(--text)}
+  .site-switch .ss-item.is-on{background:rgba(56,189,248,.18);color:#d3efff}
+  html[data-theme="light"] .site-switch .ss-item.is-on{background:rgba(2,132,199,.10);color:#0369a1}
   .theme-switch{
     margin-left:auto;flex:0 0 auto;display:inline-flex;gap:2px;padding:3px;
     background:var(--switch-bg);border:1px solid var(--line);border-radius:999px;
@@ -514,10 +529,14 @@
     .ch-link{padding:9px;border-radius:50%}
     .theme-switch button span{display:none}
     .theme-switch button{padding:8px}
+    .top-in{gap:8px}
+    .brand span{font-size:10.5px}
+    .site-switch{padding:2px}
+    .site-switch .ss-item{padding:8px;font-size:11px}
   }
   @media (max-width:380px){
     :root{--pad:15px}
-    .brand span span{font-size:10px}
+    .brand span span{display:none}
     .score-card{padding:15px 13px 14px}
     .subj-row{grid-template-columns:48px minmax(0,1fr) minmax(0,1fr);padding:10px;gap:8px}
   }
@@ -552,6 +571,10 @@
         <span>대학별 2027 정시모집요강</span>
       </span>
     </a>
+    <nav class="site-switch" aria-label="모집 시기 전환">
+      <span class="ss-item ss-jeongsi is-on" aria-current="page">정시</span>
+      <a class="ss-item ss-susi" href="https://susihanip.github.io/" aria-label="수시한입(수시모집) 사이트로 이동">수시</a>
+    </nav>
     <div class="theme-switch" role="group" aria-label="화면 테마 선택">
       <button type="button" data-theme-set="light" aria-pressed="false" title="화이트 모드">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
