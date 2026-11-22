@@ -992,808 +992,808 @@
    "pdfUrl": "",
    "shortsUrl": ""
   },
- {
-  "id": "kongju",
-  "name": "국립공주대학교",
-  "campus": "공주·천안·예산캠퍼스",
-  "group": [
-   "가군",
-   "나군"
-  ],
-  "quota": "정시 188명 · 2027학년도 총 3,254명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 18:00",
-  "summary": "가군 수능 일반 116 · 나군 자율전공 72 · 성인학습자Ⅱ 40(정원외) | 예체능은 수능+실기 병합(실기 30~50%)",
-  "noticeUrl": "https://ipsi.kongju.ac.kr/kor/57/pdfViewer/CAT074",
-  "pdfUrl": "https://ipsi.kongju.ac.kr/attach/ae9e148b537c9d206be6035c869e451d/9a9db098b587ee18b321c826f3707a49",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "kunsan",
-  "name": "국립군산대학교",
-  "campus": "군산캠퍼스",
-  "group": [
-   "가군",
-   "다군"
-  ],
-  "quota": "정시 59명 · 2027학년도 총 1,875명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 20:00",
-  "summary": "수능위주 일반 42명(정원내) + 정원외 17명 | 수시 이월 인원은 12월 최종요강 반영",
-  "noticeUrl": "https://www.kunsan.ac.kr/iphak/index.kunsan?menuCd=DOM_000001213002000000",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "kumoh",
-  "name": "국립금오공과대학교",
-  "campus": "구미캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 243명 · 2027학년도 총 1,368명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 19:00",
-  "summary": "컴퓨터공학부(나군) 15 · 인공지능공학전공(가군) 5 · AX융합학과(다군) 10 | 수능 100%, 미적분·기하 15% 가산",
-  "noticeUrl": "https://iphak.kumoh.ac.kr/ipsi/sub0201.do",
-  "pdfUrl": "https://iphak.kumoh.ac.kr/cms/fileOpen.do?path=%2F_res%2Fipsi%2Fetc%2F2027jungsi_mozip.pdf",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "mokpo",
-  "name": "국립목포대학교",
-  "campus": "목포캠퍼스",
-  "group": [
-   "가군",
-   "다군"
-  ],
-  "quota": "정시 68명 · 2027학년도 총 1,560명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 20:00",
-  "summary": "수능위주 일반 64 · 지역인재 3 | 약학과 수학·과탐 필수, 수시 미충원은 정시로 이월",
-  "noticeUrl": "https://www.mokpo.ac.kr/ipsi/798/subview.do",
-  "pdfUrl": "https://www.mokpo.ac.kr/sites/ipsi/atchmnfl/ipsiPdfView/25/temp_1789116425265100.pdf",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "mmu",
-  "name": "국립목포해양대학교",
-  "campus": "목포캠퍼스",
-  "group": [
-   "가군"
-  ],
-  "quota": "정시 60명 · 2027학년도 총 782명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 중심 | 해사대학 계열별 수능최저 2개 영역 합 9~10등급",
-  "noticeUrl": "https://www.mmu.ac.kr/admission/contents/lastRegular",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "sunchon",
-  "name": "국립순천대학교",
-  "campus": "순천캠퍼스",
-  "group": [
-   "가군",
-   "다군"
-  ],
-  "quota": "정시 38명 · 2027학년도 총 1,718명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 38명(정원내) + 정원외 18명 | 수시 이월 반영 전",
-  "noticeUrl": "https://www.scnu.ac.kr/iphak/na/ntt/selectNttInfo.do?nttSn=281319433",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "gyeongguk",
-  "name": "국립경국대학교",
-  "campus": "안동캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 20명 · 2027학년도 총 1,665명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 21:00",
-  "summary": "가·나·다군 수능위주 | 수시 이월 인원은 12.31 공지",
-  "noticeUrl": "https://ipsi.gknu.ac.kr/addon/pdfjs/web/viewer.html?file=/data/mojib/202609011002026a96240a094c5.pdf",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "changwon",
-  "name": "국립창원대학교",
-  "campus": "창원캠퍼스",
-  "group": [
-   "가군",
-   "다군"
-  ],
-  "quota": "정시 232명 · 2027학년도 총 1,922명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 214명(정원내) + 정원외 17명 | 수시 이월 반영 전",
-  "noticeUrl": "https://www.changwon.ac.kr/ipsi/cm/cntnts/cntntsView.do?mi=4171&cntntsId=7184",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "hanbat",
-  "name": "국립한밭대학교",
-  "campus": "대전캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 99명 · 2027학년도 총 2,105명 중",
-  "schedule": "2027. 1. 4.(월) 10:00 ~ 1. 7.(목) 18:00",
-  "summary": "수능위주 99명 | 수시 이월 인원 반영 전",
-  "noticeUrl": "https://www.hanbat.ac.kr/bbs/BBSMSTR_000000000138/list.do?mno=sub02_03&kind=notice2",
-  "pdfUrl": "https://www.hanbat.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000199564Pi8&fileSn=0",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "knut",
-  "name": "국립한국교통대학교",
-  "campus": "충주·증평캠퍼스",
-  "group": [
-   "가군",
-   "다군"
-  ],
-  "quota": "정시 175명 · 2027학년도 총 2,161명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "가군·다군 분할모집(수능위주 일반) | 2027학년도 입학생부터 등록금 전액 지원 (입학처 사이트 접속 불가 → 대입정보포털 링크)",
-  "noticeUrl": "https://www.adiga.kr/ucp/uvt/uni/univDetail.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000034",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "gwnu",
-  "name": "국립강릉원주대학교",
-  "campus": "강릉·원주캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 92명 · 2027학년도 총 1,829명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 중심(강릉·원주 캠퍼스) | 수시 이월 반영 전",
-  "noticeUrl": "https://dor.gwnu.ac.kr/iphak/7603/subview.do",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "hknu",
-  "name": "한경국립대학교",
-  "campus": "안성캠퍼스",
-  "group": [
-   "다군"
-  ],
-  "quota": "정시 282명 · 2027학년도 총 1,436명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 중심 | 안성캠퍼스, 수시 이월 반영 전",
-  "noticeUrl": "https://ipsi.hknu.ac.kr/mojib/mojib.php?m_type=JEONGSI",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "수도권"
- },
- {
-  "id": "koreatech",
-  "name": "한국기술교육대학교",
-  "campus": "천안캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 150명 · 2027학년도 총 936명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 150명 | 정시 모집요강 2026.8.31 공지",
-  "noticeUrl": "https://www.koreatech.ac.kr/board.es?bid=0036&cg_code=0500000000&mid=a40601000000",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "kentech",
-  "name": "한국에너지공과대학교",
-  "campus": "나주캠퍼스",
-  "group": [],
-  "quota": "학부 모집인원은 입학처 모집안내 참조 (2027 시행계획 미수록)",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "이공계 특수목적대학(나주) | 2027학년도 학부 모집안내·모집요강 공개",
-  "noticeUrl": "https://admission.kentech.ac.kr/ipsi",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "tue",
-  "name": "한국공학대학교",
-  "campus": "시흥캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 505명 · 2027학년도 총 1,680명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 505명 | 시흥캠퍼스, 정시 모집요강 입학처 게시",
-  "noticeUrl": "https://iphak.tukorea.ac.kr/jungsi/guide.htm?bbsid=guide&ctg_cd=jungsi",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "수도권"
- },
- {
-  "id": "knsu",
-  "name": "한국체육대학교",
-  "campus": "서울캠퍼스",
-  "group": [
-   "가군"
-  ],
-  "quota": "모집인원은 입학처 모집요강 참조 (2027 시행계획 미수록)",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "체육특기자·수능위주 | 2027 수시모집요강 변경 알림(실기고사 일정) 공지",
-  "noticeUrl": "https://ape.knsu.ac.kr/ipsi/rolling/application.do",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "서울"
- },
- {
-  "id": "karts",
-  "name": "한국예술종합학교",
-  "campus": "서울 석관동",
-  "group": [],
-  "quota": "예술사과정 정원내·정원외 별도 공고 (2027 시행계획 미수록)",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수시·정시 구분 없이 연중 전형 | 예술사과정 실기 중심, 2027 요강 2026.4.7 공지",
-  "noticeUrl": "https://karts.ac.kr/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000007&ctgryId=BBSCTG_0001020200000&noticeAt=Y&nttNo=69907",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "서울"
- },
- {
-  "id": "snue",
-  "name": "서울교육대학교",
-  "campus": "서울캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 108명 · 2027학년도 총 353명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 108명 + 자율화 10명 | 정시 모집요강 입학처 게시",
-  "noticeUrl": "https://admission.snue.ac.kr/admission/main.do",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "서울"
- },
- {
-  "id": "ginue",
-  "name": "경인교육대학교",
-  "campus": "인천·안양캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 179명 · 2027학년도 총 584명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 179명 + 자율화 3명 | 정시 모집요강(2027) 입학본부 게시",
-  "noticeUrl": "https://ipsi.ginue.ac.kr/ipsi/CMS/Board/Board.do?mCode=MN023&mode=view&board_seq=47239",
-  "pdfUrl": "https://ipsi.ginue.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Qm9hcmQsNzgyMTQsWQ==",
-  "shortsUrl": "",
-  "region": "수도권"
- },
- {
-  "id": "gjue",
-  "name": "공주교육대학교",
-  "campus": "공주캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 159명 · 2027학년도 총 341명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "1단계 수능 100%(2배수) → 수능 500+면접 100 | 농어촌·기회균형·장애인은 수시 미충원 시 선발",
-  "noticeUrl": "https://www.gjue.ac.kr/ipsi/216/pdfViewer/CAT241",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "gjnue",
-  "name": "광주교육대학교",
-  "campus": "광주캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 53명 · 2027학년도 총 335명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 18:00",
-  "summary": "수능위주 일반전형 53명(정원내) | 수능 100%(1,000점), 한국사 가산",
-  "noticeUrl": "https://www.gnue.ac.kr/",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "dnue",
-  "name": "대구교육대학교",
-  "campus": "대구캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 62명 · 2027학년도 총 402명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 62명 + 자율화 30명 | 정시 모집요강 입학안내 게시",
-  "noticeUrl": "http://admission.dnue.ac.kr/ipsi/CMS/Board/Board.do?mCode=MN023",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "bnue",
-  "name": "부산교육대학교",
-  "campus": "부산캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 122명 · 2027학년도 총 344명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 122명 | 정시 모집요강 입학 홈페이지 게시",
-  "noticeUrl": "https://enter.bnue.ac.kr/menu/jungsi",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "jnue",
-  "name": "전주교육대학교",
-  "campus": "전주캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 79명 · 2027학년도 총 274명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 17:00",
-  "summary": "일반학생 79명 | 1단계 수능 100%(200%) → 수능 90+면접 10, 수능최저 미적용",
-  "noticeUrl": "https://www.jnue.ac.kr/",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "cue",
-  "name": "진주교육대학교",
-  "campus": "진주캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 102명 · 2027학년도 총 330명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 18:00",
-  "summary": "수능 100%(800점), 면접 없음 | 국·수·영·탐 각 25%",
-  "noticeUrl": "https://www.cue.ac.kr/enter/CMS/Contents/Contents.do?mCode=MN018",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "cjue",
-  "name": "청주교육대학교",
-  "campus": "청주캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 68명 · 2027학년도 총 277명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 68명 | 정시 모집요강 입학 홈페이지 게시",
-  "noticeUrl": "https://www.cje.ac.kr/ipsi/web/board/brdList.do?menu_cd=000049",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "cnue",
-  "name": "춘천교육대학교",
-  "campus": "춘천캠퍼스",
-  "group": [
-   "나군"
-  ],
-  "quota": "정시 120명 · 2027학년도 총 304명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 120명 | 2027학년도 정시 모집요강 2026.8.28 공고",
-  "noticeUrl": "https://www.cnue.ac.kr/enter/communication/notice.do?articleNo=41715&mode=view",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "hallym",
-  "name": "한림대학교",
-  "campus": "춘천캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 351명 · 2027학년도 총 1,953명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 351명 | 2027 정시 모집요강 배포용 게시",
-  "noticeUrl": "https://www.hallym.ac.kr/admission/6047/subview.do",
-  "pdfUrl": "https://www.hallym.ac.kr/pdfView/admission/18/144/fileDownload.do",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "sch",
-  "name": "순천향대학교",
-  "campus": "아산캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 563명 · 2027학년도 총 2,794명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "정시 563명 규모 · 수능 509 · 기타 54 / 수시 이월 인원 반영 전",
-  "noticeUrl": "https://www.sch.ac.kr/",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "hoseo",
-  "name": "호서대학교",
-  "campus": "아산·천안캠퍼스",
-  "group": [
-   "가군",
-   "나군"
-  ],
-  "quota": "정시 293명 · 2027학년도 총 3,136명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 18:00",
-  "summary": "수능위주 293명 | 아산·천안캠퍼스",
-  "noticeUrl": "https://ipsi.hoseo.ac.kr/submenu.do?menuurl=69HsiUDd88Yz%2F6q8AbV4%2BA%3D%3D",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "baekseok",
-  "name": "백석대학교",
-  "campus": "천안캠퍼스",
-  "group": [
-   "가군",
-   "나군"
-  ],
-  "quota": "정시 165명 · 2027학년도 총 3,096명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 165명 | 천안캠퍼스, 2027 모집요강 게시",
-  "noticeUrl": "https://ipsi.bu.ac.kr/10000015",
-  "pdfUrl": "https://ipsi.bu.ac.kr/files/ipsi/content/202606/43de97b68b19e771a457ac79b17242ae.pdf",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "sunmoon",
-  "name": "선문대학교",
-  "campus": "아산캠퍼스",
-  "group": [
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 88명 · 2027학년도 총 2,299명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 88명 | 2027 정시 모집요강 11월 중순 탑재",
-  "noticeUrl": "https://ilove.sunmoon.ac.kr/",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "nsu",
-  "name": "남서울대학교",
-  "campus": "천안캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 161명 · 2027학년도 총 2,338명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 161명 | 천안캠퍼스",
-  "noticeUrl": "https://www.namseoul.net/submenu.do?menuurl=pNIJTWxI%2b8B8m%2bUBBAchHA%3d%3d&",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "cju",
-  "name": "청주대학교",
-  "campus": "청주캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 260명 · 2027학년도 총 2,818명 중",
-  "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 21:00",
-  "summary": "수능위주 260명 | 2027 정시모집요강(2026.09) 게시",
-  "noticeUrl": "https://www.cju.ac.kr/ipsi/contents.do?key=792",
-  "pdfUrl": "https://www.cju.ac.kr/DATA/download/ipsi/cts793_file_y2027_1102.pdf",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "hannam",
-  "name": "한남대학교",
-  "campus": "대전캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 145명 · 2027학년도 총 2,931명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 145명 + 자율화 10명 | 2027 정시 모집요강 페이지",
-  "noticeUrl": "https://www.hannam.ac.kr/2609-jungsi/",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "pcu",
-  "name": "배재대학교",
-  "campus": "대전캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 25명 · 2027학년도 총 1,957명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 25명(정원내) + 자율화 84명 | 대전캠퍼스",
-  "noticeUrl": "https://www.pcu.ac.kr/enter/18/pdfViewer/CAT006",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "mokwon",
-  "name": "목원대학교",
-  "campus": "대전캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 13명 · 2027학년도 총 1,993명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 13명(정원내) + 자율화 | 2027 정시 모집요강 안내(2026.8.31)",
-  "noticeUrl": "https://enter.mokwon.ac.kr/enter/",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "dju",
-  "name": "대전대학교",
-  "campus": "대전캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 46명 · 2027학년도 총 1,916명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 46명 | 2027 정시 모집요강 입학처 게시",
-  "noticeUrl": "https://ipsi.dju.ac.kr/enter/html/main/intro.asp",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "wsu",
-  "name": "우송대학교",
-  "campus": "대전캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 41명 · 2027학년도 총 2,148명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 41명 | 2027 정시 모집요강 PDF(팝업) 제공",
-  "noticeUrl": "https://ent.wsu.ac.kr/site/ent/popup/2027jungsi.pdf",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "konyang",
-  "name": "건양대학교",
-  "campus": "논산·대전캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 121명 · 2027학년도 총 1,776명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 121명(본교·제2캠퍼스 합) | 논산·대전캠퍼스 (입학처 사이트 접속 불가 → 대입정보포털 링크)",
-  "noticeUrl": "https://www.adiga.kr/ucp/uvt/uni/univDetail.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000054",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "daegu",
-  "name": "대구대학교",
-  "campus": "경산캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 75명 · 2027학년도 총 4,355명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 54명(정원내) + 자율화 115명 | 2027 정시 모집요강 게시",
-  "noticeUrl": "https://ipsi.daegu.ac.kr/kor/26/pdfViewer/CAT074",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "dcatholic",
-  "name": "대구가톨릭대학교",
-  "campus": "경산캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 132명 · 2027학년도 총 2,923명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 120명(정원내) + 자율화 260명 | 경산캠퍼스",
-  "noticeUrl": "https://ibsi.cu.ac.kr/kor/jungsi/doctrine/view.do",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "handong",
-  "name": "한동대학교",
-  "campus": "포항캠퍼스",
-  "group": [
-   "다군"
-  ],
-  "quota": "정시 30명 · 2027학년도 총 760명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 30명 | 포항캠퍼스, 정시 공지 게시",
-  "noticeUrl": "https://admissions.handong.edu/regular/notice/",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "deu",
-  "name": "동의대학교",
-  "campus": "부산캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 48명 · 2027학년도 총 4,038명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 48명(정원내) + 자율화 170명 | 부산캠퍼스",
-  "noticeUrl": "https://ipsi.deu.ac.kr/ipsi/",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "ks",
-  "name": "경성대학교",
-  "campus": "부산캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 193명 · 2027학년도 총 2,923명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 193명 | 부산캠퍼스",
-  "noticeUrl": "https://www.ks.ac.kr/ipsi/CMS/Contents/Contents.do?mCode=MN025",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "bufs",
-  "name": "부산외국어대학교",
-  "campus": "부산캠퍼스",
-  "group": [
-   "가군",
-   "나군"
-  ],
-  "quota": "정시 51명 · 2027학년도 총 1,589명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 51명(정원내) + 자율화 64명 | 부산캠퍼스",
-  "noticeUrl": "https://enter.bufs.ac.kr/",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "silla",
-  "name": "신라대학교",
-  "campus": "부산캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 41명 · 2027학년도 총 1,872명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 41명(정원내) + 자율화 142명 | 부산캠퍼스",
-  "noticeUrl": "https://ipsi.silla.ac.kr/ipsi/index.php?pCode=1779878804",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "inje",
-  "name": "인제대학교",
-  "campus": "김해캠퍼스",
-  "group": [
-   "가군",
-   "다군"
-  ],
-  "quota": "정시 143명 · 2027학년도 총 1,806명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 143명 | 김해캠퍼스",
-  "noticeUrl": "https://magazine.inje.ac.kr/inje_jungsi/1",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "kyungnam",
-  "name": "경남대학교",
-  "campus": "창원캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 14명 · 2027학년도 총 2,167명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 12명 + 자율화 120명 | 창원캠퍼스",
-  "noticeUrl": "https://ipsi.kyungnam.ac.kr/ipsi/6809/subview.do",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- },
- {
-  "id": "jeonju",
-  "name": "전주대학교",
-  "campus": "전주캠퍼스",
-  "group": [
-   "가군",
-   "나군",
-   "다군"
-  ],
-  "quota": "정시 89명 · 2027학년도 총 2,722명 중",
-  "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
-  "summary": "수능위주 89명(정원내) + 자율화 48명 | 전주캠퍼스",
-  "noticeUrl": "https://iphak.jj.ac.kr/iphak/regular/guidelines.do?mode=list&article.offset=0",
-  "pdfUrl": "",
-  "shortsUrl": "",
-  "region": "지방"
- }
+  {
+   "id": "kongju",
+   "name": "국립공주대학교",
+   "campus": "공주·천안·예산캠퍼스",
+   "group": [
+    "가군",
+    "나군"
+   ],
+   "quota": "정시 188명 · 2027학년도 총 3,254명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 18:00",
+   "summary": "가군 수능 일반 116 · 나군 자율전공 72 · 성인학습자Ⅱ 40(정원외) | 예체능은 수능+실기 병합(실기 30~50%)",
+   "noticeUrl": "https://ipsi.kongju.ac.kr/kor/57/pdfViewer/CAT074",
+   "pdfUrl": "https://ipsi.kongju.ac.kr/attach/ae9e148b537c9d206be6035c869e451d/9a9db098b587ee18b321c826f3707a49",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "kunsan",
+   "name": "국립군산대학교",
+   "campus": "군산캠퍼스",
+   "group": [
+    "가군",
+    "다군"
+   ],
+   "quota": "정시 59명 · 2027학년도 총 1,875명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 20:00",
+   "summary": "수능위주 일반 42명(정원내) + 정원외 17명 | 수시 이월 인원은 12월 최종요강 반영",
+   "noticeUrl": "https://www.kunsan.ac.kr/iphak/index.kunsan?menuCd=DOM_000001213002000000",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "kumoh",
+   "name": "국립금오공과대학교",
+   "campus": "구미캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 243명 · 2027학년도 총 1,368명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 19:00",
+   "summary": "컴퓨터공학부(나군) 15 · 인공지능공학전공(가군) 5 · AX융합학과(다군) 10 | 수능 100%, 미적분·기하 15% 가산",
+   "noticeUrl": "https://iphak.kumoh.ac.kr/ipsi/sub0201.do",
+   "pdfUrl": "https://iphak.kumoh.ac.kr/cms/fileOpen.do?path=%2F_res%2Fipsi%2Fetc%2F2027jungsi_mozip.pdf",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "mokpo",
+   "name": "국립목포대학교",
+   "campus": "목포캠퍼스",
+   "group": [
+    "가군",
+    "다군"
+   ],
+   "quota": "정시 68명 · 2027학년도 총 1,560명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 20:00",
+   "summary": "수능위주 일반 64 · 지역인재 3 | 약학과 수학·과탐 필수, 수시 미충원은 정시로 이월",
+   "noticeUrl": "https://www.mokpo.ac.kr/ipsi/798/subview.do",
+   "pdfUrl": "https://www.mokpo.ac.kr/sites/ipsi/atchmnfl/ipsiPdfView/25/temp_1789116425265100.pdf",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "mmu",
+   "name": "국립목포해양대학교",
+   "campus": "목포캠퍼스",
+   "group": [
+    "가군"
+   ],
+   "quota": "정시 60명 · 2027학년도 총 782명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 중심 | 해사대학 계열별 수능최저 2개 영역 합 9~10등급",
+   "noticeUrl": "https://www.mmu.ac.kr/admission/contents/lastRegular",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "sunchon",
+   "name": "국립순천대학교",
+   "campus": "순천캠퍼스",
+   "group": [
+    "가군",
+    "다군"
+   ],
+   "quota": "정시 38명 · 2027학년도 총 1,718명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 38명(정원내) + 전형기간 자율모집 18명 | 수시 이월 반영 전",
+   "noticeUrl": "https://www.scnu.ac.kr/iphak/na/ntt/selectNttInfo.do?nttSn=281319433",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "gyeongguk",
+   "name": "국립경국대학교",
+   "campus": "안동캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 20명 · 2027학년도 총 1,665명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 21:00",
+   "summary": "가·나·다군 수능위주 | 수시 이월 인원은 12.31 공지",
+   "noticeUrl": "https://ipsi.gknu.ac.kr/addon/pdfjs/web/viewer.html?file=/data/mojib/202609011002026a96240a094c5.pdf",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "changwon",
+   "name": "국립창원대학교",
+   "campus": "창원캠퍼스",
+   "group": [
+    "가군",
+    "다군"
+   ],
+   "quota": "정시 232명 · 2027학년도 총 1,922명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 214명(정원내) + 정원외 17명 | 수시 이월 반영 전",
+   "noticeUrl": "https://www.changwon.ac.kr/ipsi/cm/cntnts/cntntsView.do?mi=4171&cntntsId=7184",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "hanbat",
+   "name": "국립한밭대학교",
+   "campus": "대전캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 99명 · 2027학년도 총 2,105명 중",
+   "schedule": "2027. 1. 4.(월) 10:00 ~ 1. 7.(목) 18:00",
+   "summary": "수능위주 99명 | 수시 이월 인원 반영 전",
+   "noticeUrl": "https://www.hanbat.ac.kr/bbs/BBSMSTR_000000000138/list.do?mno=sub02_03&kind=notice2",
+   "pdfUrl": "https://www.hanbat.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000199564Pi8&fileSn=0",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "knut",
+   "name": "국립한국교통대학교",
+   "campus": "충주·증평캠퍼스",
+   "group": [
+    "가군",
+    "다군"
+   ],
+   "quota": "정시 175명 · 2027학년도 총 2,161명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "가군·다군 분할모집(수능위주 일반) | 2027학년도 입학생부터 등록금 전액 지원 (입학처 사이트 접속 불가 → 대입정보포털 링크)",
+   "noticeUrl": "https://www.adiga.kr/ucp/uvt/uni/univDetail.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000034",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "gwnu",
+   "name": "국립강릉원주대학교",
+   "campus": "강릉·원주캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 92명 · 2027학년도 총 1,829명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 중심(강릉·원주 캠퍼스) | 수시 이월 반영 전",
+   "noticeUrl": "https://dor.gwnu.ac.kr/iphak/7603/subview.do",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "hknu",
+   "name": "한경국립대학교",
+   "campus": "안성캠퍼스",
+   "group": [
+    "다군"
+   ],
+   "quota": "정시 282명 · 2027학년도 총 1,436명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 중심 | 안성캠퍼스, 수시 이월 반영 전",
+   "noticeUrl": "https://ipsi.hknu.ac.kr/mojib/mojib.php?m_type=JEONGSI",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "수도권"
+  },
+  {
+   "id": "koreatech",
+   "name": "한국기술교육대학교",
+   "campus": "천안캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 150명 · 2027학년도 총 936명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 150명 | 정시 모집요강 2026.8.31 공지",
+   "noticeUrl": "https://www.koreatech.ac.kr/board.es?bid=0036&cg_code=0500000000&mid=a40601000000",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "kentech",
+   "name": "한국에너지공과대학교",
+   "campus": "나주캠퍼스",
+   "group": [],
+   "quota": "학부 모집인원은 입학처 모집안내 참조 (2027 시행계획 미수록)",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "이공계 특수목적대학(나주) | 2027학년도 학부 모집안내·모집요강 공개",
+   "noticeUrl": "https://admission.kentech.ac.kr/ipsi",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "tue",
+   "name": "한국공학대학교",
+   "campus": "시흥캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 505명 · 2027학년도 총 1,680명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 505명 | 시흥캠퍼스, 정시 모집요강 입학처 게시",
+   "noticeUrl": "https://iphak.tukorea.ac.kr/jungsi/guide.htm?bbsid=guide&ctg_cd=jungsi",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "수도권"
+  },
+  {
+   "id": "knsu",
+   "name": "한국체육대학교",
+   "campus": "서울캠퍼스",
+   "group": [
+    "가군"
+   ],
+   "quota": "모집인원은 입학처 모집요강 참조 (2027 시행계획 미수록)",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "체육특기자·수능위주 | 2027 수시모집요강 변경 알림(실기고사 일정) 공지",
+   "noticeUrl": "https://ape.knsu.ac.kr/ipsi/rolling/application.do",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "서울"
+  },
+  {
+   "id": "karts",
+   "name": "한국예술종합학교",
+   "campus": "서울 석관동",
+   "group": [],
+   "quota": "예술사과정 정원내·정원외 별도 공고 (2027 시행계획 미수록)",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수시·정시 구분 없이 연중 전형 | 예술사과정 실기 중심, 2027 요강 2026.4.7 공지",
+   "noticeUrl": "https://karts.ac.kr/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000007&ctgryId=BBSCTG_0001020200000&noticeAt=Y&nttNo=69907",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "서울"
+  },
+  {
+   "id": "snue",
+   "name": "서울교육대학교",
+   "campus": "서울캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 108명 · 2027학년도 총 353명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 108명 + 자율화 10명 | 정시 모집요강 입학처 게시",
+   "noticeUrl": "https://admission.snue.ac.kr/admission/main.do",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "서울"
+  },
+  {
+   "id": "ginue",
+   "name": "경인교육대학교",
+   "campus": "인천·안양캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 179명 · 2027학년도 총 584명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 179명 + 자율화 3명 | 정시 모집요강(2027) 입학본부 게시",
+   "noticeUrl": "https://ipsi.ginue.ac.kr/ipsi/CMS/Board/Board.do?mCode=MN023&mode=view&board_seq=47239",
+   "pdfUrl": "https://ipsi.ginue.ac.kr/ipsi/ajx_json/UploadMgr/downloadRun.do?qcode=Qm9hcmQsNzgyMTQsWQ==",
+   "shortsUrl": "",
+   "region": "수도권"
+  },
+  {
+   "id": "gjue",
+   "name": "공주교육대학교",
+   "campus": "공주캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 159명 · 2027학년도 총 341명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "1단계 수능 100%(2배수) → 수능 500+면접 100 | 농어촌·기회균형·장애인은 수시 미충원 시 선발",
+   "noticeUrl": "https://www.gjue.ac.kr/ipsi/216/pdfViewer/CAT241",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "gjnue",
+   "name": "광주교육대학교",
+   "campus": "광주캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 53명 · 2027학년도 총 335명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 18:00",
+   "summary": "수능위주 일반전형 53명(정원내) | 수능 100%(1,000점), 한국사 가산",
+   "noticeUrl": "https://www.gnue.ac.kr/",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "dnue",
+   "name": "대구교육대학교",
+   "campus": "대구캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 62명 · 2027학년도 총 402명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 62명 + 자율화 30명 | 정시 모집요강 입학안내 게시",
+   "noticeUrl": "http://admission.dnue.ac.kr/ipsi/CMS/Board/Board.do?mCode=MN023",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "bnue",
+   "name": "부산교육대학교",
+   "campus": "부산캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 122명 · 2027학년도 총 344명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 122명 | 정시 모집요강 입학 홈페이지 게시",
+   "noticeUrl": "https://enter.bnue.ac.kr/menu/jungsi",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "jnue",
+   "name": "전주교육대학교",
+   "campus": "전주캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 79명 · 2027학년도 총 274명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 17:00",
+   "summary": "일반학생 79명 | 1단계 수능 100%(200%) → 수능 90+면접 10, 수능최저 미적용",
+   "noticeUrl": "https://www.jnue.ac.kr/",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "cue",
+   "name": "진주교육대학교",
+   "campus": "진주캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 102명 · 2027학년도 총 330명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 18:00",
+   "summary": "수능 100%(800점), 면접 없음 | 국·수·영·탐 각 25%",
+   "noticeUrl": "https://www.cue.ac.kr/enter/CMS/Contents/Contents.do?mCode=MN018",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "cjue",
+   "name": "청주교육대학교",
+   "campus": "청주캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 68명 · 2027학년도 총 277명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 68명 | 정시 모집요강 입학 홈페이지 게시",
+   "noticeUrl": "https://www.cje.ac.kr/ipsi/web/board/brdList.do?menu_cd=000049",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "cnue",
+   "name": "춘천교육대학교",
+   "campus": "춘천캠퍼스",
+   "group": [
+    "나군"
+   ],
+   "quota": "정시 120명 · 2027학년도 총 304명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 120명 | 2027학년도 정시 모집요강 2026.8.28 공고",
+   "noticeUrl": "https://www.cnue.ac.kr/enter/communication/notice.do?articleNo=41715&mode=view",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "hallym",
+   "name": "한림대학교",
+   "campus": "춘천캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 351명 · 2027학년도 총 1,953명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 351명 | 2027 정시 모집요강 배포용 게시",
+   "noticeUrl": "https://www.hallym.ac.kr/admission/6047/subview.do",
+   "pdfUrl": "https://www.hallym.ac.kr/pdfView/admission/18/144/fileDownload.do",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "sch",
+   "name": "순천향대학교",
+   "campus": "아산캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 563명 · 2027학년도 총 2,794명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "정시 563명 규모 · 수능 509 · 기타 54 / 수시 이월 인원 반영 전",
+   "noticeUrl": "https://www.sch.ac.kr/",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "hoseo",
+   "name": "호서대학교",
+   "campus": "아산·천안캠퍼스",
+   "group": [
+    "가군",
+    "나군"
+   ],
+   "quota": "정시 293명 · 2027학년도 총 3,136명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 18:00",
+   "summary": "수능위주 293명 | 아산·천안캠퍼스",
+   "noticeUrl": "https://ipsi.hoseo.ac.kr/submenu.do?menuurl=69HsiUDd88Yz%2F6q8AbV4%2BA%3D%3D",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "baekseok",
+   "name": "백석대학교",
+   "campus": "천안캠퍼스",
+   "group": [
+    "가군",
+    "나군"
+   ],
+   "quota": "정시 165명 · 2027학년도 총 3,096명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 165명 | 천안캠퍼스, 2027 모집요강 게시",
+   "noticeUrl": "https://ipsi.bu.ac.kr/10000015",
+   "pdfUrl": "https://ipsi.bu.ac.kr/files/ipsi/content/202606/43de97b68b19e771a457ac79b17242ae.pdf",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "sunmoon",
+   "name": "선문대학교",
+   "campus": "아산캠퍼스",
+   "group": [
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 88명 · 2027학년도 총 2,299명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 88명 | 2027 정시 모집요강 11월 중순 탑재",
+   "noticeUrl": "https://ilove.sunmoon.ac.kr/",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "nsu",
+   "name": "남서울대학교",
+   "campus": "천안캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 161명 · 2027학년도 총 2,338명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 161명 | 천안캠퍼스",
+   "noticeUrl": "https://www.namseoul.net/submenu.do?menuurl=pNIJTWxI%2b8B8m%2bUBBAchHA%3d%3d&",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "cju",
+   "name": "청주대학교",
+   "campus": "청주캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 260명 · 2027학년도 총 2,818명 중",
+   "schedule": "2027. 1. 4.(월) 09:00 ~ 1. 7.(목) 21:00",
+   "summary": "수능위주 260명 | 2027 정시모집요강(2026.09) 게시",
+   "noticeUrl": "https://www.cju.ac.kr/ipsi/contents.do?key=792",
+   "pdfUrl": "https://www.cju.ac.kr/DATA/download/ipsi/cts793_file_y2027_1102.pdf",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "hannam",
+   "name": "한남대학교",
+   "campus": "대전캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 145명 · 2027학년도 총 2,931명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 145명 + 자율화 10명 | 2027 정시 모집요강 페이지",
+   "noticeUrl": "https://www.hannam.ac.kr/2609-jungsi/",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "pcu",
+   "name": "배재대학교",
+   "campus": "대전캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 25명 · 2027학년도 총 1,957명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 25명(정원내) + 자율화 84명 | 대전캠퍼스",
+   "noticeUrl": "https://www.pcu.ac.kr/enter/18/pdfViewer/CAT006",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "mokwon",
+   "name": "목원대학교",
+   "campus": "대전캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 13명 · 2027학년도 총 1,993명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 13명(정원내) + 자율화 | 2027 정시 모집요강 안내(2026.8.31)",
+   "noticeUrl": "https://enter.mokwon.ac.kr/enter/",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "dju",
+   "name": "대전대학교",
+   "campus": "대전캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 46명 · 2027학년도 총 1,916명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 46명 | 2027 정시 모집요강 입학처 게시",
+   "noticeUrl": "https://ipsi.dju.ac.kr/enter/html/main/intro.asp",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "wsu",
+   "name": "우송대학교",
+   "campus": "대전캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 41명 · 2027학년도 총 2,148명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 41명 | 2027 정시 모집요강 PDF(팝업) 제공",
+   "noticeUrl": "https://ent.wsu.ac.kr/site/ent/popup/2027jungsi.pdf",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "konyang",
+   "name": "건양대학교",
+   "campus": "논산·대전캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 121명 · 2027학년도 총 1,776명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 121명(본교·제2캠퍼스 합) | 논산·대전캠퍼스 (입학처 사이트 접속 불가 → 대입정보포털 링크)",
+   "noticeUrl": "https://www.adiga.kr/ucp/uvt/uni/univDetail.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000054",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "daegu",
+   "name": "대구대학교",
+   "campus": "경산캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 75명 · 2027학년도 총 4,355명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 54명(정원내) + 자율화 115명 | 2027 정시 모집요강 게시",
+   "noticeUrl": "https://ipsi.daegu.ac.kr/kor/26/pdfViewer/CAT074",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "dcatholic",
+   "name": "대구가톨릭대학교",
+   "campus": "경산캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 132명 · 2027학년도 총 2,923명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 120명(정원내) + 자율화 260명 | 경산캠퍼스",
+   "noticeUrl": "https://ibsi.cu.ac.kr/kor/jungsi/doctrine/view.do",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "handong",
+   "name": "한동대학교",
+   "campus": "포항캠퍼스",
+   "group": [
+    "다군"
+   ],
+   "quota": "정시 30명 · 2027학년도 총 760명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 30명 | 포항캠퍼스, 정시 공지 게시",
+   "noticeUrl": "https://admissions.handong.edu/regular/notice/",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "deu",
+   "name": "동의대학교",
+   "campus": "부산캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 48명 · 2027학년도 총 4,038명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 48명(정원내) + 자율화 170명 | 부산캠퍼스",
+   "noticeUrl": "https://ipsi.deu.ac.kr/ipsi/",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "ks",
+   "name": "경성대학교",
+   "campus": "부산캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 193명 · 2027학년도 총 2,923명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 193명 | 부산캠퍼스",
+   "noticeUrl": "https://www.ks.ac.kr/ipsi/CMS/Contents/Contents.do?mCode=MN025",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "bufs",
+   "name": "부산외국어대학교",
+   "campus": "부산캠퍼스",
+   "group": [
+    "가군",
+    "나군"
+   ],
+   "quota": "정시 51명 · 2027학년도 총 1,589명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 51명(정원내) + 자율화 64명 | 부산캠퍼스",
+   "noticeUrl": "https://enter.bufs.ac.kr/",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "silla",
+   "name": "신라대학교",
+   "campus": "부산캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 41명 · 2027학년도 총 1,872명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 41명(정원내) + 자율화 142명 | 부산캠퍼스",
+   "noticeUrl": "https://ipsi.silla.ac.kr/ipsi/index.php?pCode=1779878804",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "inje",
+   "name": "인제대학교",
+   "campus": "김해캠퍼스",
+   "group": [
+    "가군",
+    "다군"
+   ],
+   "quota": "정시 143명 · 2027학년도 총 1,806명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 143명 | 김해캠퍼스",
+   "noticeUrl": "https://magazine.inje.ac.kr/inje_jungsi/1",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "kyungnam",
+   "name": "경남대학교",
+   "campus": "창원캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 14명 · 2027학년도 총 2,167명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 12명 + 자율화 120명 | 창원캠퍼스",
+   "noticeUrl": "https://ipsi.kyungnam.ac.kr/ipsi/6809/subview.do",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  },
+  {
+   "id": "jeonju",
+   "name": "전주대학교",
+   "campus": "전주캠퍼스",
+   "group": [
+    "가군",
+    "나군",
+    "다군"
+   ],
+   "quota": "정시 89명 · 2027학년도 총 2,722명 중",
+   "schedule": "2027. 1. 4.(월) ~ 1. 7.(목) (정시 원서접수 공통기간, 마감시각 대학별 상이)",
+   "summary": "수능위주 89명(정원내) + 자율화 48명 | 전주캠퍼스",
+   "noticeUrl": "https://iphak.jj.ac.kr/iphak/regular/guidelines.do?mode=list&article.offset=0",
+   "pdfUrl": "",
+   "shortsUrl": "",
+   "region": "지방"
+  }
  ]
 }
