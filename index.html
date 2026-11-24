@@ -569,6 +569,44 @@
     .card{animation:none}
     .dot{animation:none;opacity:.8}
   }
+
+  /* ── 학과(모집단위) 목록 ── */
+  .filters.cat-filters{margin-top:8px}
+  .filters.cat-filters .chip{font-size:12px;padding:8px 13px}
+  .dept-box{margin-top:12px;border-top:1px dashed var(--line);padding-top:11px}
+  .dept-head{display:flex;align-items:center;gap:8px;justify-content:space-between;flex-wrap:wrap}
+  .dept-toggle{
+    display:inline-flex;align-items:center;gap:5px;font-family:inherit;font-size:12.5px;font-weight:700;
+    color:var(--accent-ink);background:var(--accent-soft);border:1px solid var(--accent-line);
+    border-radius:999px;padding:7px 13px;cursor:pointer;transition:all .16s;
+  }
+  .dept-toggle:active{transform:scale(.98)}
+  .dept-toggle .arw{font-size:9px;opacity:.85}
+  .dept-sum{display:flex;gap:5px;flex-wrap:wrap;font-size:10.5px;color:var(--muted)}
+  .dept-sum .s{display:inline-flex;align-items:center;gap:3px;border:1px solid var(--line);border-radius:999px;padding:2px 8px}
+  .dept-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:5px}
+  .dept-item{border:1px solid var(--line);border-radius:12px;background:var(--surface-soft);overflow:hidden}
+  .dept-row{
+    display:flex;align-items:center;gap:7px;width:100%;padding:8px 10px;background:none;border:0;
+    font-family:inherit;color:inherit;text-align:left;cursor:pointer;
+  }
+  .dept-name{flex:1 1 auto;min-width:0;font-size:13px;font-weight:700;letter-spacing:-.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .dept-cat{flex:0 0 auto;font-size:9.5px;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:1px 6px}
+  .dept-cut{flex:0 0 auto;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .dept-arw{flex:0 0 auto;font-size:9px;color:var(--dim);margin-left:1px}
+  .dept-item .badge{flex:0 0 auto;font-size:10px;padding:2px 7px;letter-spacing:0}
+  .dept-why{padding:0 10px 9px;margin:-2px 0 0;font-size:10.5px;line-height:1.55;color:var(--dim)}
+  .dept-tracks{margin:0;padding:0 10px 10px;list-style:none;display:grid;gap:4px;font-size:10.5px;color:var(--muted)}
+  .dept-tracks li{display:flex;gap:6px;justify-content:space-between;border-top:1px dotted var(--line);padding-top:4px}
+  .dept-tracks .tk{flex:1 1 auto;min-width:0}
+  .dept-tracks .sp{color:var(--dim)}
+  .dept-more{padding:2px 10px 10px;font-size:10.5px;color:var(--accent-ink)}
+  .dept-empty{padding:8px 2px 2px;font-size:11.5px;color:var(--dim)}
+  .dept-note{padding:9px 2px 0;font-size:10.5px;line-height:1.55;color:var(--dim)}
+  @media (max-width:400px){
+    .dept-name{font-size:12.5px}
+    .dept-cut{font-size:10.5px}
+  }
 </style>
 </head>
 <body>
@@ -705,6 +743,13 @@
     <button class="chip" type="button" data-band="소신" aria-pressed="false">소신</button>
     <button class="chip" type="button" data-band="어려움" aria-pressed="false">어려움</button>
   </div>
+  <div class="filters" id="dept-band-filters" role="group" aria-label="학과별 판정 필터" hidden>
+    <button class="chip" type="button" data-vband="전체" aria-pressed="true">학과 전체</button>
+    <button class="chip" type="button" data-vband="안정" aria-pressed="false">안정 학과</button>
+    <button class="chip" type="button" data-vband="적정" aria-pressed="false">적정 학과</button>
+    <button class="chip" type="button" data-vband="소신" aria-pressed="false">소신 학과</button>
+    <button class="chip" type="button" data-vband="어려움" aria-pressed="false">어려움 학과</button>
+  </div>
   <p class="score-sum" id="score-sum" hidden></p>
   <p class="score-note">공개된 <b>2027 수능 예상 등급컷 기반 근사 환산</b> 및 <b>전년도 70% 컷 기준 참고용 결과</b>입니다. 대학별 반영비율·변환표준점수·영어 가감점에 따라 달라지므로 반드시 입학처·어디가에서 확인하세요.</p>
   <details class="cut-table" id="cut-table">
@@ -716,7 +761,7 @@
 <div class="wrap controls">
   <div class="search">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input id="q" type="search" inputmode="search" autocomplete="off" placeholder="대학명 또는 키워드 검색 (예: 서울대, 수능100)" aria-label="대학명 또는 키워드 검색" />
+    <input id="q" type="search" inputmode="search" autocomplete="off" placeholder="대학·학과 검색 (예: 서울대, 컴퓨터, 간호)" aria-label="대학명 또는 학과명 검색" />
     <button class="clear" id="clear" type="button" aria-label="검색어 지우기">✕</button>
   </div>
   <div class="filters" role="group" aria-label="모집군 필터">
@@ -732,6 +777,15 @@
     <button class="chip" type="button" data-region="수도권" aria-pressed="false">수도권</button>
     <button class="chip" type="button" data-region="지방" aria-pressed="false">지방</button>
   </div>
+  <div class="filters cat-filters" role="group" aria-label="계열(큰 구분) 필터">
+    <button class="chip" type="button" data-cat="전체" aria-pressed="true">계열 전체</button>
+    <button class="chip" type="button" data-cat="i" aria-pressed="false">이공계</button>
+    <button class="chip" type="button" data-cat="m" aria-pressed="false">문과</button>
+    <button class="chip" type="button" data-cat="s" aria-pressed="false">의약·보건</button>
+    <button class="chip" type="button" data-cat="e" aria-pressed="false">사범·교육</button>
+    <button class="chip" type="button" data-cat="a" aria-pressed="false">예체능</button>
+    <button class="chip" type="button" data-cat="f" aria-pressed="false">자유전공·융합</button>
+  </div>
 </div>
 
 <main class="wrap">
@@ -743,7 +797,7 @@
       <button class="chip" type="button" data-sort="가나다순" aria-pressed="false">가나다순</button>
     </div>
   </div>
-  <p class="legend" id="legend" hidden><b>안정</b> = 대학 상위 20% 모집단위 컷 이상 · <b>적정</b> = 중위 컷 이상 · <b>소신</b> = 대학 최저 컷 이상 · <b>어려움</b> = 최저 컷보다 낮음<br>카드의 판정 줄은 <b>내 예상 백분위와 그 대학 컷의 실제 점수 차이</b>를, 그 아래 줄은 <b>발목 과목·영어 등급·보완 조건</b>을 보여줍니다.</p>
+  <p class="legend" id="legend" hidden><b>대학 카드 판정</b> — <b>안정</b> = 대학 상위 20% 모집단위 컷 이상 · <b>적정</b> = 중위 컷 이상 · <b>소신</b> = 대학 최저 컷 이상 · <b>어려움</b> = 최저 컷보다 낮음<br><b>학과 판정</b> — 그 학과의 2026 정시 70% 컷과 내 예상 백분위 차이로 <b>안정</b>(+2.0 이상) · <b>적정</b>(-1.0~+2.0) · <b>소신</b>(-4.0~-1.0) · <b>어려움</b>(-4.0 미만) · <b>미등록</b>(컷 미공개)을 표시합니다. 학과·계열로 걸러 보면 조건에 맞는 학과가 있는 대학만 남고 학과 목록이 자동으로 펼쳐집니다.</p>
   <div id="list">
     <div class="loading"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>요강 목록 불러오는 중…</span></div>
   </div>
@@ -759,6 +813,7 @@
       <li>표시된 모집인원은 <b>수시 이월 인원 반영 전</b> 값입니다(대교협 전형시행계획·각 대학 2027 정시요강 기준). 최종 모집인원은 원서접수 직전 입학처 공지에서 다시 확인하세요.</li>
       <li>일정·전형방법은 각 대학 입학처의 <b>최종 확정 요강</b>이 기준입니다. 이 페이지는 원문 링크를 모아둔 안내용입니다.</li>
       <li>입결 배지는 <b>2026학년도 최종등록자 70% 컷</b>을 대학 단위로 묶은 참고값입니다. 학과별·전형별 차이가 크고, 대학마다 반영비율이 달라 다른 대학과 직접 비교할 수 없습니다.</li>
+      <li>카드 안 <b>학과(모집단위)별 70% 컷</b>은 대교협 ‘어디가’가 공개한 2026학년도 모집단위별 최종등록자 70% 컷입니다. 같은 학과가 여러 전형·군에 있으면 <b>일반전형 가운데 가장 높은 컷</b>을 대표값으로 쓰고, 특별전형(농어촌·기회균형·특성화고 등)만 있는 경우에는 옆에 <b>*</b>를 붙였습니다. 모집인원 3명 이하 등으로 대학이 결과를 내지 않은 학과는 ‘컷 미공개’로 표시합니다. 입시결과를 공개하지 않는 대학(KAIST, POSTECH, GIST, DGIST, UNIST, KENTECH, 한국예술종합학교 등)은 모집단위 이름만 실었습니다.</li>
       <li><b>성적 입력기의 원점수→백분위 환산</b>은 EBSi가 공개한 <b>2027학년도 수능 예상 등급컷</b>(선택과목별 1~8등급, 2026-11-20 확인)과 등급 구분 백분위(96/89/77/60/40/23/11/4/0) 사이를 선형 보간한 <b>근사값</b>입니다. 12월 11일 성적 통지 후 평가원 확정 등급과 다를 수 있고, 영어는 절대평가라 평균에서 제외했습니다.</li>
       <li>모든 링크는 각 대학 입학처와 유튜브로 연결됩니다.</li>
     </ul>
@@ -776,6 +831,7 @@
 (function () {
   var state = {
     items: [], cuts: {}, q: "", group: "전체", region: "전체", sort: "추천순", band: "전체",
+    cat: "전체", vband: "전체", open: {}, trackOpen: {},
     mode: "pct", score: null, ready: false,
     inputMode: "subject", unit: "raw",
     subj: {
@@ -794,6 +850,7 @@
   var scoreUnit = document.getElementById("score-unit");
   var scoreClear = document.getElementById("score-clear");
   var bandWrap = document.getElementById("band-filters");
+  var vbandWrap = document.getElementById("dept-band-filters");
   var scoreSum = document.getElementById("score-sum");
   var legendEl = document.getElementById("legend");
   var subjectForm = document.getElementById("subject-form");
@@ -929,17 +986,108 @@
       .join(" ").toLowerCase();
   }
 
+  /* ── 학과(모집단위) 데이터: 카드 안에서 학과별 70% 컷과 판정을 보여준다 ── */
+  var DEPTS = {};
+  var DEPT_CATS = { m: "문과", i: "이공계", s: "의약·보건", e: "사범·교육", a: "예체능", f: "자유전공·융합", x: "기타" };
+
+  function deptRows(uid) {
+    var d = DEPTS[uid];
+    return (d && d.j && d.j.length) ? d.j : null;
+  }
+  // 대표 컷: 일반전형 중 가장 높은 컷(보수적), 없으면 특별전형 컷
+  function deptRep(tracks) {
+    var best = null, any = null;
+    for (var i = 0; i < tracks.length; i++) {
+      var t = tracks[i];
+      if (t[3] == null) continue;
+      if (!t[1]) { if (best == null || t[3] > best) best = t[3]; }
+      else if (any == null || t[3] > any) any = t[3];
+    }
+    return best != null ? best : any;
+  }
+  function deptIsSpecialOnly(tracks) {
+    var any = false;
+    for (var i = 0; i < tracks.length; i++) {
+      if (tracks[i][3] == null) continue;
+      if (!tracks[i][1]) return false;
+      any = true;
+    }
+    return any;
+  }
+  function deptBand(cutV, p) {
+    if (cutV == null || p == null) return "미등록";
+    var d = p - cutV;
+    if (d >= 2) return "안정";
+    if (d >= -1) return "적정";
+    if (d >= -4) return "소신";
+    return "어려움";
+  }
+  function deptObj(row) {
+    return { name: row[0], cat: row[1], catName: DEPT_CATS[row[1]] || "기타", tracks: row[2] || [], cut: deptRep(row[2] || []) };
+  }
+  function deptQueryHit(uid, q) {
+    if (!q) return false;
+    var rows = deptRows(uid);
+    if (!rows) return false;
+    for (var i = 0; i < rows.length; i++) {
+      if (String(rows[i][0]).toLowerCase().indexOf(q) !== -1) return true;
+    }
+    return false;
+  }
+  function deptFilterOn() {
+    return state.cat !== "전체" || state.vband !== "전체";
+  }
+  function matchDept(o, q, p) {
+    if (state.cat !== "전체" && o.cat !== state.cat) return false;
+    if (q && String(o.name).toLowerCase().indexOf(q) === -1) return false;
+    if (state.vband !== "전체" && deptBand(o.cut, p) !== state.vband) return false;
+    return true;
+  }
+  function deptMatches(uid, q, p) {
+    var rows = deptRows(uid);
+    if (!rows) return null;
+    var p2 = p == null ? null : p;
+    var out = [];
+    for (var i = 0; i < rows.length; i++) {
+      var o = deptObj(rows[i]);
+      if (matchDept(o, q, p2)) out.push(o);
+    }
+    return out;
+  }
+  function deptCounts(uid, p) {
+    var rows = deptRows(uid), n = { "안정": 0, "적정": 0, "소신": 0, "어려움": 0, "미등록": 0 };
+    if (!rows) return n;
+    rows.forEach(function (r) { n[deptBand(deptRep(r[2] || []), p)]++; });
+    return n;
+  }
+
   function filtered() {
     var q = state.q.trim().toLowerCase();
+    var p = effectivePct();
+    var deptOn = deptFilterOn() || !!q;
     var rows = state.items.filter(function (u) {
       var okGroup = state.group === "전체" || (u.group || []).indexOf(state.group) !== -1;
       var okRegion = state.region === "전체" || u.region === state.region;
-      var okQuery = !q || haystack(u).indexOf(q) !== -1;
+      var okQuery = !q || haystack(u).indexOf(q) !== -1 || deptQueryHit(u.id, q);
+      if (!okGroup || !okRegion || !okQuery) return false;
       var b = bandOf(u);
       var okBand = state.band === "전체" || b === state.band || (b === "미등록" && state.score != null && state.band !== "전체");
-      return okGroup && okRegion && okQuery && okBand;
+      if (!okBand) return false;
+      if (deptOn) {
+        // 학과 조건(계열·학과명·학과 판정)에 맞는 학과가 하나도 없으면 카드를 숨깁니다
+        if (state.cat !== "전체" || state.vband !== "전체") {
+          var ms = deptMatches(u.id, q, p) || [];
+          // 검색어가 대학명에 걸린 경우에는 학과 조건만 본다
+          var pass = ms.some(function (o) {
+            if (state.cat !== "전체" && o.cat !== state.cat) return false;
+            if (state.vband !== "전체" && deptBand(o.cut, p) !== state.vband) return false;
+            return true;
+          });
+          if (!pass) return false;
+        }
+      }
+      return true;
     });
-    var p = effectivePct();
     if (state.sort === "가나다순") {
       rows.sort(function (a, b) { return String(a.name || "").localeCompare(String(b.name || ""), "ko"); });
     } else if (p != null) {
@@ -1058,6 +1206,93 @@
       "</div>";
   }
 
+  function itemById(uid) {
+    for (var i = 0; i < state.items.length; i++) if (state.items[i].id === uid) return state.items[i];
+    return null;
+  }
+
+  function deptTracksHtml(o, p) {
+    var out = [];
+    var tracks = o.tracks.slice().sort(function (a, b) {
+      if (!!a[1] !== !!b[1]) return a[1] ? 1 : -1;
+      return 0;
+    });
+    tracks.forEach(function (t) {
+      if (o.tracks.length > 6 && t[1] && t[3] == null) return;
+      var cutTxt = t[3] == null ? "컷 미공개" : "70% 컷 " + pctStr(t[3]);
+      var diff = (t[3] != null && p != null) ? " (" + (p - t[3] >= 0 ? "+" : "-") + Math.abs(Math.round((p - t[3]) * 10) / 10).toFixed(1) + ")" : "";
+      out.push("<li><span class=\"tk\">" + esc(t[0]) + (t[1] ? " <span class=\"sp\">특별</span>" : "") + "</span><span>" + cutTxt + diff + "</span></li>");
+    });
+    if (!out.length) return "";
+    return '<ul class="dept-tracks">' + out.join("") + "</ul>";
+  }
+
+  function deptBox(u) {
+    var rows = deptRows(u.id);
+    if (!rows) return "";
+    var p = effectivePct();
+    var q = state.q.trim().toLowerCase();
+    var filterOn = deptFilterOn();
+    var qHit = !!q && deptQueryHit(u.id, q) && haystack(u).indexOf(q) === -1;
+    var focus = filterOn || qHit;
+    var open = focus || !!state.open[u.id];
+    var all = rows.map(deptObj);
+    var list = all.filter(function (o) {
+      if (state.cat !== "전체" && o.cat !== state.cat) return false;
+      if (q && String(o.name).toLowerCase().indexOf(q) === -1) return false;
+      if (state.vband !== "전체" && deptBand(o.cut, p) !== state.vband) return false;
+      return true;
+    });
+    if (focus && !list.length) return "";
+    if (state.vband !== "전체" && p == null) list = all;
+
+    var n = deptCounts(u.id, p);
+    var sum = [];
+    if (p != null) {
+      ["안정", "적정", "소신", "어려움"].forEach(function (b) {
+        if (n[b]) sum.push('<span class="s">' + b + " " + n[b] + "</span>");
+      });
+      if (n["미등록"]) sum.push('<span class="s">미등록 ' + n["미등록"] + "</span>");
+    } else {
+      var cc = {};
+      all.forEach(function (o) { cc[o.catName] = (cc[o.catName] || 0) + 1; });
+      Object.keys(cc).forEach(function (k) { sum.push('<span class="s">' + esc(k) + " " + cc[k] + "</span>"); });
+    }
+
+    var shownN = list.length;
+    var head = '<div class="dept-head">' +
+      '<button class="dept-toggle" type="button" data-dept-toggle="' + esc(u.id) + '" aria-expanded="' + (open ? "true" : "false") + '">' +
+      (open ? "학과 " + shownN + "개 접기" : "학과 " + rows.length + "개 보기") +
+      '<span class="arw">' + (open ? "▲" : "▼") + "</span></button>" +
+      '<div class="dept-sum">' + sum.join("") + "</div></div>";
+
+    if (!open) return '<div class="dept-box">' + head + "</div>";
+
+    var LIMIT = 40;
+    var items = list.slice(0, LIMIT).map(function (o) {
+      var b = deptBand(o.cut, p);
+      var cutTxt = o.cut == null ? "컷 미공개" : "70% 컷 " + pctStr(o.cut);
+      var diff = (o.cut != null && p != null)
+        ? "내 " + pctStr(p) + " vs 컷 " + pctStr(o.cut) + " (" + (p - o.cut >= 0 ? "+" : "-") + Math.abs(Math.round((p - o.cut) * 10) / 10).toFixed(1) + ")"
+        : (o.cut == null ? (p != null ? "입결(70% 컷) 미공개 — 자동 비교 불가" : "입결(70% 컷)이 공개되지 않았습니다") : "내 성적을 넣으면 이 학과 컷과 비교합니다");
+      return '<li class="dept-item" data-uid="' + esc(u.id) + '" data-dept="' + esc(o.name) + '">' +
+        '<button class="dept-row" type="button" aria-label="' + esc(o.name) + ' 전형별 컷 보기">' +
+        '<span class="dept-name">' + esc(o.name) + "</span>" +
+        '<span class="dept-cat">' + esc(o.catName) + "</span>" +
+        '<span class="dept-cut">' + esc(cutTxt) + "</span>" +
+        (p != null ? '<span class="badge ' + bandClass(b) + '">' + esc(b) + (o.tracks.length > 1 && deptIsSpecialOnly(o.tracks) ? "*" : "") + "</span>" : "") +
+        (o.tracks.length > 1 ? '<span class="dept-arw" aria-hidden="true">▾</span>' : "") +
+        "</button>" +
+        (p != null ? '<p class="dept-why">' + esc(diff) + "</p>" : "") +
+        "</li>";
+    }).join("");
+
+    var more = list.length > LIMIT ? '<div class="dept-more">학과가 ' + list.length + "개 더 있습니다. 학과명을 검색하거나 계열·판정 필터로 좁혀 보세요.</div>" : "";
+    var dn = DEPTS[u.id] || {};
+    var note = (dn.note || dn.nj) ? '<p class="dept-note">※ ' + esc(dn.note || dn.nj) + "</p>" : "";
+    return '<div class="dept-box">' + head + '<ul class="dept-list">' + items + "</ul>" + more + note + "</div>";
+  }
+
   function card(u) {
     var groups = (u.group || []).map(function (g) {
       return '<span class="g ' + (GROUP_CLASS[g] || "") + '">' + esc(g) + "</span>";
@@ -1072,7 +1307,7 @@
     else links.push('<span class="btn pending" aria-disabled="true">1분 요약 쇼츠 준비 중</span>');
 
     return '' +
-      '<article class="card">' +
+      '<article class="card" data-uid="' + esc(u.id) + '">' +
         '<div class="card-head">' +
           '<div class="card-title">' +
             "<h2>" + esc(u.name) + "</h2>" +
@@ -1081,6 +1316,7 @@
           '<div class="groups">' + groups + "</div>" +
         "</div>" +
         cutBlock(u) +
+        deptBox(u) +
         '<dl class="facts">' +
           (u.quota ? '<div class="fact"><dt>모집인원</dt><dd>' + esc(u.quota) + "</dd></div>" : "") +
           (u.schedule ? '<div class="fact"><dt>원서접수</dt><dd class="strong">' + esc(u.schedule) + "</dd></div>" : "") +
@@ -1140,6 +1376,13 @@
     scoreClear.hidden = !hasAnyInput();
     if (p == null) {
       bandWrap.hidden = true; legendEl.hidden = true;
+      if (vbandWrap) {
+        vbandWrap.hidden = true;
+        state.vband = "전체";
+        Array.prototype.forEach.call(vbandWrap.querySelectorAll(".chip"), function (c) {
+          c.setAttribute("aria-pressed", String(c.dataset.vband === "전체"));
+        });
+      }
       scoreSum.hidden = !(state.inputMode === "subject" && hasAnyInput());
       if (!scoreSum.hidden) scoreSum.innerHTML = "국어·수학·탐구 중 하나 이상의 점수를 넣으면 대학별 판정이 시작됩니다. 영어 등급은 참고 배지로만 반영됩니다.";
       state.band = "전체";
@@ -1149,6 +1392,7 @@
       return;
     }
     bandWrap.hidden = false; scoreSum.hidden = false; legendEl.hidden = false;
+    if (vbandWrap) vbandWrap.hidden = false;
     var n = bandCounts();
     var parts = [];
     if (state.inputMode === "subject") {
@@ -1177,8 +1421,19 @@
     if (!state.ready) return;
     var rows = filtered();
     var p = effectivePct();
+    var q2 = state.q.trim().toLowerCase();
+    var deptN = 0;
+    if (deptFilterOn() || q2) {
+      rows.forEach(function (u) {
+        var ms = deptMatches(u.id, q2, p);
+        if (ms) deptN += ms.length;
+      });
+    }
     countEl.hidden = false;
     countEl.innerHTML = "총 <b>" + rows.length + "</b>곳" +
+      ((deptFilterOn() || q2) ? " · 학과 <b>" + deptN + "</b>개" : "") +
+      (state.cat === "전체" ? "" : " · " + esc(DEPT_CATS[state.cat] || state.cat)) +
+      (state.vband === "전체" ? "" : " · " + esc(state.vband) + " 학과") +
       (state.group === "전체" ? "" : " · " + esc(state.group)) +
       (state.region === "전체" ? "" : " · " + esc(state.region)) +
       (state.band === "전체" ? "" : " · " + esc(state.band)) +
@@ -1212,6 +1467,40 @@
   wireChips("region", function (v) { state.region = v; });
   wireChips("sort", function (v) { state.sort = v; });
   wireChips("band", function (v) { state.band = v; });
+  wireChips("cat", function (v) { state.cat = v; });
+  wireChips("vband", function (v) { state.vband = v; });
+
+  // 카드 안 학과 목록: 토글 · 학과별 전형 내역 펼치기
+  listEl.addEventListener("click", function (e) {
+    var t = e.target.closest ? e.target.closest("[data-dept-toggle]") : null;
+    if (t) {
+      var uid = t.getAttribute("data-dept-toggle");
+      state.open[uid] = !state.open[uid];
+      var art = t.closest("article.card");
+      var u = itemById(uid);
+      if (art && u) {
+        var tmp = document.createElement("div");
+        tmp.innerHTML = card(u);
+        art.replaceWith(tmp.firstElementChild);
+      }
+      return;
+    }
+    var r = e.target.closest ? e.target.closest(".dept-row") : null;
+    if (r) {
+      var item = r.parentNode;
+      var old = item.querySelector(".dept-tracks");
+      if (old) { old.remove(); return; }
+      var u2 = item.getAttribute("data-uid"), dn = item.getAttribute("data-dept");
+      var rows = deptRows(u2) || [];
+      for (var i = 0; i < rows.length; i++) {
+        if (rows[i][0] === dn) {
+          var html = deptTracksHtml(deptObj(rows[i]), effectivePct());
+          if (html) item.insertAdjacentHTML("beforeend", html);
+          return;
+        }
+      }
+    }
+  });
 
   function resetBand() {
     state.band = "전체";
@@ -1452,10 +1741,13 @@
   Promise.all([
     fetch("data/universities.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/cutoffs.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : { universities: {} }; }).catch(function () { return { universities: {} }; }),
-    fetch("data/grade-cuts-2027.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+    fetch("data/grade-cuts-2027.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
+    fetch("data/depts.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
   ]).then(function (res) {
     var data = res[0], cuts = res[1];
     GRADE_CUTS = res[2] || null;
+    DEPTS = (res[3] && res[3].universities) || {};
+    if (res[3] && res[3].cats) DEPT_CATS = res[3].cats;
     state.items = (data.universities || []).slice();
     state.cuts = (cuts && cuts.universities) || {};
     state.ready = true;
