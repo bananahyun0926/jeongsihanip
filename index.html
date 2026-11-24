@@ -6,9 +6,22 @@
 <title>2027 정시모집요강 모음 | 정시한입</title>
 <meta name="description" content="2027학년도 대학별 정시모집요강을 한 곳에서 — 모집군·모집인원·원서접수 일정과 입학처 공지, 요강 PDF, 1분 요약 쇼츠 링크를 모았습니다. 국어·수학·탐구 원점수나 백분위를 넣으면 2027 수능 예상 등급컷으로 환산해 지원 가능 대학을 참고용으로 추려보세요. (정시한입)" />
 <meta name="theme-color" content="#0D1B2A" id="meta-theme" />
+<link rel="canonical" href="https://jeongsihanip.github.io/" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
 <meta property="og:title" content="2027 정시모집요강 모음 | 정시한입" />
-<meta property="og:description" content="대학별 2027 정시모집요강 · 모집인원 · 원서접수 일정 · 입학처 공지 · PDF · 1분 요약 쇼츠" />
+<meta property="og:description" content="196개 대학 2027 정시모집요강 · 학과별 70% 컷 · 내 수능 백분위로 소신·적정 판정 · 입학처 공지·PDF·1분 요약 쇼츠" />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeongsihanip.github.io/" />
+<meta property="og:site_name" content="정시한입" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:image" content="https://jeongsihanip.github.io/og/og-jeongsi.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="정시한입 — 2027 대학별 정시모집요강 196개 대학" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="2027 정시모집요강 모음 | 정시한입" />
+<meta name="twitter:description" content="196개 대학 2027 정시모집요강 · 학과별 70% 컷 · 내 수능 백분위로 소신·적정 판정" />
+<meta name="twitter:image" content="https://jeongsihanip.github.io/og/og-jeongsi.png" />
 <meta name="naver-site-verification" content="21a3e7762f813665430a8b1bf3f3ec1b18eecda1" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ5B4J0HXY"></script>
@@ -607,6 +620,18 @@
     .dept-name{font-size:12.5px}
     .dept-cut{font-size:10.5px}
   }
+
+  /* ── 대학별 페이지(/u/)에서 ?u= 로 들어왔을 때 안내 ── */
+  .uparam-note{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    margin:0 0 10px;padding:10px 12px;border-radius:12px;font-size:12px;line-height:1.5;
+    color:var(--text-soft);background:var(--accent-soft);border:1px solid var(--accent-line);
+  }
+  .uparam-note b{color:var(--text)}
+  .uparam-note button{
+    margin-left:auto;font-family:inherit;font-size:11.5px;font-weight:800;cursor:pointer;
+    color:var(--on-accent);background:var(--accent);border:0;border-radius:999px;padding:6px 12px;
+  }
 </style>
 </head>
 <body>
@@ -831,7 +856,7 @@
 (function () {
   var state = {
     items: [], cuts: {}, q: "", group: "전체", region: "전체", sort: "추천순", band: "전체",
-    cat: "전체", vband: "전체", open: {}, trackOpen: {},
+    cat: "전체", vband: "전체", open: {}, trackOpen: {}, focusUid: null,
     mode: "pct", score: null, ready: false,
     inputMode: "subject", unit: "raw",
     subj: {
@@ -1066,6 +1091,7 @@
     var p = effectivePct();
     var deptOn = deptFilterOn() || !!q;
     var rows = state.items.filter(function (u) {
+      if (state.focusUid && u.id !== state.focusUid) return false;
       var okGroup = state.group === "전체" || (u.group || []).indexOf(state.group) !== -1;
       var okRegion = state.region === "전체" || u.region === state.region;
       var okQuery = !q || haystack(u).indexOf(q) !== -1 || deptQueryHit(u.id, q);
@@ -1703,16 +1729,18 @@
 
   var t = null;
   qEl.addEventListener("input", function () {
+    clearFocus();
     state.q = qEl.value;
     clearEl.classList.toggle("show", !!qEl.value);
     clearTimeout(t);
     t = setTimeout(render, 90);
   });
   clearEl.addEventListener("click", function () {
+    clearFocus();
     qEl.value = ""; state.q = ""; clearEl.classList.remove("show"); qEl.focus(); render();
   });
   qEl.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") { qEl.value = ""; state.q = ""; clearEl.classList.remove("show"); render(); }
+    if (e.key === "Escape") { clearFocus(); qEl.value = ""; state.q = ""; clearEl.classList.remove("show"); render(); }
   });
 
   // ── 테마 ──
@@ -1745,6 +1773,62 @@
       try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
     });
   });
+
+  function clearFocus() {
+    if (!state.focusUid) return;
+    state.focusUid = null;
+    var n = document.getElementById("uparam-note");
+    if (n) n.remove();
+  }
+  // ── 대학별 정적 페이지(/u/{uid}.html)의 "내 점수로 계산하기" 버튼으로 들어오면
+  //    그 대학만 검색·펼침해서 바로 보여준다 (?u=konkuk)
+  function applyUParam() {
+    var uid = null;
+    try { uid = new URLSearchParams(location.search).get("u"); } catch (e) { return; }
+    if (!uid) return;
+    var u = itemById(uid);
+    if (!u) return;
+    state.focusUid = u.id;
+    state.q = "";
+    qEl.value = "";
+    if (clearEl) clearEl.classList.remove("show");
+    state.group = "전체"; state.region = "전체"; state.band = "전체";
+    state.cat = "전체"; state.vband = "전체"; state.sort = "추천순";
+    ["group", "region", "band", "cat", "vband", "sort"].forEach(function (a) {
+      Array.prototype.forEach.call(document.querySelectorAll(".chip[data-" + a + "]"), function (c) {
+        c.setAttribute("aria-pressed", String(c.dataset[a] === state[a]));
+      });
+    });
+    state.open[u.id] = true;
+    var old = document.getElementById("uparam-note");
+    if (old) old.remove();
+    var note = document.createElement("div");
+    note.id = "uparam-note";
+    note.className = "uparam-note";
+    note.innerHTML = '🔎 <b>' + esc(u.name) + '</b> 카드로 바로 이동했어요. 학과 목록은 카드 안에서 펼쳐 볼 수 있어요.' +
+      '<button type="button" id="uparam-clear">전체 196개 대학 보기</button>';
+    var countRow = countEl.closest(".count-row") || countEl;
+    countRow.parentNode.insertBefore(note, countRow);
+    note.querySelector("#uparam-clear").addEventListener("click", function () {
+      qEl.value = ""; state.q = ""; clearEl.classList.remove("show");
+      state.open = {};
+      state.focusUid = null;
+      note.remove();
+      render();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+  function scrollToUParam() {
+    var uid = null;
+    try { uid = new URLSearchParams(location.search).get("u"); } catch (e) { return; }
+    if (!uid) return;
+    var art = document.getElementById("uparam-note") || document.querySelector('article.card[data-uid="' + uid + '"]');
+    if (!art) return;
+    var hd = document.querySelector("header.top");
+    var ct = document.querySelector(".controls");
+    var off = (hd ? hd.offsetHeight : 0) + (ct ? ct.offsetHeight : 0) + 8;
+    window.scrollTo({ top: art.getBoundingClientRect().top + window.pageYOffset - off, behavior: "auto" });
+  }
 
   Promise.all([
     fetch("data/universities.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
@@ -1779,7 +1863,9 @@
     syncModeUI();
     renderOuts();
     updateScoreUI();
+    applyUParam();
     render();
+    scrollToUParam();
   }).catch(function () {
     listEl.innerHTML = '<div class="empty"><b>목록을 불러오지 못했어요</b>' +
       "잠시 후 새로고침해 주세요. 계속 안 되면 정시한입 채널에 알려 주세요.</div>";
