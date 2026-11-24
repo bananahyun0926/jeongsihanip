@@ -37,15 +37,29 @@
     $('#updatedAt').textContent = '업데이트 ' + (data.updatedAtLabel || data.updatedAt || '—');
 
     // KPI
-    renderPendingKpi($('#kpi-visitors'), $('#kpi-visitors-sub'), s.websiteVisitors, 'GA4 연동 전');
-    renderPendingKpi($('#kpi-pageviews'), $('#kpi-pageviews-sub'), s.pageviews, 'GA4 연동 전');
+    renderPendingKpi($('#kpi-visitors'), $('#kpi-visitors-sub'), s.websiteVisitors, '두 사이트 합계 · GA4 11/21~11/24');
+    renderPendingKpi($('#kpi-pageviews'), $('#kpi-pageviews-sub'), s.pageviews, '두 사이트 합계 · GA4 11/21~11/24');
     $('#kpi-ytviews').textContent = fmt(s.youtubeViews) + '회';
     $('#kpi-subs').textContent = fmt(s.subscribers) + '명';
 
     if (s.videoCount !== undefined) {
       $('#kpi-ytviews-sub').textContent = '공개 영상 ' + fmt(s.videoCount) + '편 조회수 합 (좋아요 ' + fmt(s.likes) + '개)';
     }
-    $('#kpi-subs-sub').textContent = '공개 표시 없음 · 0으로 집계';
+    $('#kpi-subs-sub').textContent = 'YouTube 공개 구독자 · 두 채널 합';
+
+    // KPI 배지·상태
+    const setKpi = (sel, status) => {
+      const card = $(sel);
+      if (!card) return;
+      card.dataset.status = status;
+      const badge = $('.badge', card);
+      if (badge) {
+        badge.textContent = status === 'pending' ? '집계 대기' : '실측';
+        badge.className = 'badge ' + (status === 'pending' ? 'badge-pending' : 'badge-live');
+      }
+    };
+    setKpi('#kpi-visitors', s.status && s.status.website === 'pending' ? 'pending' : 'live');
+    setKpi('#kpi-pageviews', s.status && s.status.website === 'pending' ? 'pending' : 'live');
 
     // status note
     const noteParts = [];
@@ -146,6 +160,14 @@
       const site = b.site || {};
       const key = b.theme === 'gold-yellow' ? 'susihanip' : 'jeongsihanip';
       const sample = (data.sample && data.sample[key]) || {};
+      const live = Array.isArray(site.daily) && site.daily.length > 0;
+      const daily = live ? site.daily : (sample.daily || []);
+      const sources = (live ? site.trafficSources : sample.trafficSources) || [];
+      const pages = site.topPages || [];
+      const unis = site.topUniversities || [];
+      const badge = live
+        ? '<span class="badge badge-live">GA4 실측</span>'
+        : '<span class="badge badge-sample">샘플</span>';
       const card = el('article', 'web-card');
       card.dataset.brand = key;
 
@@ -157,60 +179,91 @@
       card.appendChild(head);
       card.appendChild(el('p', 'web-sub',
         esc(site.title || '') + ' · 대학 ' + fmt(site.universityCount) + '곳 · ' +
-        (site.status === 'pending' ? site.statusLabel : site.source)));
+        (site.status === 'pending' ? site.statusLabel : (site.source || site.statusLabel || ''))));
 
       // 방문자 추이
       const p1 = el('div', 'panel');
       p1.innerHTML =
-        '<div class="panel-head"><h3>일별 방문자 · 페이지뷰</h3><span class="badge badge-sample">샘플</span></div>' +
+        '<div class="panel-head"><h3>일별 방문자 · 페이지뷰</h3>' + badge + '</div>' +
         '<div class="chart-holder"></div>' +
         '<div class="legend"><span><i class="lg-vis"></i>방문자</span><span><i class="lg-pv"></i>페이지뷰</span></div>';
       card.appendChild(p1);
-      $('.chart-holder', p1).appendChild(lineChart(sample.daily || [], site));
+      $('.chart-holder', p1).appendChild(lineChart(daily, site, live));
+      if (live) {
+        card.appendChild(el('p', 'chart-note',
+          esc(site.periodLabel || '') + ' · 활성 사용자 ' + fmt(site.visitors) + '명 · 조회수 ' + fmt(site.pageviews) +
+          (site.latestDate ? ' · 최근 집계일 ' + esc(site.latestDate) : '') +
+          (site.pendingNote ? ' · ' + esc(site.pendingNote) : '')));
+      }
 
       // 유입 경로
       const p2 = el('div', 'panel');
-      p2.innerHTML = '<div class="panel-head"><h3>유입 경로</h3><span class="badge badge-sample">샘플</span></div><div class="sources"></div>';
+      p2.innerHTML = '<div class="panel-head"><h3>유입 경로</h3>' + badge + '</div><div class="sources"></div>';
       card.appendChild(p2);
       const srcBox = $('.sources', p2);
-      (sample.trafficSources || []).forEach((t) => {
+      sources.forEach((t) => {
         const row = el('div', 'src');
+        const pct = t.value === undefined || t.value === null ? null : Math.min(100, t.value);
         row.innerHTML =
           '<span>' + esc(t.name) + '</span>' +
-          '<span class="src-bar"><i style="width:' + Math.min(100, t.value) + '%"></i></span>' +
-          '<b>' + t.value + '%</b>';
+          '<span class="src-bar"><i style="width:' + (pct === null ? 0 : pct) + '%"></i></span>' +
+          '<b>' + (pct === null ? '—' : pct + '%') + '</b>' +
+          (t.users === undefined ? '' : '<small>' + fmt(t.users) + '명</small>');
         srcBox.appendChild(row);
       });
 
-      // 인기 대학 클릭
+      // 인기 페이지 / 인기 대학 클릭
       const p3 = el('div', 'panel');
-      p3.innerHTML = '<div class="panel-head"><h3>인기 대학 클릭 TOP 5</h3><span class="badge badge-sample">샘플</span></div><div class="ranks"></div>';
-      card.appendChild(p3);
-      const rankBox = $('.ranks', p3);
-      (sample.topUniversities || []).forEach((u, i) => {
-        const row = el('div', 'rank');
-        row.innerHTML =
-          '<span class="no">' + (i + 1) + '</span>' +
-          '<span class="nm">' + esc(u.name) + '</span>' +
-          '<span class="cl"><b>' + fmt(u.clicks) + '</b> 클릭</span>';
-        rankBox.appendChild(row);
-      });
+      if (pages.length) {
+        p3.innerHTML = '<div class="panel-head"><h3>인기 페이지</h3>' + badge + '</div><div class="ranks"></div>';
+        card.appendChild(p3);
+        const pageBox = $('.ranks', p3);
+        pages.forEach((pg, i) => {
+          const row = el('div', 'rank');
+          row.innerHTML =
+            '<span class="no">' + (i + 1) + '</span>' +
+            '<span class="nm">' + esc(pg.path) + '</span>' +
+            '<span class="cl"><b>' + fmt(pg.views) + '</b> 조회 · ' + fmt(pg.users) + '명</span>';
+          pageBox.appendChild(row);
+        });
+        if (site.topUniversitiesNote) {
+          p3.appendChild(el('p', 'panel-note', '대학 카드 클릭 집계는 ' + esc(site.topUniversitiesNote)));
+        }
+      } else if (unis.length) {
+        p3.innerHTML = '<div class="panel-head"><h3>인기 대학 클릭 TOP 5</h3>' + badge + '</div><div class="ranks"></div>';
+        card.appendChild(p3);
+        const rankBox = $('.ranks', p3);
+        unis.forEach((u, i) => {
+          const row = el('div', 'rank');
+          row.innerHTML =
+            '<span class="no">' + (i + 1) + '</span>' +
+            '<span class="nm">' + esc(u.name) + '</span>' +
+            '<span class="cl"><b>' + fmt(u.clicks) + '</b> 클릭</span>';
+          rankBox.appendChild(row);
+        });
+      } else {
+        p3.innerHTML = '<div class="panel-head"><h3>인기 대학 클릭 TOP 5</h3><span class="badge badge-pending">집계 준비</span></div>' +
+          '<p class="panel-note">' + esc(site.topUniversitiesNote || '대학 카드 클릭 이벤트 수집 전입니다.') + '</p>';
+        card.appendChild(p3);
+      }
 
       const caption = el('p', 'yt-note');
-      caption.textContent = '샘플 데이터 · 실제 집계 아님. GA4 연동 후 실수치로 대체됩니다.';
+      caption.textContent = live
+        ? 'GA4 실측값입니다. 방문자는 사이트별 순 활성 사용자, 조회수는 페이지뷰(화면 조회) 기준입니다.'
+        : '샘플 데이터 · 실제 집계 아님. GA4 연동 후 실수치로 대체됩니다.';
       card.appendChild(caption);
 
       grid.appendChild(card);
     });
   }
 
-  function lineChart(daily, site) {
+  function lineChart(daily, site, live) {
     const W = 460, H = 158, L = 28, R = 8, T = 12, B = 22;
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
     svg.setAttribute('class', 'chart');
     svg.setAttribute('role', 'img');
-    svg.setAttribute('aria-label', '일별 방문자와 페이지뷰 샘플 차트');
+    svg.setAttribute('aria-label', live ? '일별 방문자와 페이지뷰 차트' : '일별 방문자와 페이지뷰 샘플 차트');
 
     if (!daily.length) {
       const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');

@@ -41,7 +41,7 @@
       <div class="hero-head">
         <p class="eyebrow">STATS HUB</p>
         <h1>두 채널, <em>한 화면</em>에서.</h1>
-        <p class="lede">정시한입과 수시한입의 웹사이트 방문자·인기 대학 클릭과 유튜브 조회수·구독자를 나란히 모았습니다. 유튜브 수치는 실측, 웹사이트 수치는 GA4 연동 후 자동으로 채워집니다.</p>
+        <p class="lede">정시한입과 수시한입의 웹사이트 방문자·유입 경로·인기 페이지와 유튜브 조회수·구독자를 나란히 모았습니다. 유튜브 수치는 공개 페이지 실측, 웹사이트 수치는 GA4 실측(11/21~11/24)입니다.</p>
       </div>
       <nav class="quick" aria-label="빠른 링크">
         <a class="quick-link q-jeong" href="https://jeongsihanip.github.io/" target="_blank" rel="noopener">
@@ -69,15 +69,15 @@
 
     <!-- KPI -->
     <section class="kpis" aria-label="전체 요약">
-      <article class="kpi" data-status="pending">
-        <div class="kpi-top"><span class="kpi-label">총 웹사이트 방문자</span><span class="badge badge-pending">집계 대기</span></div>
+      <article class="kpi" data-status="live">
+        <div class="kpi-top"><span class="kpi-label">총 웹사이트 방문자</span><span class="badge badge-live">실측</span></div>
         <div class="kpi-value" id="kpi-visitors">—</div>
-        <div class="kpi-sub" id="kpi-visitors-sub">GA4 연동 전 · 측정 시작 전</div>
+        <div class="kpi-sub" id="kpi-visitors-sub">두 사이트 합계 · GA4 11/21~11/24</div>
       </article>
-      <article class="kpi" data-status="pending">
-        <div class="kpi-top"><span class="kpi-label">총 페이지뷰</span><span class="badge badge-pending">집계 대기</span></div>
+      <article class="kpi" data-status="live">
+        <div class="kpi-top"><span class="kpi-label">총 페이지뷰</span><span class="badge badge-live">실측</span></div>
         <div class="kpi-value" id="kpi-pageviews">—</div>
-        <div class="kpi-sub" id="kpi-pageviews-sub">GA4 연동 전 · 측정 시작 전</div>
+        <div class="kpi-sub" id="kpi-pageviews-sub">두 사이트 합계 · GA4 11/21~11/24</div>
       </article>
       <article class="kpi kpi-live" data-status="live">
         <div class="kpi-top"><span class="kpi-label">총 유튜브 조회수</span><span class="badge badge-live">실측</span></div>
@@ -87,7 +87,7 @@
       <article class="kpi kpi-live" data-status="live">
         <div class="kpi-top"><span class="kpi-label">총 구독자 수</span><span class="badge badge-live">실측</span></div>
         <div class="kpi-value" id="kpi-subs">—</div>
-        <div class="kpi-sub" id="kpi-subs-sub">공개 표시 없음 · 0으로 집계</div>
+        <div class="kpi-sub" id="kpi-subs-sub">YouTube 공개 구독자 · 두 채널 합</div>
       </article>
     </section>
 
@@ -106,11 +106,11 @@
     <section class="section" aria-labelledby="web-title">
       <div class="section-head">
         <h2 id="web-title">웹사이트 방문 분석</h2>
-        <span class="section-tag tag-pending">GA4 연동 대기</span>
+        <span class="section-tag tag-live">GA4 실측 · 11/21~11/24</span>
       </div>
       <div class="pending-banner">
         <span class="pb-icon" aria-hidden="true">◔</span>
-        <p><b>아직 집계 전입니다.</b> 두 사이트에 Google Analytics 4가 연결되면 일별 방문자·페이지뷰, 유입 경로, 인기 대학 클릭 TOP 5가 이 자리에 실제 수치로 채워집니다. 지금 보이는 차트는 <b>레이아웃 확인용 샘플</b>이며 실제 방문 기록이 아닙니다.</p>
+        <p><b>Google Analytics 4 실측값입니다.</b> 정시한입(<code>G-MZ5B4J0HXY</code>)·수시한입(<code>G-S9MYLSQM1V</code>) 속성의 11/21~11/24(대한민국 시간) 기록을 옮겼습니다. GA4 표준 보고서는 하루 이틀 늦게 확정되므로 <b>당일(11/24) 수치는 다음 집계 때 반영</b>됩니다.</p>
       </div>
       <div class="web-grid" id="webGrid"></div>
     </section>

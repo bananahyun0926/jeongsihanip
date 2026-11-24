@@ -1,24 +1,24 @@
 {
-  "updatedAt": "2026-11-21T19:46:00+09:00",
-  "updatedAtLabel": "2026-11-21 19:46 (KST)",
+  "updatedAt": "2026-11-24T14:35:00+09:00",
+  "updatedAtLabel": "2026-11-24 14:35 (KST)",
   "source": {
-    "youtube": "YouTube 공개 채널·영상 페이지 직접 확인 (실측)",
-    "website": "Google Analytics 4 미연결 — 집계 대기"
+    "youtube": "YouTube 공개 채널·영상 페이지 직접 확인 (실측, 2026-11-24 14:10~14:25 KST)",
+    "website": "Google Analytics 4 탐색 보고서 직접 확인 (정시한입 G-MZ5B4J0HXY · 수시한입 G-S9MYLSQM1V, 11/21~11/24, 보고 시간대 GMT+9)"
   },
   "summary": {
-    "websiteVisitors": null,
-    "pageviews": null,
-    "youtubeViews": 1126,
-    "subscribers": 0,
-    "videoCount": 2,
-    "likes": 4,
+    "websiteVisitors": 43,
+    "pageviews": 86,
+    "youtubeViews": 18662,
+    "subscribers": 5,
+    "videoCount": 16,
+    "likes": 31,
     "status": {
-      "website": "pending",
+      "website": "live",
       "youtube": "live"
     },
-    "websiteNote": "GA4 연동 전이라 웹사이트 방문자·페이지뷰는 아직 0건 집계입니다. 아래 차트는 레이아웃 확인용 샘플입니다.",
+    "websiteNote": "GA4 실측 11/21~11/24(대한민국 시간) · 두 사이트 단순 합계라 같은 사람이 양쪽을 방문하면 두 번 집계됩니다. 11/24는 GA4 집계 지연(24~48시간)으로 아직 0건으로 표시됩니다.",
     "youtubeNote": "공개 영상 조회수 합계 기준입니다. YouTube Studio의 채널 총 조회수와는 다를 수 있습니다.",
-    "subscribersNote": "YouTube 공개 페이지에 구독자 수가 아직 표시되지 않아 0으로 집계했습니다."
+    "subscribersNote": "YouTube 공개 채널에 표시되는 구독자 수입니다(정시한입 3명 · 수시한입 2명)."
   },
   "jeongsihanip": {
     "name": "정시한입",
@@ -27,48 +27,162 @@
     "site": {
       "title": "2027 정시모집요강 모음",
       "url": "https://jeongsihanip.github.io/",
-      "universityCount": 23,
-      "status": "pending",
-      "statusLabel": "측정 시작(집계 대기)",
-      "source": "GA4 미연결",
-      "visitors": null,
-      "pageviews": null,
-      "daily": [],
-      "trafficSources": [],
-      "topUniversities": []
+      "universityCount": 196,
+      "status": "live",
+      "statusLabel": "GA4 실측",
+      "source": "GA4 G-MZ5B4J0HXY · 11/21~11/24",
+      "visitors": 18,
+      "pageviews": 50,
+      "periodLabel": "2026-11-21 ~ 2026-11-24 (KST)",
+      "latestDate": "11-23",
+      "pendingDate": "11-24",
+      "pendingNote": "11/24 방문 기록은 GA4 집계 반영 대기 중입니다.",
+      "daily": [
+        {
+          "date": "11-21",
+          "visitors": 9,
+          "pageviews": 22
+        },
+        {
+          "date": "11-22",
+          "visitors": 11,
+          "pageviews": 24
+        },
+        {
+          "date": "11-23",
+          "visitors": 2,
+          "pageviews": 4
+        }
+      ],
+      "trafficSources": [
+        {
+          "name": "직접 방문(Direct)",
+          "users": 16,
+          "pageviews": 39,
+          "value": 89
+        },
+        {
+          "name": "YouTube 영상(Organic Video)",
+          "users": 1,
+          "pageviews": 10,
+          "value": 6
+        },
+        {
+          "name": "SNS(Organic Social)",
+          "users": 1,
+          "pageviews": 1,
+          "value": 6
+        }
+      ],
+      "topPages": [
+        {
+          "path": "/",
+          "users": 18,
+          "views": 50
+        }
+      ],
+      "topUniversities": [],
+      "topUniversitiesNote": "select_content 이벤트가 아직 사이트에 심어지지 않아 집계 전입니다."
     },
     "youtube": {
       "channelId": "UCUfpBD3chWMgcEVjq2rKpww",
       "url": "https://www.youtube.com/@jeongsihanip",
-      "subscribers": 0,
-      "subscribersStatus": "public_hidden",
-      "totalViews": 1126,
-      "likes": 4,
-      "videoCount": 2,
+      "subscribers": 3,
+      "subscribersStatus": "public",
+      "totalViews": 10701,
+      "likes": 22,
+      "videoCount": 8,
       "schedule": "매일 15:00 · 19:00 · 22:00 (하루 3편)",
-      "nextUp": "오늘 22:00 연세대 편 → 내일부터 고려대·KAIST·POSTECH 순",
-      "checkedAt": "2026-11-21T19:44:00+09:00",
+      "nextUp": "오늘 15:00 대학 편 업로드 예정 (11-24 14:00 기준 미게시)",
+      "checkedAt": "2026-11-24T14:20:00+09:00",
+      "viewsNote": "영상 페이지 '조회수' 실측값 기준.",
       "videos": [
         {
-          "id": "OEZeBpUk8yc",
-          "title": "수능 끝! 건국대 서울캠퍼스 2027 정시모집 1분 총정리 (모집인원·반영비율·군 이동) #Shorts",
-          "shortTitle": "건국대 서울캠퍼스",
-          "url": "https://www.youtube.com/shorts/OEZeBpUk8yc",
-          "publishedAt": "2026-11-21T15:11:00+09:00",
-          "publishedLabel": "11월 21일 15:11",
+          "id": "rJaG_ILOg7o",
+          "title": "한양대 2027 정시 총정리 | 1,289명·수능 90+학생부종합 10",
+          "shortTitle": "한양대(서울)",
+          "url": "https://www.youtube.com/shorts/rJaG_ILOg7o",
+          "publishedAt": "2026-11-23T18:50:07+09:00",
+          "publishedLabel": "11월 23일 18:50",
           "durationSec": 44,
-          "views": 705,
+          "views": 1381,
+          "likes": 4
+        },
+        {
+          "id": "DdLgMZTDmxk",
+          "title": "성균관대 2027 정시 총정리 | 1,463명·모집군별 반영비율 전격 변경",
+          "shortTitle": "성균관대",
+          "url": "https://www.youtube.com/shorts/DdLgMZTDmxk",
+          "publishedAt": "2026-11-23T14:44:32+09:00",
+          "publishedLabel": "11월 23일 14:44",
+          "durationSec": 48,
+          "views": 1196,
+          "likes": 2
+        },
+        {
+          "id": "VkD-XGPpDlM",
+          "title": "서강대 2027 정시 총정리 | 623명·수능 100%·다군은 자유전공",
+          "shortTitle": "서강대",
+          "url": "https://www.youtube.com/shorts/VkD-XGPpDlM",
+          "publishedAt": "2026-11-22T21:55:55+09:00",
+          "publishedLabel": "11월 22일 21:55",
+          "durationSec": 46,
+          "views": 1253,
+          "likes": 2
+        },
+        {
+          "id": "rSndw3LGEPo",
+          "title": "KAIST 2027 정시 총정리 | 군외모집 15명·수능 100%·확률과통계 불가",
+          "shortTitle": "KAIST",
+          "url": "https://www.youtube.com/shorts/rSndw3LGEPo",
+          "publishedAt": "2026-11-22T18:56:43+09:00",
+          "publishedLabel": "11월 22일 18:56",
+          "durationSec": 47,
+          "views": 1186,
           "likes": 1
+        },
+        {
+          "id": "kaPeaNozlAQ",
+          "title": "고려대 2027 정시 총정리 | 가군 1,875명·수능 100%·신설 계약학과 3곳",
+          "shortTitle": "고려대",
+          "url": "https://www.youtube.com/shorts/kaPeaNozlAQ",
+          "publishedAt": "2026-11-22T14:55:01+09:00",
+          "publishedLabel": "11월 22일 14:55",
+          "durationSec": 43,
+          "views": 1249,
+          "likes": 2
+        },
+        {
+          "id": "CEXIYJlHe40",
+          "title": "연세대 2027 정시 총정리 | 1,483명·수능 950+학생부 50·가군/나군",
+          "shortTitle": "연세대",
+          "url": "https://www.youtube.com/shorts/CEXIYJlHe40",
+          "publishedAt": "2026-11-21T20:48:59+09:00",
+          "publishedLabel": "11월 21일 20:48",
+          "durationSec": 43,
+          "views": 1382,
+          "likes": 3
         },
         {
           "id": "p5DjyAgTPG0",
           "title": "서울대 2027 정시 총정리 | 나군 1,374명·수능 반영비율 한눈에",
           "shortTitle": "서울대",
           "url": "https://www.youtube.com/shorts/p5DjyAgTPG0",
-          "publishedAt": "2026-11-21T18:03:00+09:00",
-          "publishedLabel": "11월 21일 18:03",
-          "durationSec": 47,
-          "views": 421,
+          "publishedAt": "2026-11-21T18:02:53+09:00",
+          "publishedLabel": "11월 21일 18:02",
+          "durationSec": 48,
+          "views": 1655,
+          "likes": 5
+        },
+        {
+          "id": "OEZeBpUk8yc",
+          "title": "수능 끝! 건국대 서울캠퍼스 2027 정시모집 1분 총정리 (모집인원·반영비율·군 이동) #Shorts",
+          "shortTitle": "건국대 서울캠퍼스",
+          "url": "https://www.youtube.com/shorts/OEZeBpUk8yc",
+          "publishedAt": "2026-11-21T15:11:31+09:00",
+          "publishedLabel": "11월 21일 15:11",
+          "durationSec": 44,
+          "views": 1399,
           "likes": 3
         }
       ]
@@ -81,93 +195,164 @@
     "site": {
       "title": "2027 수시모집요강 모음",
       "url": "https://susihanip.github.io/",
-      "universityCount": 23,
-      "status": "pending",
-      "statusLabel": "측정 시작(집계 대기)",
-      "source": "GA4 미연결",
-      "visitors": null,
-      "pageviews": null,
-      "daily": [],
-      "trafficSources": [],
-      "topUniversities": []
+      "universityCount": 196,
+      "status": "live",
+      "statusLabel": "GA4 실측",
+      "source": "GA4 G-S9MYLSQM1V · 11/21~11/24",
+      "visitors": 25,
+      "pageviews": 36,
+      "periodLabel": "2026-11-21 ~ 2026-11-24 (KST)",
+      "latestDate": "11-23",
+      "pendingDate": "11-24",
+      "pendingNote": "11/24 방문 기록은 GA4 집계 반영 대기 중입니다.",
+      "daily": [
+        {
+          "date": "11-21",
+          "visitors": 15,
+          "pageviews": 17
+        },
+        {
+          "date": "11-22",
+          "visitors": 10,
+          "pageviews": 17
+        },
+        {
+          "date": "11-23",
+          "visitors": 2,
+          "pageviews": 2
+        }
+      ],
+      "trafficSources": [
+        {
+          "name": "직접 방문(Direct)",
+          "users": 23,
+          "pageviews": 33,
+          "value": 92
+        },
+        {
+          "name": "SNS(Organic Social)",
+          "users": 1,
+          "pageviews": 1,
+          "value": 4
+        },
+        {
+          "name": "YouTube 영상(Organic Video)",
+          "users": 1,
+          "pageviews": 2,
+          "value": 4
+        }
+      ],
+      "topPages": [
+        {
+          "path": "/",
+          "users": 25,
+          "views": 36
+        }
+      ],
+      "topUniversities": [],
+      "topUniversitiesNote": "select_content 이벤트가 아직 사이트에 심어지지 않아 집계 전입니다."
     },
     "youtube": {
       "channelId": "UCDD9Zzgw2vDG22iQMIWk3_w",
       "url": "https://www.youtube.com/@susihanip",
-      "subscribers": 0,
-      "subscribersStatus": "public_hidden",
-      "totalViews": 0,
-      "likes": 0,
-      "videoCount": 0,
+      "subscribers": 2,
+      "subscribersStatus": "public",
+      "totalViews": 7961,
+      "likes": 9,
+      "videoCount": 8,
       "schedule": "매일 15:00 · 19:00 · 22:00 (하루 3편)",
-      "nextUp": "내일(11/22) 15:00 서울대 편부터 업로드 예정",
-      "checkedAt": "2026-11-21T19:44:00+09:00",
-      "videos": []
-    }
-  },
-  "sample": {
-    "label": "샘플",
-    "caption": "레이아웃 확인용 예시 데이터입니다. 실제 집계 수치가 아닙니다.",
-    "jeongsihanip": {
-      "daily": [
-        { "date": "11-08", "visitors": 12, "pageviews": 19 },
-        { "date": "11-09", "visitors": 18, "pageviews": 26 },
-        { "date": "11-10", "visitors": 15, "pageviews": 24 },
-        { "date": "11-11", "visitors": 24, "pageviews": 37 },
-        { "date": "11-12", "visitors": 21, "pageviews": 33 },
-        { "date": "11-13", "visitors": 29, "pageviews": 44 },
-        { "date": "11-14", "visitors": 34, "pageviews": 51 },
-        { "date": "11-15", "visitors": 31, "pageviews": 47 },
-        { "date": "11-16", "visitors": 44, "pageviews": 66 },
-        { "date": "11-17", "visitors": 52, "pageviews": 79 },
-        { "date": "11-18", "visitors": 46, "pageviews": 71 },
-        { "date": "11-19", "visitors": 68, "pageviews": 104 },
-        { "date": "11-20", "visitors": 87, "pageviews": 133 },
-        { "date": "11-21", "visitors": 121, "pageviews": 188 }
-      ],
-      "trafficSources": [
-        { "name": "YouTube 프로필", "value": 54 },
-        { "name": "직접 방문", "value": 22 },
-        { "name": "검색(네이버·구글)", "value": 16 },
-        { "name": "기타·SNS", "value": 8 }
-      ],
-      "topUniversities": [
-        { "name": "건국대", "clicks": 38 },
-        { "name": "서울대", "clicks": 31 },
-        { "name": "연세대", "clicks": 19 },
-        { "name": "고려대", "clicks": 14 },
-        { "name": "성균관대", "clicks": 9 }
-      ]
-    },
-    "susihanip": {
-      "daily": [
-        { "date": "11-08", "visitors": 4, "pageviews": 6 },
-        { "date": "11-09", "visitors": 6, "pageviews": 9 },
-        { "date": "11-10", "visitors": 5, "pageviews": 8 },
-        { "date": "11-11", "visitors": 9, "pageviews": 13 },
-        { "date": "11-12", "visitors": 7, "pageviews": 11 },
-        { "date": "11-13", "visitors": 11, "pageviews": 16 },
-        { "date": "11-14", "visitors": 13, "pageviews": 20 },
-        { "date": "11-15", "visitors": 12, "pageviews": 18 },
-        { "date": "11-16", "visitors": 17, "pageviews": 25 },
-        { "date": "11-17", "visitors": 20, "pageviews": 30 },
-        { "date": "11-18", "visitors": 18, "pageviews": 27 },
-        { "date": "11-19", "visitors": 26, "pageviews": 39 },
-        { "date": "11-20", "visitors": 33, "pageviews": 50 },
-        { "date": "11-21", "visitors": 41, "pageviews": 63 }
-      ],
-      "trafficSources": [
-        { "name": "YouTube 프로필", "value": 48 },
-        { "name": "직접 방문", "value": 25 },
-        { "name": "검색(네이버·구글)", "value": 19 },
-        { "name": "기타·SNS", "value": 8 }
-      ],
-      "topUniversities": [
-        { "name": "서울대", "clicks": 12 },
-        { "name": "연세대", "clicks": 10 },
-        { "name": "고려대", "clicks": 8 },
-        { "name": "한양대", "clicks": 6 },
-        { "name": "중앙대", "clicks": 4 }
+      "nextUp": "오늘 15:00 대학 편 업로드 예정 (11-24 14:00 기준 미게시)",
+      "checkedAt": "2026-11-24T14:20:00+09:00",
+      "viewsNote": "영상 페이지 '조회수' 실측값 기준.",
+      "videos": [
+        {
+          "id": "SXTSdrCexI8",
+          "title": "성균관대 2027 수시 총정리 | 2,378명·융합인재 최저 신설·논술 376명 46초",
+          "shortTitle": "성균관대",
+          "url": "https://www.youtube.com/shorts/SXTSdrCexI8",
+          "publishedAt": "2026-11-23T19:01:10+09:00",
+          "publishedLabel": "11월 23일 19:01",
+          "durationSec": 46,
+          "views": 810,
+          "likes": 0
+        },
+        {
+          "id": "4a6kHNW7fcE",
+          "title": "서강대 2027 수시 총정리 | 1,044명·일반Ⅰ·Ⅱ 분리·논술 171명 48초",
+          "shortTitle": "서강대",
+          "url": "https://www.youtube.com/shorts/4a6kHNW7fcE",
+          "publishedAt": "2026-11-23T14:50:21+09:00",
+          "publishedLabel": "11월 23일 14:50",
+          "durationSec": 48,
+          "views": 1068,
+          "likes": 3
+        },
+        {
+          "id": "1xWdTQvFZVM",
+          "title": "POSTECH 2027 수시 총정리 | 370명·수능최저 4등급 46초",
+          "shortTitle": "POSTECH",
+          "url": "https://www.youtube.com/shorts/1xWdTQvFZVM",
+          "publishedAt": "2026-11-22T21:49:51+09:00",
+          "publishedLabel": "11월 22일 21:49",
+          "durationSec": 46,
+          "views": 464,
+          "likes": 0
+        },
+        {
+          "id": "kwrdgImuvig",
+          "title": "KAIST 2027 수시 총정리 | 865명·수능최저 없음 46초",
+          "shortTitle": "KAIST",
+          "url": "https://www.youtube.com/shorts/kwrdgImuvig",
+          "publishedAt": "2026-11-22T18:48:28+09:00",
+          "publishedLabel": "11월 22일 18:48",
+          "durationSec": 46,
+          "views": 1140,
+          "likes": 1
+        },
+        {
+          "id": "WOsYa0GiZWQ",
+          "title": "고려대 2027 수시 총정리 | 2,731명·계열적합 523명 46초",
+          "shortTitle": "고려대",
+          "url": "https://www.youtube.com/shorts/WOsYa0GiZWQ",
+          "publishedAt": "2026-11-22T14:47:21+09:00",
+          "publishedLabel": "11월 22일 14:47",
+          "durationSec": 46,
+          "views": 1343,
+          "likes": 2
+        },
+        {
+          "id": "LZwnWhUBcp0",
+          "title": "건국대 2027 수시 총정리 | 1,900명·자기추천 903명 44초",
+          "shortTitle": "건국대",
+          "url": "https://www.youtube.com/shorts/LZwnWhUBcp0",
+          "publishedAt": "2026-11-21T21:07:39+09:00",
+          "publishedLabel": "11월 21일 21:07",
+          "durationSec": 44,
+          "views": 547,
+          "likes": 1
+        },
+        {
+          "id": "4fSGGB82UaI",
+          "title": "연세대 2027 수시 총정리 | 2,088명·교과100%·논술 일정 44초",
+          "shortTitle": "연세대",
+          "url": "https://www.youtube.com/shorts/4fSGGB82UaI",
+          "publishedAt": "2026-11-21T20:16:36+09:00",
+          "publishedLabel": "11월 21일 20:16",
+          "durationSec": 44,
+          "views": 1307,
+          "likes": 0
+        },
+        {
+          "id": "P_ImIXkuP4E",
+          "title": "서울대 2027 수시 총정리 | 2,233명·수능최저·일정 45초",
+          "shortTitle": "서울대",
+          "url": "https://www.youtube.com/shorts/P_ImIXkuP4E",
+          "publishedAt": "2026-11-21T20:05:50+09:00",
+          "publishedLabel": "11월 21일 20:05",
+          "durationSec": 45,
+          "views": 1282,
+          "likes": 2
+        }
       ]
     }
   }
